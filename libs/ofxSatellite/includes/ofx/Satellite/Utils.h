@@ -32,6 +32,8 @@
 #include "CoordGeodetic.h"
 #include "Observer.h"
 #include "Util.h"
+#include "ofxTime.h"
+#include "ofxGeo.h"
 
 
 namespace ofx {
@@ -49,6 +51,14 @@ public:
         double max_elevation;
     };
 
+    static Geo::ElevatedCoordinate getPosition(const SGP4& satellite,
+                                               const Poco::DateTime& time);
+
+    static DateTime toDateTime(const Poco::DateTime& time);
+
+    static Geo::ElevatedCoordinate toElevatedCoordinate(const CoordGeodetic& coord);
+
+    static Observer toObserver(const Geo::ElevatedCoordinate& coordinate0);
 
     static double FindMaxElevation(const CoordGeodetic& user_geo,
                                    SGP4& sgp4,

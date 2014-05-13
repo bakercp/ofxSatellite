@@ -30,6 +30,52 @@ namespace ofx {
 namespace Satellite {
 
 
+DateTime Utils::toDateTime(const Poco::DateTime& time)
+{
+    DateTime dt;
+
+    dt.Initialise(time.year(),
+                  time.month(),
+                  time.day(),
+                  time.hour(),
+                  time.minute(),
+                  time.second(),
+                  time.microsecond());
+
+    return dt;
+}
+
+
+Geo::ElevatedCoordinate Utils::getPosition(const SGP4& satellite,
+                                           const Poco::DateTime& time)
+{
+
+    DateTime now = toDateTime(time);
+
+    Eci eci = satellite.FindPosition(now);
+
+    CoordGeodetic geo = eci.ToGeodetic();
+
+    return toElevatedCoordinate(geo);
+}
+
+
+Geo::ElevatedCoordinate Utils::toElevatedCoordinate(const CoordGeodetic& coord)
+{
+    return Geo::ElevatedCoordinate(Util::RadiansToDegrees(coord.latitude),
+                                   Util::RadiansToDegrees(coord.longitude),
+                                   Util::RadiansToDegrees(coord.altitude));
+}
+
+
+Observer Utils::toObserver(const Geo::ElevatedCoordinate& coordinate)
+{
+    return Observer(coordinate.getLatitude(),
+                    coordinate.getLongitude(),
+                    coordinate.getElevation());
+}
+
+
 double Utils::FindMaxElevation(const CoordGeodetic& user_geo,
                                SGP4& sgp4,
                                const DateTime& aos,

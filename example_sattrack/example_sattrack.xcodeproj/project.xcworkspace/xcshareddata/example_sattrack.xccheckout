@@ -5,31 +5,35 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>A5AD4D61-1F95-4E29-9C31-B2682AD99D62</string>
+	<string>8ED779D2-D732-4234-A450-25389B49CF34</string>
 	<key>IDESourceControlProjectName</key>
-	<string>example_passpredict</string>
+	<string>example_sattrack</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
+		<key>19583976-F8A5-4384-8921-FC5993427021</key>
+		<string>ssh://github.com/bakercp/ofxTime.git</string>
+		<key>2170DAC9-0857-4871-9FEE-2B1A08706F66</key>
+		<string>ssh://github.com/bakercp/ofxSatellite.git</string>
+		<key>3A0B38DE-0FB7-401A-97D1-D67FFACDB544</key>
+		<string>ssh://github.com/bakercp/ofxGeo.git</string>
 		<key>45B414AD-06FD-4497-9C7A-E1A33FADFECF</key>
 		<string>ssh://github.com/bakercp/openFrameworks.git</string>
-		<key>9CB5300D-73DF-480E-A611-FA6A20490F58</key>
-		<string>ssh://github.com/bakercp/ofxGeo.git</string>
-		<key>B907F8AE-27F5-4106-97DB-54DC4AB23EBA</key>
-		<string>ssh://github.com/SAIC/ofxSGP4.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>addons/ofxSGP4/example_passpredict/example_passpredict.xcodeproj/project.xcworkspace</string>
+	<string>addons/ofxSatellite/example_sattrack/example_sattrack.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
+		<key>19583976-F8A5-4384-8921-FC5993427021</key>
+		<string>../../../../ofxTime</string>
+		<key>2170DAC9-0857-4871-9FEE-2B1A08706F66</key>
+		<string>../../..</string>
+		<key>3A0B38DE-0FB7-401A-97D1-D67FFACDB544</key>
+		<string>../../../../ofxGeo</string>
 		<key>45B414AD-06FD-4497-9C7A-E1A33FADFECF</key>
 		<string>../../../../..</string>
-		<key>9CB5300D-73DF-480E-A611-FA6A20490F58</key>
-		<string>../../../../ofxGeo</string>
-		<key>B907F8AE-27F5-4106-97DB-54DC4AB23EBA</key>
-		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>ssh://github.com/SAIC/ofxSGP4.git</string>
+	<string>ssh://github.com/bakercp/ofxSatellite.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
@@ -40,7 +44,7 @@
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>9CB5300D-73DF-480E-A611-FA6A20490F58</string>
+			<string>3A0B38DE-0FB7-401A-97D1-D67FFACDB544</string>
 			<key>IDESourceControlWCCName</key>
 			<string>ofxGeo</string>
 		</dict>
@@ -48,9 +52,17 @@
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>B907F8AE-27F5-4106-97DB-54DC4AB23EBA</string>
+			<string>2170DAC9-0857-4871-9FEE-2B1A08706F66</string>
 			<key>IDESourceControlWCCName</key>
-			<string>ofxSGP4</string>
+			<string>ofxSatellite</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>19583976-F8A5-4384-8921-FC5993427021</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ofxTime</string>
 		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>

@@ -42,4 +42,10 @@ public:
 
     void keyPressed(int key);
 
+    Geo::ElevatedCoordinate myLocation;
+
+    std::vector<SGP4> satellites;
+
+    float scaler;
+
 };
