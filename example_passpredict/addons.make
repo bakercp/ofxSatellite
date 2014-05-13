@@ -1,2 +1,3 @@
 ofxGeo
-ofxSGP4
+ofxSatellite
+ofxTime

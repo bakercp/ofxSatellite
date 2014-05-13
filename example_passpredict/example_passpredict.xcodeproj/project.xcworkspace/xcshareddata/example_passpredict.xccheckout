@@ -5,31 +5,35 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>A5AD4D61-1F95-4E29-9C31-B2682AD99D62</string>
+	<string>62CFEF79-F774-4A5A-967D-72E9993C917A</string>
 	<key>IDESourceControlProjectName</key>
 	<string>example_passpredict</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
+		<key>20027BBB-2C2B-4C2F-9F5D-A7BBD5B7074B</key>
+		<string>ssh://github.com/bakercp/ofxSatellite.git</string>
+		<key>2E665FBA-3B55-45BF-A510-607C7C3A43E2</key>
+		<string>ssh://github.com/bakercp/ofxTime.git</string>
 		<key>45B414AD-06FD-4497-9C7A-E1A33FADFECF</key>
 		<string>ssh://github.com/bakercp/openFrameworks.git</string>
 		<key>9CB5300D-73DF-480E-A611-FA6A20490F58</key>
 		<string>ssh://github.com/bakercp/ofxGeo.git</string>
-		<key>B907F8AE-27F5-4106-97DB-54DC4AB23EBA</key>
-		<string>ssh://github.com/SAIC/ofxSGP4.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>addons/ofxSGP4/example_passpredict/example_passpredict.xcodeproj/project.xcworkspace</string>
+	<string>addons/ofxSatellite/example_passpredict/example_passpredict.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
+		<key>20027BBB-2C2B-4C2F-9F5D-A7BBD5B7074B</key>
+		<string>../../..</string>
+		<key>2E665FBA-3B55-45BF-A510-607C7C3A43E2</key>
+		<string>../../../../ofxTime</string>
 		<key>45B414AD-06FD-4497-9C7A-E1A33FADFECF</key>
 		<string>../../../../..</string>
 		<key>9CB5300D-73DF-480E-A611-FA6A20490F58</key>
 		<string>../../../../ofxGeo</string>
-		<key>B907F8AE-27F5-4106-97DB-54DC4AB23EBA</key>
-		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>ssh://github.com/SAIC/ofxSGP4.git</string>
+	<string>ssh://github.com/bakercp/ofxSatellite.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
@@ -48,9 +52,17 @@
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>B907F8AE-27F5-4106-97DB-54DC4AB23EBA</string>
+			<string>20027BBB-2C2B-4C2F-9F5D-A7BBD5B7074B</string>
 			<key>IDESourceControlWCCName</key>
-			<string>ofxSGP4</string>
+			<string>ofxSatellite</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>2E665FBA-3B55-45BF-A510-607C7C3A43E2</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ofxTime</string>
 		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
