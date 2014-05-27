@@ -1,6 +1,6 @@
 // =============================================================================
 //
-// Copyright (c) 2010-2014 Christopher Baker <http://christopherbaker.net>
+// Copyright (c) 2014 Christopher Baker <http://christopherbaker.net>
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -23,14 +23,47 @@
 // =============================================================================
 
 
-#include "ofxGeo.h"
-#include "ofxTime.h"
-#include "SGP4.h"
-#include "CoordTopocentric.h"
-#include "CoordGeodetic.h"
-#include "Observer.h"
-#include "Util.h"
-#include "ofx/Satellite/Utils.h"
 #include "ofx/Satellite/Satellite.h"
+#include "ofx/Satellite/Utils.h"
 
 
+namespace ofx {
+namespace Satellite {
+
+
+Satellite::Satellite(const std::string& lineOne,
+                     const std::string& lineTwo):
+    Tle(lineOne, lineTwo),
+    _sgp4(*this)
+{
+}
+
+
+Satellite::Satellite(const std::string& name,
+                     const std::string& lineOne,
+                     const std::string& lineTwo):
+    Tle(name, lineOne, lineTwo),
+    _sgp4(*this)
+{
+}
+
+
+Satellite::Satellite(const Tle& tle):
+    Tle(tle),
+    _sgp4(*this)
+{
+}
+
+
+Satellite::~Satellite()
+{
+}
+
+
+Eci Satellite::find(const Poco::DateTime& date) const
+{
+    return _sgp4.FindPosition(Utils::toDateTime(date));
+}
+
+    
+} } // namespace ofx::Satellite
