@@ -42,10 +42,17 @@ public:
 
     void keyPressed(int key);
 
+
+    ofSpherePrimitive earthSphere;
+
+    ofImage colorMap;
+
     Geo::ElevatedCoordinate myLocation;
 
-    std::vector<SGP4> satellites;
+    std::vector<Satellite::Satellite> satellites;
 
     float scaler;
+
+    ofEasyCam cam;
 
 };

@@ -5,46 +5,50 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>62CFEF79-F774-4A5A-967D-72E9993C917A</string>
+	<string>6839002E-E8CE-4F87-BEEF-49F1CA307A2C</string>
 	<key>IDESourceControlProjectName</key>
 	<string>example_passpredict</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>20027BBB-2C2B-4C2F-9F5D-A7BBD5B7074B</key>
-		<string>ssh://github.com/bakercp/ofxSatellite.git</string>
-		<key>2E665FBA-3B55-45BF-A510-607C7C3A43E2</key>
+		<key>19583976-F8A5-4384-8921-FC5993427021</key>
 		<string>ssh://github.com/bakercp/ofxTime.git</string>
-		<key>45B414AD-06FD-4497-9C7A-E1A33FADFECF</key>
-		<string>ssh://github.com/bakercp/openFrameworks.git</string>
-		<key>9CB5300D-73DF-480E-A611-FA6A20490F58</key>
+		<key>2170DAC9-0857-4871-9FEE-2B1A08706F66</key>
+		<string>ssh://github.com/bakercp/ofxSatellite.git</string>
+		<key>3A0B38DE-0FB7-401A-97D1-D67FFACDB544</key>
 		<string>ssh://github.com/bakercp/ofxGeo.git</string>
+		<key>87BC136C-196B-41C5-9A7F-2853DADC4C31</key>
+		<string>ssh://github.com/bakercp/openFrameworks.git</string>
+		<key>E7247F3A-BD58-4D1B-892C-6C84C0112852</key>
+		<string>ssh://github.com/bakercp/ofxSpatialHash.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>addons/ofxSatellite/example_passpredict/example_passpredict.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>20027BBB-2C2B-4C2F-9F5D-A7BBD5B7074B</key>
-		<string>../../..</string>
-		<key>2E665FBA-3B55-45BF-A510-607C7C3A43E2</key>
+		<key>19583976-F8A5-4384-8921-FC5993427021</key>
 		<string>../../../../ofxTime</string>
-		<key>45B414AD-06FD-4497-9C7A-E1A33FADFECF</key>
-		<string>../../../../..</string>
-		<key>9CB5300D-73DF-480E-A611-FA6A20490F58</key>
+		<key>2170DAC9-0857-4871-9FEE-2B1A08706F66</key>
+		<string>../../..</string>
+		<key>3A0B38DE-0FB7-401A-97D1-D67FFACDB544</key>
 		<string>../../../../ofxGeo</string>
+		<key>87BC136C-196B-41C5-9A7F-2853DADC4C31</key>
+		<string>../../../../..</string>
+		<key>E7247F3A-BD58-4D1B-892C-6C84C0112852</key>
+		<string>../../../../ofxSpatialHash</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>ssh://github.com/bakercp/ofxSatellite.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>45B414AD-06FD-4497-9C7A-E1A33FADFECF</string>
+	<string>87BC136C-196B-41C5-9A7F-2853DADC4C31</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>9CB5300D-73DF-480E-A611-FA6A20490F58</string>
+			<string>3A0B38DE-0FB7-401A-97D1-D67FFACDB544</string>
 			<key>IDESourceControlWCCName</key>
 			<string>ofxGeo</string>
 		</dict>
@@ -52,7 +56,7 @@
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>20027BBB-2C2B-4C2F-9F5D-A7BBD5B7074B</string>
+			<string>2170DAC9-0857-4871-9FEE-2B1A08706F66</string>
 			<key>IDESourceControlWCCName</key>
 			<string>ofxSatellite</string>
 		</dict>
@@ -60,7 +64,15 @@
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>2E665FBA-3B55-45BF-A510-607C7C3A43E2</string>
+			<string>E7247F3A-BD58-4D1B-892C-6C84C0112852</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ofxSpatialHash</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>19583976-F8A5-4384-8921-FC5993427021</string>
 			<key>IDESourceControlWCCName</key>
 			<string>ofxTime</string>
 		</dict>
@@ -68,7 +80,7 @@
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>45B414AD-06FD-4497-9C7A-E1A33FADFECF</string>
+			<string>87BC136C-196B-41C5-9A7F-2853DADC4C31</string>
 			<key>IDESourceControlWCCName</key>
 			<string>openFrameworks</string>
 		</dict>
