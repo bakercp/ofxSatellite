@@ -40,6 +40,9 @@ namespace ofx {
 namespace Satellite {
 
 
+class Satellite;
+
+
 /// \brief A collection of utilities for satellite tasks.
 class Utils
 {
@@ -50,6 +53,10 @@ public:
         DateTime los;
         double max_elevation;
     };
+
+    static std::vector<Satellite> loadTLEFromFile(const std::string& filename);
+
+    static std::vector<Satellite> loadTLEFromBuffer(const ofBuffer& buffer);
 
     static Geo::ElevatedCoordinate getPosition(const SGP4& satellite,
                                                const Poco::DateTime& time);

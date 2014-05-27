@@ -24,10 +24,79 @@
 
 
 #include "ofx/Satellite/Utils.h"
+#include "ofx/Satellite/Satellite.h"
+#include "Poco/String.h"
 
 
 namespace ofx {
 namespace Satellite {
+
+
+std::vector<Satellite> Utils::loadTLEFromFile(const std::string& filename)
+{
+    return loadTLEFromBuffer(ofBufferFromFile(filename));
+}
+
+
+std::vector<Satellite> Utils::loadTLEFromBuffer(const ofBuffer& buffer)
+{
+    std::vector<Satellite> satellites;
+
+    ofBuffer buf(buffer);
+
+    std::string currentLine = "";
+
+    std::string tleName = "";
+    std::string tleLineOne = "";
+    std::string tleLineTwo = "";
+
+    buf.resetLineReader();
+
+    bool first = true;
+
+    while (!buf.isLastLine())
+    {
+        currentLine = buf.getNextLine();
+
+        Poco::trimInPlace(currentLine);
+
+        std::cout << currentLine << std::endl;
+
+        if (currentLine.empty())
+        {
+            continue;
+        }
+        else if (currentLine[0] == '1')
+        {
+            tleLineOne = currentLine;
+        }
+        else if (currentLine[0] == '2')
+        {
+            tleLineTwo = currentLine;
+        }
+        else
+        {
+            if (!tleLineOne.empty() && !tleLineTwo.empty())
+            {
+                satellites.push_back(Satellite(tleName, tleLineOne, tleLineTwo));
+            }
+            else if (first)
+            {
+                first = false;
+            }
+            else
+            {
+                ofLogWarning("Utils::loadTLEFromBuffer") << "Incomplete TLE";
+            }
+
+            tleName = currentLine;
+            tleLineOne = "";
+            tleLineTwo = "";
+        }
+    }
+
+    return satellites;
+}
 
 
 DateTime Utils::toDateTime(const Poco::DateTime& time)
@@ -64,7 +133,7 @@ Geo::ElevatedCoordinate Utils::toElevatedCoordinate(const CoordGeodetic& coord)
 {
     return Geo::ElevatedCoordinate(Util::RadiansToDegrees(coord.latitude),
                                    Util::RadiansToDegrees(coord.longitude),
-                                   Util::RadiansToDegrees(coord.altitude));
+                                   coord.altitude * 1000);
 }
 
 
@@ -72,7 +141,7 @@ Observer Utils::toObserver(const Geo::ElevatedCoordinate& coordinate)
 {
     return Observer(coordinate.getLatitude(),
                     coordinate.getLongitude(),
-                    coordinate.getElevation());
+                    coordinate.getElevation() / 1000);
 }
 
 
