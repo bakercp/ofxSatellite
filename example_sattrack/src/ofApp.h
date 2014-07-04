@@ -42,7 +42,6 @@ public:
 
     void keyPressed(int key);
 
-
     ofSpherePrimitive earthSphere;
 
     ofImage colorMap;
@@ -52,6 +51,8 @@ public:
     std::vector<Satellite::Satellite> satellites;
 
     float scaler;
+
+    float rot;
 
     ofEasyCam cam;
 

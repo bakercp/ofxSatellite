@@ -31,6 +31,8 @@ void ofApp::setup()
     ofEnableDepthTest();
 	ofEnableAlphaBlending();
 
+    rot = 0;
+
     scaler = 300 / Geo::Utils::EARTH_RADIUS_KM;
 
     colorMap.loadImage("color_map_1024.jpg");
@@ -77,7 +79,8 @@ void ofApp::draw()
     cam.begin();
 
 	ofPushMatrix();
-
+    rot += 1;
+    ofRotate(rot, 0, 1, 0);
     ofScale(scaler, scaler, scaler);
 
     ofSetColor(255);
@@ -96,11 +99,11 @@ void ofApp::draw()
 
     while (iter != satellites.end())
     {
-        if (iter->Name().compare("AQUA") != 0 && iter->Name().compare("TERRA") != 0)
-        {
-            ++iter;
-            continue;
-        }
+//        if (iter->Name().compare("AQUA") != 0 && iter->Name().compare("TERRA") != 0)
+//        {
+//            ++iter;
+//            continue;
+//        }
 
         pos = Satellite::Utils::toElevatedCoordinate((*iter).find(now).ToGeodetic());
 
@@ -131,7 +134,7 @@ void ofApp::draw()
         ss << "Longitude (deg): " << pos.getLongitude() << std::endl;
         ss << " Elevation (km): " << pos.getElevation() / 1000 << std::endl;
 
-		ofDrawBitmapString(ss.str(), worldPoint);
+//		ofDrawBitmapString(ss.str(), worldPoint);
 
         ++iter;
     }
