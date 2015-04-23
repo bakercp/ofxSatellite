@@ -1,4 +1,4 @@
 ofxSGP4
 =======
 
-A satellite tracker using the libsgp4.
+A thin wrapper for the [libsgp4](http://www.danrw.com/sgp4/) library.
