@@ -109,7 +109,7 @@ DateTime Utils::toDateTime(const Poco::DateTime& time)
                   time.hour(),
                   time.minute(),
                   time.second(),
-                  time.microsecond());
+                  time.millisecond() * 1000 + time.microsecond());
 
     return dt;
 }

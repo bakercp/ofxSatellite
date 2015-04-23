@@ -60,6 +60,12 @@ Satellite::~Satellite()
 }
 
 
+Eci Satellite::find(const DateTime& date) const
+{
+    return _sgp4.FindPosition(date);
+}
+
+
 Eci Satellite::find(const Poco::DateTime& date) const
 {
     return _sgp4.FindPosition(Utils::toDateTime(date));

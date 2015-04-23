@@ -55,6 +55,8 @@ public:
 
     virtual ~Satellite();
 
+    Eci find(const DateTime& date) const;
+
     Eci find(const Poco::DateTime& time) const;
 
 
