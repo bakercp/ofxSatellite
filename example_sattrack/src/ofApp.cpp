@@ -67,11 +67,6 @@ void ofApp::setup()
 }
 
 
-void ofApp::update()
-{
-}
-
-
 void ofApp::draw()
 {
 	ofBackground(0);
@@ -95,21 +90,16 @@ void ofApp::draw()
 
     ofx::Geo::ElevatedCoordinate pos;
 
-    int t = 0;
-
     Poco::DateTime now;
 
     while (iter != satellites.end())
     {
+        // Only show two satellites to keep things simple.
         if (iter->Name().compare("AQUA") != 0 && iter->Name().compare("TERRA") != 0)
         {
             ++iter;
             continue;
         }
-
-        t++;
-//
-//        if (t > 100) break;
 
         try
         {
@@ -117,6 +107,7 @@ void ofApp::draw()
         }
         catch (...)
         {
+            // If there is an exception, skip it.
             ++iter;
             continue;
         }
@@ -148,7 +139,7 @@ void ofApp::draw()
         ss << "Longitude (deg): " << pos.getLongitude() << std::endl;
         ss << " Elevation (km): " << pos.getElevation() / 1000 << std::endl;
 
-	ofDrawBitmapString(ss.str(), worldPoint);
+        ofDrawBitmapString(ss.str(), worldPoint);
 
         ++iter;
     }
@@ -157,9 +148,4 @@ void ofApp::draw()
 
     cam.end();
 
-}
-
-
-void ofApp::keyPressed(int key)
-{
 }
