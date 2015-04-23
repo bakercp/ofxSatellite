@@ -148,7 +148,7 @@ void ofApp::draw()
         ss << "Longitude (deg): " << pos.getLongitude() << std::endl;
         ss << " Elevation (km): " << pos.getElevation() / 1000 << std::endl;
 
-//		ofDrawBitmapString(ss.str(), worldPoint);
+	ofDrawBitmapString(ss.str(), worldPoint);
 
         ++iter;
     }
