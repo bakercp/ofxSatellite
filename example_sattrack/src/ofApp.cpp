@@ -33,11 +33,11 @@ void ofApp::setup()
 
     rot = 0;
 
-    scaler = 300 / Geo::Utils::EARTH_RADIUS_KM;
+    scaler = 300 / ofx::Geo::GeoUtils::EARTH_RADIUS_KM;
 
     colorMap.loadImage("color_map_1024.jpg");
 
-    earthSphere.set(Geo::Utils::EARTH_RADIUS_KM, 24);
+    earthSphere.set(ofx::Geo::GeoUtils::EARTH_RADIUS_KM, 24);
     ofQuaternion quat;
     quat.makeRotate(180, 0, 1, 0);
     earthSphere.rotate(quat);
@@ -46,15 +46,15 @@ void ofApp::setup()
                              colorMap.getTextureReference().getTextureData().tex_t,
                              0);
 
-    myLocation = Geo::ElevatedCoordinate(51.507406923983446,
-                                         -0.12773752212524414,
-                                         0.05);
+    myLocation = ofx::Geo::ElevatedCoordinate(51.507406923983446,
+                                              -0.12773752212524414,
+                                              0.05);
 
     ofHttpResponse response = ofLoadURL("http://www.celestrak.com/NORAD/elements/resource.txt");
 
     if (200 == response.status)
     {
-        satellites = Satellite::Utils::loadTLEFromBuffer(response.data);
+        satellites = ofx::Satellite::Utils::loadTLEFromBuffer(response.data);
     }
     else
     {
@@ -79,8 +79,8 @@ void ofApp::draw()
     cam.begin();
 
 	ofPushMatrix();
-    rot += 1;
-    ofRotate(rot, 0, 1, 0);
+    //rot += 1;
+    //ofRotate(rot, 0, 1, 0);
     ofScale(scaler, scaler, scaler);
 
     ofSetColor(255);
@@ -91,21 +91,35 @@ void ofApp::draw()
     ofQuaternion latRot;
     ofQuaternion longRot;
 
-    std::vector<Satellite::Satellite>::const_iterator iter = satellites.begin();
+    std::vector<ofx::Satellite::Satellite>::const_iterator iter = satellites.begin();
+
+    ofx::Geo::ElevatedCoordinate pos;
+
+    int t = 0;
 
     Poco::DateTime now;
 
-    Geo::ElevatedCoordinate pos;
-
     while (iter != satellites.end())
     {
-//        if (iter->Name().compare("AQUA") != 0 && iter->Name().compare("TERRA") != 0)
-//        {
-//            ++iter;
-//            continue;
-//        }
+        if (iter->Name().compare("AQUA") != 0 && iter->Name().compare("TERRA") != 0)
+        {
+            ++iter;
+            continue;
+        }
 
-        pos = Satellite::Utils::toElevatedCoordinate((*iter).find(now).ToGeodetic());
+        t++;
+//
+//        if (t > 100) break;
+
+        try
+        {
+            pos = ofx::Satellite::Utils::toElevatedCoordinate((*iter).find(now).ToGeodetic());
+        }
+        catch (...)
+        {
+            ++iter;
+            continue;
+        }
 
 		ofQuaternion latRot;
         ofQuaternion longRot;
@@ -114,7 +128,7 @@ void ofApp::draw()
 		longRot.makeRotate(pos.getLongitude(), 0, 1, 0);
 
 		//our starting point is 0,0, on the surface of our sphere, this is where the meridian and equator meet
-		ofVec3f center = ofVec3f(0,0, pos.getElevation() / 1000 + Geo::Utils::EARTH_RADIUS_KM);
+		ofVec3f center = ofVec3f(0,0, pos.getElevation() / 1000 + ofx::Geo::GeoUtils::EARTH_RADIUS_KM);
 		//multiplying a quat with another quat combines their rotations into one quat
 		//multiplying a quat to a vector applies the quat's rotation to that vector
 		//so to to generate our point on the sphere, multiply all of our quaternions together then multiple the centery by the combined rotation

@@ -30,9 +30,6 @@
 #include "ofxSatellite.h"
 
 
-using namespace ofx;
-
-
 class ofApp: public ofBaseApp
 {
 public:
@@ -46,9 +43,9 @@ public:
 
     ofImage colorMap;
 
-    Geo::ElevatedCoordinate myLocation;
+    ofx::Geo::ElevatedCoordinate myLocation;
 
-    std::vector<Satellite::Satellite> satellites;
+    std::vector<ofx::Satellite::Satellite> satellites;
 
     float scaler;
 

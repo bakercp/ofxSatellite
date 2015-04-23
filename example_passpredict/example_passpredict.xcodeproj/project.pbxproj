@@ -1,1098 +1,3929 @@
-// !$*UTF8*$!
-{
-	archiveVersion = 1;
-	classes = {
-	};
-	objectVersion = 46;
-	objects = {
-
-/* Begin PBXBuildFile section */
-		02f878e84cd6299ed22361f45efd58df /* SGP4.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3225c5826b6e61472c508c84e1c81c08 /* SGP4.cpp */; };
-		045a2b483916e01209927c7655100ed0 /* CoordTopocentric.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 06ec8d051fdadfcdf3891afb1b4103c1 /* CoordTopocentric.cpp */; };
-		08cd2256307b048a8152d1c6c07891f2 /* CoordinateBounds.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 699d60a62bcfd7b740ff0b62a648a2eb /* CoordinateBounds.cpp */; };
-		1f122c94015b73a1aa4aa43055aa9f63 /* SolarPosition.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11adc71c2eeceb617585f80fffc3ee5d /* SolarPosition.cpp */; };
-		21d5b299e31341b5d655ea6ef6025b86 /* CoordGeodetic.cpp in Sources */ = {isa = PBXBuildFile; fileRef = aa203e8e5a958f9ba46f64786133865e /* CoordGeodetic.cpp */; };
-		265bab017954b6cc1d2a3d789ffd3cc3 /* Observer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 89474d2ea08f16fbc6ae438b7a0da619 /* Observer.cpp */; };
-		3e7d272bb14cf0cd21ab9bf5a7273d0b /* ofRectangled.cpp in Sources */ = {isa = PBXBuildFile; fileRef = f43c8904807c0f81956584efc57035e1 /* ofRectangled.cpp */; };
-		49fbbb743b8337e09f42eaff123dadaa /* UTMLocationBounds.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 57ac19537d7e9dc0b7f69f9708140359 /* UTMLocationBounds.cpp */; };
-		4b14cedcc7195a4d1f8e28b4f9635a89 /* ofApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 19c22cd05d10f78b32ff80c6be3a9385 /* ofApp.cpp */; };
-		4d81191b49715b34c8fa65496baf354a /* Globals.cpp in Sources */ = {isa = PBXBuildFile; fileRef = b029979aab04e790310c1a743f91fc03 /* Globals.cpp */; };
-		508d5ecda7faff379f58128a8a24d1e4 /* ofVec2d.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ff63913175ed4525ae4d309e584b0546 /* ofVec2d.cpp */; };
-		532af6d7e3cb5ae24d160140f3ad5d7c /* Utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 44ff7f4131bdb1710cf68aa41f5fe5ff /* Utils.cpp */; };
-		5847aa7c8b6171d9fe1cc8d585df1b90 /* Period.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ae9c89f270782b85763a355476f8c8e6 /* Period.cpp */; };
-		651de076cc112b6101e5c2bce436b639 /* Satellite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3becb5a155f6baa3bea761df48071c1f /* Satellite.cpp */; };
-		75680dd78047c04373769c5b8d8aaa52 /* Coordinate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 46170c7ad3127d015f025a0365f06235 /* Coordinate.cpp */; };
-		76efc0b4cd58c2a247731b074f349415 /* Utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8cd80811b2f6fea24395fb70e5754e83 /* Utils.cpp */; };
-		7701602118c70c10291e49c88e0fa855 /* Utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2f615cee50f03c98ee5f099953ec3fca /* Utils.cpp */; };
-		8285a7f277ac7d2038387981930667e2 /* OrbitalElements.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 66b0e95189d928bb08b77e74a613b782 /* OrbitalElements.cpp */; };
-		8919dbc6e0dcfc437dcffb905cafc401 /* DateTime.cpp in Sources */ = {isa = PBXBuildFile; fileRef = e0ebad6cf2af6ad79be06442040ab860 /* DateTime.cpp */; };
-		8d5f19ebd8346746ae55e39bcb97825b /* Eci.cpp in Sources */ = {isa = PBXBuildFile; fileRef = dff9e78844130870c9759e8a8c233e8e /* Eci.cpp */; };
-		929aecb71883296976f4bc83327c95d1 /* TimeSpan.cpp in Sources */ = {isa = PBXBuildFile; fileRef = f2b6a6aa7c61fcbd6a41fff224cc3347 /* TimeSpan.cpp */; };
-		9d2002dcca863f80989626bd8bf7bf57 /* ofVec4d.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ad30986094675c81abb2d2bbcc882e4e /* ofVec4d.cpp */; };
-		BBAB23CB13894F3D00AA2426 /* GLUT.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = BBAB23BE13894E4700AA2426 /* GLUT.framework */; };
-		E4328149138ABC9F0047C5CB /* openFrameworksDebug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4328148138ABC890047C5CB /* openFrameworksDebug.a */; };
-		E45BE97B0E8CC7DD009D7055 /* AGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E45BE9710E8CC7DD009D7055 /* AGL.framework */; };
-		E45BE97C0E8CC7DD009D7055 /* ApplicationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E45BE9720E8CC7DD009D7055 /* ApplicationServices.framework */; };
-		E45BE97D0E8CC7DD009D7055 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E45BE9730E8CC7DD009D7055 /* AudioToolbox.framework */; };
-		E45BE97F0E8CC7DD009D7055 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E45BE9750E8CC7DD009D7055 /* CoreAudio.framework */; };
-		E45BE9800E8CC7DD009D7055 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E45BE9760E8CC7DD009D7055 /* CoreFoundation.framework */; };
-		E45BE9810E8CC7DD009D7055 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E45BE9770E8CC7DD009D7055 /* CoreServices.framework */; };
-		E45BE9830E8CC7DD009D7055 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E45BE9790E8CC7DD009D7055 /* OpenGL.framework */; };
-		E45BE9840E8CC7DD009D7055 /* QuickTime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E45BE97A0E8CC7DD009D7055 /* QuickTime.framework */; };
-		E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4B69E1D0A3A1BDC003C02F2 /* main.cpp */; };
-		E4C2424710CC5A17004149E2 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4C2424410CC5A17004149E2 /* AppKit.framework */; };
-		E4C2424810CC5A17004149E2 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4C2424510CC5A17004149E2 /* Cocoa.framework */; };
-		E4C2424910CC5A17004149E2 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4C2424610CC5A17004149E2 /* IOKit.framework */; };
-		E4EB6799138ADC1D00A09F29 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBAB23BE13894E4700AA2426 /* GLUT.framework */; };
-		E7E077E515D3B63C0020DFD4 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7E077E415D3B63C0020DFD4 /* CoreVideo.framework */; };
-		E7E077E815D3B6510020DFD4 /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7E077E715D3B6510020DFD4 /* QTKit.framework */; };
-		E7F985F815E0DEA3003869B5 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7F985F515E0DE99003869B5 /* Accelerate.framework */; };
-		a45ae417dc366d2319d3a19292eeefed /* Vector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 60e0f24878474a4aee71d50af2678c23 /* Vector.cpp */; };
-		a5c693a7acc97a9e70f942002fcd7f18 /* Util.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3841f040369b6f65aba7ce80967ced7b /* Util.cpp */; };
-		cae4fc54449de204f0aaf087a036ca27 /* Tle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4a2aec0a46e5294df372c40c89ad7d93 /* Tle.cpp */; };
-		f43c0efc1c2c6fa257b0be375dc91d9f /* UTMLocation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 604bb71b812e172ad8fa62c97ae01496 /* UTMLocation.cpp */; };
-		fd60be5ce7bbd47bd60d6f5bf702fb10 /* Interval.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8f3df41cc44878753f29bde5bf5d1167 /* Interval.cpp */; };
-/* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		E4328147138ABC890047C5CB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E4328143138ABC890047C5CB /* openFrameworksLib.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = E4B27C1510CBEB8E00536013;
-			remoteInfo = openFrameworks;
-		};
-		E4EEB9AB138B136A00A80321 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E4328143138ABC890047C5CB /* openFrameworksLib.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = E4B27C1410CBEB8E00536013;
-			remoteInfo = openFrameworks;
-		};
-/* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		E4C2427710CC5ABF004149E2 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				BBAB23CB13894F3D00AA2426 /* GLUT.framework in CopyFiles */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
-/* Begin PBXFileReference section */
-		06ec8d051fdadfcdf3891afb1b4103c1 /* CoordTopocentric.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = CoordTopocentric.cpp; path = ../../../addons/ofxSatellite/libs/libsgp4/CoordTopocentric.cpp; sourceTree = SOURCE_ROOT; };
-		081fa8a6e82902e0559672e3ac9d2f87 /* ofRectangled.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofRectangled.h; path = ../../../addons/ofxGeo/src/ofRectangled.h; sourceTree = SOURCE_ROOT; };
-		0acf5c25f4063432218faaac6c600297 /* ofVec4d.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofVec4d.h; path = ../../../addons/ofxGeo/src/ofVec4d.h; sourceTree = SOURCE_ROOT; };
-		0f304b76d020460d46c85ea8ae04d7c0 /* ofxSatellite.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxSatellite.h; path = ../../../addons/ofxSatellite/src/ofxSatellite.h; sourceTree = SOURCE_ROOT; };
-		11adc71c2eeceb617585f80fffc3ee5d /* SolarPosition.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = SolarPosition.cpp; path = ../../../addons/ofxSatellite/libs/libsgp4/SolarPosition.cpp; sourceTree = SOURCE_ROOT; };
-		19c22cd05d10f78b32ff80c6be3a9385 /* ofApp.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofApp.cpp; path = src/ofApp.cpp; sourceTree = SOURCE_ROOT; };
-		27c6a66dcd92da674907e4ae6a93d4fd /* Period.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = Period.h; path = ../../../addons/ofxTime/libs/ofxTime/include/ofx/Time/Period.h; sourceTree = SOURCE_ROOT; };
-		2cdc015dfc2cea94d61870dffb72ddb7 /* CoordGeodetic.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = CoordGeodetic.h; path = ../../../addons/ofxSatellite/libs/libsgp4/CoordGeodetic.h; sourceTree = SOURCE_ROOT; };
-		2d778a3949a95d4a0559395b43e07e54 /* SGP4.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = SGP4.h; path = ../../../addons/ofxSatellite/libs/libsgp4/SGP4.h; sourceTree = SOURCE_ROOT; };
-		2f615cee50f03c98ee5f099953ec3fca /* Utils.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = Utils.cpp; path = ../../../addons/ofxSatellite/libs/ofxSatellite/src/Utils.cpp; sourceTree = SOURCE_ROOT; };
-		3225c5826b6e61472c508c84e1c81c08 /* SGP4.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = SGP4.cpp; path = ../../../addons/ofxSatellite/libs/libsgp4/SGP4.cpp; sourceTree = SOURCE_ROOT; };
-		3841f040369b6f65aba7ce80967ced7b /* Util.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = Util.cpp; path = ../../../addons/ofxSatellite/libs/libsgp4/Util.cpp; sourceTree = SOURCE_ROOT; };
-		3becb5a155f6baa3bea761df48071c1f /* Satellite.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = Satellite.cpp; path = ../../../addons/ofxSatellite/libs/ofxSatellite/src/Satellite.cpp; sourceTree = SOURCE_ROOT; };
-		3dd17da6b502ba0ef242735dbfa6d53e /* Eci.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = Eci.h; path = ../../../addons/ofxSatellite/libs/libsgp4/Eci.h; sourceTree = SOURCE_ROOT; };
-		3eb97c972cc87b8d4a58f3c27682a4fb /* ofVec3d.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofVec3d.h; path = ../../../addons/ofxGeo/src/ofVec3d.h; sourceTree = SOURCE_ROOT; };
-		3f0d35aab1021e0edd881c192e4891c3 /* Satellite.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = Satellite.h; path = ../../../addons/ofxSatellite/libs/ofxSatellite/includes/ofx/Satellite/Satellite.h; sourceTree = SOURCE_ROOT; };
-		3fcc3cc63f1fb03fa5a6c417e8e9d111 /* KDTree.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = KDTree.h; path = ../../../addons/ofxSpatialHash/libs/ofxSpatialHash/include/ofx/KDTree.h; sourceTree = SOURCE_ROOT; };
-		44ff7f4131bdb1710cf68aa41f5fe5ff /* Utils.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = Utils.cpp; path = ../../../addons/ofxTime/libs/ofxTime/src/Utils.cpp; sourceTree = SOURCE_ROOT; };
-		46170c7ad3127d015f025a0365f06235 /* Coordinate.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = Coordinate.cpp; path = ../../../addons/ofxGeo/libs/ofxGeo/src/Coordinate.cpp; sourceTree = SOURCE_ROOT; };
-		491e46e314ae2929a0fa5fe2f3202292 /* Utils.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = Utils.h; path = ../../../addons/ofxTime/libs/ofxTime/include/ofx/Time/Utils.h; sourceTree = SOURCE_ROOT; };
-		4a2aec0a46e5294df372c40c89ad7d93 /* Tle.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = Tle.cpp; path = ../../../addons/ofxSatellite/libs/libsgp4/Tle.cpp; sourceTree = SOURCE_ROOT; };
-		4a7076ee8b12630deb46901f2d43776d /* Utils.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = Utils.h; path = ../../../addons/ofxGeo/libs/ofxGeo/includes/ofx/Geo/Utils.h; sourceTree = SOURCE_ROOT; };
-		4cb37f6b6ba03e50196a5e192ac94b5f /* Utils.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = Utils.h; path = ../../../addons/ofxSatellite/libs/ofxSatellite/includes/ofx/Satellite/Utils.h; sourceTree = SOURCE_ROOT; };
-		57ac19537d7e9dc0b7f69f9708140359 /* UTMLocationBounds.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = UTMLocationBounds.cpp; path = ../../../addons/ofxGeo/libs/ofxGeo/src/UTMLocationBounds.cpp; sourceTree = SOURCE_ROOT; };
-		5eba84663ef1276a176a39d69ee2802d /* Tle.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = Tle.h; path = ../../../addons/ofxSatellite/libs/libsgp4/Tle.h; sourceTree = SOURCE_ROOT; };
-		604bb71b812e172ad8fa62c97ae01496 /* UTMLocation.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = UTMLocation.cpp; path = ../../../addons/ofxGeo/libs/ofxGeo/src/UTMLocation.cpp; sourceTree = SOURCE_ROOT; };
-		60e0f24878474a4aee71d50af2678c23 /* Vector.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = Vector.cpp; path = ../../../addons/ofxSatellite/libs/libsgp4/Vector.cpp; sourceTree = SOURCE_ROOT; };
-		63972d14341aff0087caf89fe7c16ebf /* UTMLocationBounds.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = UTMLocationBounds.h; path = ../../../addons/ofxGeo/libs/ofxGeo/includes/ofx/Geo/UTMLocationBounds.h; sourceTree = SOURCE_ROOT; };
-		66b0e95189d928bb08b77e74a613b782 /* OrbitalElements.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = OrbitalElements.cpp; path = ../../../addons/ofxSatellite/libs/libsgp4/OrbitalElements.cpp; sourceTree = SOURCE_ROOT; };
-		6782f8ccbc167c8e048d4493a2853b93 /* UTM.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = UTM.h; path = ../../../addons/ofxGeo/libs/UTM/includes/UTM/UTM.h; sourceTree = SOURCE_ROOT; };
-		699d60a62bcfd7b740ff0b62a648a2eb /* CoordinateBounds.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = CoordinateBounds.cpp; path = ../../../addons/ofxGeo/libs/ofxGeo/src/CoordinateBounds.cpp; sourceTree = SOURCE_ROOT; };
-		75ec6bfab43d69c49ca2fa7eb7431361 /* DateTime.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = DateTime.h; path = ../../../addons/ofxSatellite/libs/libsgp4/DateTime.h; sourceTree = SOURCE_ROOT; };
-		7d6bd8be655da4a729dd8ef58cb572cb /* DecayedException.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = DecayedException.h; path = ../../../addons/ofxSatellite/libs/libsgp4/DecayedException.h; sourceTree = SOURCE_ROOT; };
-		84f6287fa54b66c746947875f6690182 /* ofApp.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofApp.h; path = src/ofApp.h; sourceTree = SOURCE_ROOT; };
-		89474d2ea08f16fbc6ae438b7a0da619 /* Observer.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = Observer.cpp; path = ../../../addons/ofxSatellite/libs/libsgp4/Observer.cpp; sourceTree = SOURCE_ROOT; };
-		8cd80811b2f6fea24395fb70e5754e83 /* Utils.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = Utils.cpp; path = ../../../addons/ofxGeo/libs/ofxGeo/src/Utils.cpp; sourceTree = SOURCE_ROOT; };
-		8f3df41cc44878753f29bde5bf5d1167 /* Interval.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = Interval.cpp; path = ../../../addons/ofxTime/libs/ofxTime/src/Interval.cpp; sourceTree = SOURCE_ROOT; };
-		910a940620fcfdf8e5204e2dc6f41640 /* TleException.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = TleException.h; path = ../../../addons/ofxSatellite/libs/libsgp4/TleException.h; sourceTree = SOURCE_ROOT; };
-		9a68ac2707e7e74677fbc56a31b2804b /* CoordinateBounds.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = CoordinateBounds.h; path = ../../../addons/ofxGeo/libs/ofxGeo/includes/ofx/Geo/CoordinateBounds.h; sourceTree = SOURCE_ROOT; };
-		9cd816e4bb7c54734cb150929c8338e7 /* Util.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = Util.h; path = ../../../addons/ofxSatellite/libs/libsgp4/Util.h; sourceTree = SOURCE_ROOT; };
-		BBAB23BE13894E4700AA2426 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = ../../../libs/glut/lib/osx/GLUT.framework; sourceTree = "<group>"; };
-		E4328143138ABC890047C5CB /* openFrameworksLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = openFrameworksLib.xcodeproj; path = ../../../libs/openFrameworksCompiled/project/osx/openFrameworksLib.xcodeproj; sourceTree = SOURCE_ROOT; };
-		E45BE9710E8CC7DD009D7055 /* AGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AGL.framework; path = /System/Library/Frameworks/AGL.framework; sourceTree = "<absolute>"; };
-		E45BE9720E8CC7DD009D7055 /* ApplicationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApplicationServices.framework; path = /System/Library/Frameworks/ApplicationServices.framework; sourceTree = "<absolute>"; };
-		E45BE9730E8CC7DD009D7055 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = /System/Library/Frameworks/AudioToolbox.framework; sourceTree = "<absolute>"; };
-		E45BE9750E8CC7DD009D7055 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = /System/Library/Frameworks/CoreAudio.framework; sourceTree = "<absolute>"; };
-		E45BE9760E8CC7DD009D7055 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = /System/Library/Frameworks/CoreFoundation.framework; sourceTree = "<absolute>"; };
-		E45BE9770E8CC7DD009D7055 /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = /System/Library/Frameworks/CoreServices.framework; sourceTree = "<absolute>"; };
-		E45BE9790E8CC7DD009D7055 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = /System/Library/Frameworks/OpenGL.framework; sourceTree = "<absolute>"; };
-		E45BE97A0E8CC7DD009D7055 /* QuickTime.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickTime.framework; path = /System/Library/Frameworks/QuickTime.framework; sourceTree = "<absolute>"; };
-		E4B69B5B0A3A1756003C02F2 /* example_passpredictDebug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = example_passpredictDebug.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		E4B69E1D0A3A1BDC003C02F2 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = src/main.cpp; sourceTree = SOURCE_ROOT; };
-		E4B6FCAD0C3E899E008CF71C /* openFrameworks-Info.plist */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.xml; path = "openFrameworks-Info.plist"; sourceTree = "<group>"; };
-		E4C2424410CC5A17004149E2 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
-		E4C2424510CC5A17004149E2 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
-		E4C2424610CC5A17004149E2 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = /System/Library/Frameworks/IOKit.framework; sourceTree = "<absolute>"; };
-		E4EB691F138AFCF100A09F29 /* CoreOF.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = CoreOF.xcconfig; path = ../../../libs/openFrameworksCompiled/project/osx/CoreOF.xcconfig; sourceTree = SOURCE_ROOT; };
-		E4EB6923138AFD0F00A09F29 /* Project.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Project.xcconfig; sourceTree = "<group>"; };
-		E7E077E415D3B63C0020DFD4 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = /System/Library/Frameworks/CoreVideo.framework; sourceTree = "<absolute>"; };
-		E7E077E715D3B6510020DFD4 /* QTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QTKit.framework; path = /System/Library/Frameworks/QTKit.framework; sourceTree = "<absolute>"; };
-		E7F985F515E0DE99003869B5 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = /System/Library/Frameworks/Accelerate.framework; sourceTree = "<absolute>"; };
-		a551a63c96f598937ac720f14153c0f4 /* OrbitalElements.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = OrbitalElements.h; path = ../../../addons/ofxSatellite/libs/libsgp4/OrbitalElements.h; sourceTree = SOURCE_ROOT; };
-		aa203e8e5a958f9ba46f64786133865e /* CoordGeodetic.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = CoordGeodetic.cpp; path = ../../../addons/ofxSatellite/libs/libsgp4/CoordGeodetic.cpp; sourceTree = SOURCE_ROOT; };
-		ad30986094675c81abb2d2bbcc882e4e /* ofVec4d.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofVec4d.cpp; path = ../../../addons/ofxGeo/src/ofVec4d.cpp; sourceTree = SOURCE_ROOT; };
-		ae9c89f270782b85763a355476f8c8e6 /* Period.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = Period.cpp; path = ../../../addons/ofxTime/libs/ofxTime/src/Period.cpp; sourceTree = SOURCE_ROOT; };
-		b029979aab04e790310c1a743f91fc03 /* Globals.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = Globals.cpp; path = ../../../addons/ofxSatellite/libs/libsgp4/Globals.cpp; sourceTree = SOURCE_ROOT; };
-		b5c1290549ddb8c05d8263933d057377 /* Interval.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = Interval.h; path = ../../../addons/ofxTime/libs/ofxTime/include/ofx/Time/Interval.h; sourceTree = SOURCE_ROOT; };
-		b93e3253e66e6b282c408b7cf795b920 /* nanoflann.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = nanoflann.hpp; path = ../../../addons/ofxSpatialHash/libs/nanoflann/include/nanoflann.hpp; sourceTree = SOURCE_ROOT; };
-		ba5b8f4add9046d66ead0aa3ab7572d8 /* UTMLocation.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = UTMLocation.h; path = ../../../addons/ofxGeo/libs/ofxGeo/includes/ofx/Geo/UTMLocation.h; sourceTree = SOURCE_ROOT; };
-		be180c99c925a246bb85a0324e82cbc2 /* CoordTopocentric.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = CoordTopocentric.h; path = ../../../addons/ofxSatellite/libs/libsgp4/CoordTopocentric.h; sourceTree = SOURCE_ROOT; };
-		c55a6a11a379e0f27c032381411d10ed /* Vector.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = Vector.h; path = ../../../addons/ofxSatellite/libs/libsgp4/Vector.h; sourceTree = SOURCE_ROOT; };
-		c7741f5222ea5255dd6710edf2a38c23 /* ofxSpatialHash.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxSpatialHash.h; path = ../../../addons/ofxSpatialHash/src/ofxSpatialHash.h; sourceTree = SOURCE_ROOT; };
-		cf59aa85735dc849b121b2609aa28241 /* SatelliteException.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = SatelliteException.h; path = ../../../addons/ofxSatellite/libs/libsgp4/SatelliteException.h; sourceTree = SOURCE_ROOT; };
-		d0a942c03e58219fb195a518b875aab7 /* ofVec2d.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofVec2d.h; path = ../../../addons/ofxGeo/src/ofVec2d.h; sourceTree = SOURCE_ROOT; };
-		d26663999e7d6113c46b3110faaa2de6 /* ofxGeo.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxGeo.h; path = ../../../addons/ofxGeo/src/ofxGeo.h; sourceTree = SOURCE_ROOT; };
-		d2f7f7850e61cac4b221e799046bcb16 /* SolarPosition.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = SolarPosition.h; path = ../../../addons/ofxSatellite/libs/libsgp4/SolarPosition.h; sourceTree = SOURCE_ROOT; };
-		d36b7ba863c7d8ade8c59d56bcce0770 /* TimeSpan.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = TimeSpan.h; path = ../../../addons/ofxSatellite/libs/libsgp4/TimeSpan.h; sourceTree = SOURCE_ROOT; };
-		dff9e78844130870c9759e8a8c233e8e /* Eci.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = Eci.cpp; path = ../../../addons/ofxSatellite/libs/libsgp4/Eci.cpp; sourceTree = SOURCE_ROOT; };
-		e0ebad6cf2af6ad79be06442040ab860 /* DateTime.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = DateTime.cpp; path = ../../../addons/ofxSatellite/libs/libsgp4/DateTime.cpp; sourceTree = SOURCE_ROOT; };
-		ecaa44979060ba681627a01ef973bddf /* Globals.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = Globals.h; path = ../../../addons/ofxSatellite/libs/libsgp4/Globals.h; sourceTree = SOURCE_ROOT; };
-		f2b6a6aa7c61fcbd6a41fff224cc3347 /* TimeSpan.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = TimeSpan.cpp; path = ../../../addons/ofxSatellite/libs/libsgp4/TimeSpan.cpp; sourceTree = SOURCE_ROOT; };
-		f43c8904807c0f81956584efc57035e1 /* ofRectangled.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofRectangled.cpp; path = ../../../addons/ofxGeo/src/ofRectangled.cpp; sourceTree = SOURCE_ROOT; };
-		f472785ffd33ad7a5a66869c441bbca8 /* Coordinate.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = Coordinate.h; path = ../../../addons/ofxGeo/libs/ofxGeo/includes/ofx/Geo/Coordinate.h; sourceTree = SOURCE_ROOT; };
-		faa8d784a55e0a56e0b7f3f47046e671 /* Observer.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = Observer.h; path = ../../../addons/ofxSatellite/libs/libsgp4/Observer.h; sourceTree = SOURCE_ROOT; };
-		feeeeece3c65ca4f0b66606ed1fd80c9 /* ofxTime.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxTime.h; path = ../../../addons/ofxTime/src/ofxTime.h; sourceTree = SOURCE_ROOT; };
-		ff63913175ed4525ae4d309e584b0546 /* ofVec2d.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofVec2d.cpp; path = ../../../addons/ofxGeo/src/ofVec2d.cpp; sourceTree = SOURCE_ROOT; };
-/* End PBXFileReference section */
-
-/* Begin PBXFrameworksBuildPhase section */
-		E4B69B590A3A1756003C02F2 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E7F985F815E0DEA3003869B5 /* Accelerate.framework in Frameworks */,
-				E7E077E815D3B6510020DFD4 /* QTKit.framework in Frameworks */,
-				E4EB6799138ADC1D00A09F29 /* GLUT.framework in Frameworks */,
-				E4328149138ABC9F0047C5CB /* openFrameworksDebug.a in Frameworks */,
-				E45BE97B0E8CC7DD009D7055 /* AGL.framework in Frameworks */,
-				E45BE97C0E8CC7DD009D7055 /* ApplicationServices.framework in Frameworks */,
-				E45BE97D0E8CC7DD009D7055 /* AudioToolbox.framework in Frameworks */,
-				E45BE97F0E8CC7DD009D7055 /* CoreAudio.framework in Frameworks */,
-				E45BE9800E8CC7DD009D7055 /* CoreFoundation.framework in Frameworks */,
-				E45BE9810E8CC7DD009D7055 /* CoreServices.framework in Frameworks */,
-				E45BE9830E8CC7DD009D7055 /* OpenGL.framework in Frameworks */,
-				E45BE9840E8CC7DD009D7055 /* QuickTime.framework in Frameworks */,
-				E4C2424710CC5A17004149E2 /* AppKit.framework in Frameworks */,
-				E4C2424810CC5A17004149E2 /* Cocoa.framework in Frameworks */,
-				E4C2424910CC5A17004149E2 /* IOKit.framework in Frameworks */,
-				E7E077E515D3B63C0020DFD4 /* CoreVideo.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
-
-/* Begin PBXGroup section */
-		0593f71a6c41bcbcd91d9c0c0522315b /* ofx */ = {
-			isa = PBXGroup;
-			children = (
-				3fcc3cc63f1fb03fa5a6c417e8e9d111 /* KDTree.h */,
-			);
-			name = ofx;
-			sourceTree = "<group>";
-		};
-		05ad41a21f8a492c4a0ad67a42378ccd /* include */ = {
-			isa = PBXGroup;
-			children = (
-				28d3c5052c346d0bf45bbf6cf58bb614 /* ofx */,
-			);
-			name = include;
-			sourceTree = "<group>";
-		};
-		07675191e5cbbf4211173c08e0b0b64e /* ofxGeo */ = {
-			isa = PBXGroup;
-			children = (
-				0f391434a4be149e83611ae6b072370d /* src */,
-				0840fe8eec520be46ed856c2867d07b6 /* libs */,
-			);
-			name = ofxGeo;
-			sourceTree = "<group>";
-		};
-		0840fe8eec520be46ed856c2867d07b6 /* libs */ = {
-			isa = PBXGroup;
-			children = (
-				916d885e62e86a4cf0a50712886cc5e9 /* ofxGeo */,
-				732ff1f0f380095f0c84035fcf6660d2 /* UTM */,
-			);
-			name = libs;
-			sourceTree = "<group>";
-		};
-		0f391434a4be149e83611ae6b072370d /* src */ = {
-			isa = PBXGroup;
-			children = (
-				f43c8904807c0f81956584efc57035e1 /* ofRectangled.cpp */,
-				081fa8a6e82902e0559672e3ac9d2f87 /* ofRectangled.h */,
-				ff63913175ed4525ae4d309e584b0546 /* ofVec2d.cpp */,
-				d0a942c03e58219fb195a518b875aab7 /* ofVec2d.h */,
-				3eb97c972cc87b8d4a58f3c27682a4fb /* ofVec3d.h */,
-				ad30986094675c81abb2d2bbcc882e4e /* ofVec4d.cpp */,
-				0acf5c25f4063432218faaac6c600297 /* ofVec4d.h */,
-				d26663999e7d6113c46b3110faaa2de6 /* ofxGeo.h */,
-			);
-			name = src;
-			sourceTree = "<group>";
-		};
-		12f92d22188e8072b15300b90396f278 /* src */ = {
-			isa = PBXGroup;
-			children = (
-				3becb5a155f6baa3bea761df48071c1f /* Satellite.cpp */,
-				2f615cee50f03c98ee5f099953ec3fca /* Utils.cpp */,
-			);
-			name = src;
-			sourceTree = "<group>";
-		};
-		262e56c22936a7dc64237e39f172d1c1 /* libsgp4 */ = {
-			isa = PBXGroup;
-			children = (
-				aa203e8e5a958f9ba46f64786133865e /* CoordGeodetic.cpp */,
-				2cdc015dfc2cea94d61870dffb72ddb7 /* CoordGeodetic.h */,
-				06ec8d051fdadfcdf3891afb1b4103c1 /* CoordTopocentric.cpp */,
-				be180c99c925a246bb85a0324e82cbc2 /* CoordTopocentric.h */,
-				e0ebad6cf2af6ad79be06442040ab860 /* DateTime.cpp */,
-				75ec6bfab43d69c49ca2fa7eb7431361 /* DateTime.h */,
-				7d6bd8be655da4a729dd8ef58cb572cb /* DecayedException.h */,
-				dff9e78844130870c9759e8a8c233e8e /* Eci.cpp */,
-				3dd17da6b502ba0ef242735dbfa6d53e /* Eci.h */,
-				b029979aab04e790310c1a743f91fc03 /* Globals.cpp */,
-				ecaa44979060ba681627a01ef973bddf /* Globals.h */,
-				89474d2ea08f16fbc6ae438b7a0da619 /* Observer.cpp */,
-				faa8d784a55e0a56e0b7f3f47046e671 /* Observer.h */,
-				66b0e95189d928bb08b77e74a613b782 /* OrbitalElements.cpp */,
-				a551a63c96f598937ac720f14153c0f4 /* OrbitalElements.h */,
-				cf59aa85735dc849b121b2609aa28241 /* SatelliteException.h */,
-				3225c5826b6e61472c508c84e1c81c08 /* SGP4.cpp */,
-				2d778a3949a95d4a0559395b43e07e54 /* SGP4.h */,
-				11adc71c2eeceb617585f80fffc3ee5d /* SolarPosition.cpp */,
-				d2f7f7850e61cac4b221e799046bcb16 /* SolarPosition.h */,
-				f2b6a6aa7c61fcbd6a41fff224cc3347 /* TimeSpan.cpp */,
-				d36b7ba863c7d8ade8c59d56bcce0770 /* TimeSpan.h */,
-				4a2aec0a46e5294df372c40c89ad7d93 /* Tle.cpp */,
-				5eba84663ef1276a176a39d69ee2802d /* Tle.h */,
-				910a940620fcfdf8e5204e2dc6f41640 /* TleException.h */,
-				3841f040369b6f65aba7ce80967ced7b /* Util.cpp */,
-				9cd816e4bb7c54734cb150929c8338e7 /* Util.h */,
-				60e0f24878474a4aee71d50af2678c23 /* Vector.cpp */,
-				c55a6a11a379e0f27c032381411d10ed /* Vector.h */,
-			);
-			name = libsgp4;
-			sourceTree = "<group>";
-		};
-		28d3c5052c346d0bf45bbf6cf58bb614 /* ofx */ = {
-			isa = PBXGroup;
-			children = (
-				cef17e9e6c28478748b8d76cdab358ae /* Time */,
-			);
-			name = ofx;
-			sourceTree = "<group>";
-		};
-		385a835b12a0021297521f5a554df0ae /* src */ = {
-			isa = PBXGroup;
-			children = (
-				c7741f5222ea5255dd6710edf2a38c23 /* ofxSpatialHash.h */,
-			);
-			name = src;
-			sourceTree = "<group>";
-		};
-		4491af5378192c5595d986104e06c58b /* includes */ = {
-			isa = PBXGroup;
-			children = (
-				b9cec375df9a38e10d7d288eb5a420e4 /* UTM */,
-			);
-			name = includes;
-			sourceTree = "<group>";
-		};
-		5220c728f46bb818490cea40b8b2ba05 /* includes */ = {
-			isa = PBXGroup;
-			children = (
-				eaea3a1cbaa715919906657c22e30d7d /* ofx */,
-			);
-			name = includes;
-			sourceTree = "<group>";
-		};
-		5898d0a0989b0e33ae378c0dc8d8a10d /* ofxTime */ = {
-			isa = PBXGroup;
-			children = (
-				05ad41a21f8a492c4a0ad67a42378ccd /* include */,
-				f0c6e3b6ee7399b21c2dc328027e69de /* src */,
-			);
-			name = ofxTime;
-			sourceTree = "<group>";
-		};
-		5909eb10e8b446fcc7f7b1e648080d1a /* includes */ = {
-			isa = PBXGroup;
-			children = (
-				d76c491d7059588992e88a4258c198c3 /* ofx */,
-			);
-			name = includes;
-			sourceTree = "<group>";
-		};
-		5ded4e43304c2a8c5dae60268e6e96d1 /* libs */ = {
-			isa = PBXGroup;
-			children = (
-				262e56c22936a7dc64237e39f172d1c1 /* libsgp4 */,
-				c167e376f5f61d4647dfed1a74d3e8da /* ofxSatellite */,
-			);
-			name = libs;
-			sourceTree = "<group>";
-		};
-		673c542c90f960253390265ed4064935 /* ofxSatellite */ = {
-			isa = PBXGroup;
-			children = (
-				90f390d37066e2dca34e5ce7cb1586e2 /* src */,
-				5ded4e43304c2a8c5dae60268e6e96d1 /* libs */,
-			);
-			name = ofxSatellite;
-			sourceTree = "<group>";
-		};
-		6c9af35f1a9916752055a0f3b8655795 /* libs */ = {
-			isa = PBXGroup;
-			children = (
-				cf1d40b026e188cb81fa4f13bbf8c98f /* nanoflann */,
-				b40f26471d7470b269e6f4d6d06e6bcd /* ofxSpatialHash */,
-			);
-			name = libs;
-			sourceTree = "<group>";
-		};
-		6f8ab0a4b467add4afcb478ce89de376 /* ofxSpatialHash */ = {
-			isa = PBXGroup;
-			children = (
-				385a835b12a0021297521f5a554df0ae /* src */,
-				6c9af35f1a9916752055a0f3b8655795 /* libs */,
-			);
-			name = ofxSpatialHash;
-			sourceTree = "<group>";
-		};
-		732ff1f0f380095f0c84035fcf6660d2 /* UTM */ = {
-			isa = PBXGroup;
-			children = (
-				4491af5378192c5595d986104e06c58b /* includes */,
-			);
-			name = UTM;
-			sourceTree = "<group>";
-		};
-		7c1fbbca7cae2dfad0f111235e7e39e1 /* include */ = {
-			isa = PBXGroup;
-			children = (
-				b93e3253e66e6b282c408b7cf795b920 /* nanoflann.hpp */,
-			);
-			name = include;
-			sourceTree = "<group>";
-		};
-		90f390d37066e2dca34e5ce7cb1586e2 /* src */ = {
-			isa = PBXGroup;
-			children = (
-				0f304b76d020460d46c85ea8ae04d7c0 /* ofxSatellite.h */,
-			);
-			name = src;
-			sourceTree = "<group>";
-		};
-		916d885e62e86a4cf0a50712886cc5e9 /* ofxGeo */ = {
-			isa = PBXGroup;
-			children = (
-				5220c728f46bb818490cea40b8b2ba05 /* includes */,
-				bd20485d4bf06b8ddc9594d2289af8b2 /* src */,
-			);
-			name = ofxGeo;
-			sourceTree = "<group>";
-		};
-		9361047ae9b632012c70ab0892d340a0 /* Geo */ = {
-			isa = PBXGroup;
-			children = (
-				f472785ffd33ad7a5a66869c441bbca8 /* Coordinate.h */,
-				9a68ac2707e7e74677fbc56a31b2804b /* CoordinateBounds.h */,
-				4a7076ee8b12630deb46901f2d43776d /* Utils.h */,
-				ba5b8f4add9046d66ead0aa3ab7572d8 /* UTMLocation.h */,
-				63972d14341aff0087caf89fe7c16ebf /* UTMLocationBounds.h */,
-			);
-			name = Geo;
-			sourceTree = "<group>";
-		};
-		BB4B014C10F69532006C3DED /* addons */ = {
-			isa = PBXGroup;
-			children = (
-				07675191e5cbbf4211173c08e0b0b64e /* ofxGeo */,
-				673c542c90f960253390265ed4064935 /* ofxSatellite */,
-				6f8ab0a4b467add4afcb478ce89de376 /* ofxSpatialHash */,
-				e580da17dac1e2210aa6bb6afbc77a9b /* ofxTime */,
-			);
-			name = addons;
-			sourceTree = "<group>";
-		};
-		BBAB23C913894ECA00AA2426 /* system frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				E7F985F515E0DE99003869B5 /* Accelerate.framework */,
-				E4C2424410CC5A17004149E2 /* AppKit.framework */,
-				E4C2424510CC5A17004149E2 /* Cocoa.framework */,
-				E4C2424610CC5A17004149E2 /* IOKit.framework */,
-				E45BE9710E8CC7DD009D7055 /* AGL.framework */,
-				E45BE9720E8CC7DD009D7055 /* ApplicationServices.framework */,
-				E45BE9730E8CC7DD009D7055 /* AudioToolbox.framework */,
-				E45BE9750E8CC7DD009D7055 /* CoreAudio.framework */,
-				E45BE9760E8CC7DD009D7055 /* CoreFoundation.framework */,
-				E45BE9770E8CC7DD009D7055 /* CoreServices.framework */,
-				E45BE9790E8CC7DD009D7055 /* OpenGL.framework */,
-				E45BE97A0E8CC7DD009D7055 /* QuickTime.framework */,
-				E7E077E415D3B63C0020DFD4 /* CoreVideo.framework */,
-				E7E077E715D3B6510020DFD4 /* QTKit.framework */,
-			);
-			name = "system frameworks";
-			sourceTree = "<group>";
-		};
-		BBAB23CA13894EDB00AA2426 /* 3rd party frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				BBAB23BE13894E4700AA2426 /* GLUT.framework */,
-			);
-			name = "3rd party frameworks";
-			sourceTree = "<group>";
-		};
-		E4328144138ABC890047C5CB /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				E4328148138ABC890047C5CB /* openFrameworksDebug.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		E45BE5980E8CC70C009D7055 /* frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				BBAB23CA13894EDB00AA2426 /* 3rd party frameworks */,
-				BBAB23C913894ECA00AA2426 /* system frameworks */,
-			);
-			name = frameworks;
-			sourceTree = "<group>";
-		};
-		E4B69B4A0A3A1720003C02F2 = {
-			isa = PBXGroup;
-			children = (
-				E4B6FCAD0C3E899E008CF71C /* openFrameworks-Info.plist */,
-				E4EB6923138AFD0F00A09F29 /* Project.xcconfig */,
-				E4B69E1C0A3A1BDC003C02F2 /* src */,
-				E4EEC9E9138DF44700A80321 /* openFrameworks */,
-				BB4B014C10F69532006C3DED /* addons */,
-				E45BE5980E8CC70C009D7055 /* frameworks */,
-				E4B69B5B0A3A1756003C02F2 /* example_passpredictDebug.app */,
-			);
-			sourceTree = "<group>";
-		};
-		E4B69E1C0A3A1BDC003C02F2 /* src */ = {
-			isa = PBXGroup;
-			children = (
-				E4B69E1D0A3A1BDC003C02F2 /* main.cpp */,
-				19c22cd05d10f78b32ff80c6be3a9385 /* ofApp.cpp */,
-				84f6287fa54b66c746947875f6690182 /* ofApp.h */,
-			);
-			path = src;
-			sourceTree = SOURCE_ROOT;
-		};
-		E4EEC9E9138DF44700A80321 /* openFrameworks */ = {
-			isa = PBXGroup;
-			children = (
-				E4EB691F138AFCF100A09F29 /* CoreOF.xcconfig */,
-				E4328143138ABC890047C5CB /* openFrameworksLib.xcodeproj */,
-			);
-			name = openFrameworks;
-			sourceTree = "<group>";
-		};
-		b40f26471d7470b269e6f4d6d06e6bcd /* ofxSpatialHash */ = {
-			isa = PBXGroup;
-			children = (
-				e953f1f92651a00c0dc78c82ada60e0e /* include */,
-			);
-			name = ofxSpatialHash;
-			sourceTree = "<group>";
-		};
-		b9cec375df9a38e10d7d288eb5a420e4 /* UTM */ = {
-			isa = PBXGroup;
-			children = (
-				6782f8ccbc167c8e048d4493a2853b93 /* UTM.h */,
-			);
-			name = UTM;
-			sourceTree = "<group>";
-		};
-		bd20485d4bf06b8ddc9594d2289af8b2 /* src */ = {
-			isa = PBXGroup;
-			children = (
-				46170c7ad3127d015f025a0365f06235 /* Coordinate.cpp */,
-				699d60a62bcfd7b740ff0b62a648a2eb /* CoordinateBounds.cpp */,
-				8cd80811b2f6fea24395fb70e5754e83 /* Utils.cpp */,
-				604bb71b812e172ad8fa62c97ae01496 /* UTMLocation.cpp */,
-				57ac19537d7e9dc0b7f69f9708140359 /* UTMLocationBounds.cpp */,
-			);
-			name = src;
-			sourceTree = "<group>";
-		};
-		c167e376f5f61d4647dfed1a74d3e8da /* ofxSatellite */ = {
-			isa = PBXGroup;
-			children = (
-				5909eb10e8b446fcc7f7b1e648080d1a /* includes */,
-				12f92d22188e8072b15300b90396f278 /* src */,
-			);
-			name = ofxSatellite;
-			sourceTree = "<group>";
-		};
-		cef17e9e6c28478748b8d76cdab358ae /* Time */ = {
-			isa = PBXGroup;
-			children = (
-				b5c1290549ddb8c05d8263933d057377 /* Interval.h */,
-				27c6a66dcd92da674907e4ae6a93d4fd /* Period.h */,
-				491e46e314ae2929a0fa5fe2f3202292 /* Utils.h */,
-			);
-			name = Time;
-			sourceTree = "<group>";
-		};
-		cf1d40b026e188cb81fa4f13bbf8c98f /* nanoflann */ = {
-			isa = PBXGroup;
-			children = (
-				7c1fbbca7cae2dfad0f111235e7e39e1 /* include */,
-			);
-			name = nanoflann;
-			sourceTree = "<group>";
-		};
-		d76c491d7059588992e88a4258c198c3 /* ofx */ = {
-			isa = PBXGroup;
-			children = (
-				dcc6ca999b435847e784e8e8d9627b0d /* Satellite */,
-			);
-			name = ofx;
-			sourceTree = "<group>";
-		};
-		dcc6ca999b435847e784e8e8d9627b0d /* Satellite */ = {
-			isa = PBXGroup;
-			children = (
-				3f0d35aab1021e0edd881c192e4891c3 /* Satellite.h */,
-				4cb37f6b6ba03e50196a5e192ac94b5f /* Utils.h */,
-			);
-			name = Satellite;
-			sourceTree = "<group>";
-		};
-		e013b1666a0cb6749dc18982ea3d1f27 /* libs */ = {
-			isa = PBXGroup;
-			children = (
-				5898d0a0989b0e33ae378c0dc8d8a10d /* ofxTime */,
-			);
-			name = libs;
-			sourceTree = "<group>";
-		};
-		e580da17dac1e2210aa6bb6afbc77a9b /* ofxTime */ = {
-			isa = PBXGroup;
-			children = (
-				f54275bc9edef24a0d844d151ed528bd /* src */,
-				e013b1666a0cb6749dc18982ea3d1f27 /* libs */,
-			);
-			name = ofxTime;
-			sourceTree = "<group>";
-		};
-		e953f1f92651a00c0dc78c82ada60e0e /* include */ = {
-			isa = PBXGroup;
-			children = (
-				0593f71a6c41bcbcd91d9c0c0522315b /* ofx */,
-			);
-			name = include;
-			sourceTree = "<group>";
-		};
-		eaea3a1cbaa715919906657c22e30d7d /* ofx */ = {
-			isa = PBXGroup;
-			children = (
-				9361047ae9b632012c70ab0892d340a0 /* Geo */,
-			);
-			name = ofx;
-			sourceTree = "<group>";
-		};
-		f0c6e3b6ee7399b21c2dc328027e69de /* src */ = {
-			isa = PBXGroup;
-			children = (
-				8f3df41cc44878753f29bde5bf5d1167 /* Interval.cpp */,
-				ae9c89f270782b85763a355476f8c8e6 /* Period.cpp */,
-				44ff7f4131bdb1710cf68aa41f5fe5ff /* Utils.cpp */,
-			);
-			name = src;
-			sourceTree = "<group>";
-		};
-		f54275bc9edef24a0d844d151ed528bd /* src */ = {
-			isa = PBXGroup;
-			children = (
-				feeeeece3c65ca4f0b66606ed1fd80c9 /* ofxTime.h */,
-			);
-			name = src;
-			sourceTree = "<group>";
-		};
-/* End PBXGroup section */
-
-/* Begin PBXNativeTarget section */
-		E4B69B5A0A3A1756003C02F2 /* example_passpredict */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = E4B69B5F0A3A1757003C02F2 /* Build configuration list for PBXNativeTarget "example_passpredict" */;
-			buildPhases = (
-				E4B69B580A3A1756003C02F2 /* Sources */,
-				E4B69B590A3A1756003C02F2 /* Frameworks */,
-				E4B6FFFD0C3F9AB9008CF71C /* ShellScript */,
-				E4C2427710CC5ABF004149E2 /* CopyFiles */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				E4EEB9AC138B136A00A80321 /* PBXTargetDependency */,
-			);
-			name = example_passpredict;
-			productName = myOFApp;
-			productReference = E4B69B5B0A3A1756003C02F2 /* example_passpredictDebug.app */;
-			productType = "com.apple.product-type.application";
-		};
-/* End PBXNativeTarget section */
-
-/* Begin PBXProject section */
-		E4B69B4C0A3A1720003C02F2 /* Project object */ = {
-			isa = PBXProject;
-			attributes = {
-				LastUpgradeCheck = 0460;
-			};
-			buildConfigurationList = E4B69B4D0A3A1720003C02F2 /* Build configuration list for PBXProject "example_passpredict" */;
-			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
-			hasScannedForEncodings = 0;
-			knownRegions = (
-				English,
-				Japanese,
-				French,
-				German,
-			);
-			mainGroup = E4B69B4A0A3A1720003C02F2;
-			productRefGroup = E4B69B4A0A3A1720003C02F2;
-			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = E4328144138ABC890047C5CB /* Products */;
-					ProjectRef = E4328143138ABC890047C5CB /* openFrameworksLib.xcodeproj */;
-				},
-			);
-			projectRoot = "";
-			targets = (
-				E4B69B5A0A3A1756003C02F2 /* example_passpredict */,
-			);
-		};
-/* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		E4328148138ABC890047C5CB /* openFrameworksDebug.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = openFrameworksDebug.a;
-			remoteRef = E4328147138ABC890047C5CB /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		E4B6FFFD0C3F9AB9008CF71C /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "cp -f ../../../libs/fmodex/lib/osx/libfmodex.dylib \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/MacOS/libfmodex.dylib\"; install_name_tool -change ./libfmodex.dylib @executable_path/libfmodex.dylib \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/MacOS/$PRODUCT_NAME\";\nmkdir -p \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/Resources/\"\ncp -f \"$ICON_FILE\" \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/Resources/\"\n";
-		};
-/* End PBXShellScriptBuildPhase section */
-
-/* Begin PBXSourcesBuildPhase section */
-		E4B69B580A3A1756003C02F2 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */,
-				4b14cedcc7195a4d1f8e28b4f9635a89 /* ofApp.cpp in Sources */,
-				3e7d272bb14cf0cd21ab9bf5a7273d0b /* ofRectangled.cpp in Sources */,
-				508d5ecda7faff379f58128a8a24d1e4 /* ofVec2d.cpp in Sources */,
-				9d2002dcca863f80989626bd8bf7bf57 /* ofVec4d.cpp in Sources */,
-				75680dd78047c04373769c5b8d8aaa52 /* Coordinate.cpp in Sources */,
-				08cd2256307b048a8152d1c6c07891f2 /* CoordinateBounds.cpp in Sources */,
-				76efc0b4cd58c2a247731b074f349415 /* Utils.cpp in Sources */,
-				f43c0efc1c2c6fa257b0be375dc91d9f /* UTMLocation.cpp in Sources */,
-				49fbbb743b8337e09f42eaff123dadaa /* UTMLocationBounds.cpp in Sources */,
-				21d5b299e31341b5d655ea6ef6025b86 /* CoordGeodetic.cpp in Sources */,
-				045a2b483916e01209927c7655100ed0 /* CoordTopocentric.cpp in Sources */,
-				8919dbc6e0dcfc437dcffb905cafc401 /* DateTime.cpp in Sources */,
-				8d5f19ebd8346746ae55e39bcb97825b /* Eci.cpp in Sources */,
-				4d81191b49715b34c8fa65496baf354a /* Globals.cpp in Sources */,
-				265bab017954b6cc1d2a3d789ffd3cc3 /* Observer.cpp in Sources */,
-				8285a7f277ac7d2038387981930667e2 /* OrbitalElements.cpp in Sources */,
-				02f878e84cd6299ed22361f45efd58df /* SGP4.cpp in Sources */,
-				1f122c94015b73a1aa4aa43055aa9f63 /* SolarPosition.cpp in Sources */,
-				929aecb71883296976f4bc83327c95d1 /* TimeSpan.cpp in Sources */,
-				cae4fc54449de204f0aaf087a036ca27 /* Tle.cpp in Sources */,
-				a5c693a7acc97a9e70f942002fcd7f18 /* Util.cpp in Sources */,
-				a45ae417dc366d2319d3a19292eeefed /* Vector.cpp in Sources */,
-				651de076cc112b6101e5c2bce436b639 /* Satellite.cpp in Sources */,
-				7701602118c70c10291e49c88e0fa855 /* Utils.cpp in Sources */,
-				fd60be5ce7bbd47bd60d6f5bf702fb10 /* Interval.cpp in Sources */,
-				5847aa7c8b6171d9fe1cc8d585df1b90 /* Period.cpp in Sources */,
-				532af6d7e3cb5ae24d160140f3ad5d7c /* Utils.cpp in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		E4EEB9AC138B136A00A80321 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = openFrameworks;
-			targetProxy = E4EEB9AB138B136A00A80321 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
-/* Begin XCBuildConfiguration section */
-		E4B69B4E0A3A1720003C02F2 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E4EB6923138AFD0F00A09F29 /* Project.xcconfig */;
-			buildSettings = {
-				ARCHS = "$(NATIVE_ARCH)";
-				CONFIGURATION_BUILD_DIR = "$(SRCROOT)/bin/";
-				COPY_PHASE_STRIP = NO;
-				DEAD_CODE_STRIPPING = YES;
-				GCC_AUTO_VECTORIZATION = YES;
-				GCC_ENABLE_SSE3_EXTENSIONS = YES;
-				GCC_ENABLE_SUPPLEMENTAL_SSE3_INSTRUCTIONS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
-				GCC_WARN_ABOUT_INVALID_OFFSETOF_MACRO = NO;
-				GCC_WARN_ALLOW_INCOMPLETE_PROTOCOL = NO;
-				GCC_WARN_UNINITIALIZED_AUTOS = NO;
-				GCC_WARN_UNUSED_VALUE = NO;
-				GCC_WARN_UNUSED_VARIABLE = NO;
-				HEADER_SEARCH_PATHS = (
-					"$(OF_CORE_HEADERS)",
-					src,
-					../../../addons/ofxGeo/libs,
-					../../../addons/ofxGeo/libs/UTM,
-					../../../addons/ofxGeo/libs/UTM/includes,
-					../../../addons/ofxGeo/libs/UTM/includes/UTM,
-					../../../addons/ofxGeo/libs/ofxGeo,
-					../../../addons/ofxGeo/libs/ofxGeo/includes,
-					../../../addons/ofxGeo/libs/ofxGeo/includes/ofx,
-					../../../addons/ofxGeo/libs/ofxGeo/includes/ofx/Geo,
-					../../../addons/ofxGeo/libs/ofxGeo/src,
-					../../../addons/ofxGeo/src,
-					../../../addons/ofxSatellite/libs,
-					../../../addons/ofxSatellite/libs/libsgp4,
-					../../../addons/ofxSatellite/libs/ofxSatellite,
-					../../../addons/ofxSatellite/libs/ofxSatellite/includes,
-					../../../addons/ofxSatellite/libs/ofxSatellite/includes/ofx,
-					../../../addons/ofxSatellite/libs/ofxSatellite/includes/ofx/Satellite,
-					../../../addons/ofxSatellite/libs/ofxSatellite/src,
-					../../../addons/ofxSatellite/src,
-					../../../addons/ofxSpatialHash/libs,
-					../../../addons/ofxSpatialHash/libs/nanoflann,
-					../../../addons/ofxSpatialHash/libs/nanoflann/include,
-					../../../addons/ofxSpatialHash/libs/ofxSpatialHash,
-					../../../addons/ofxSpatialHash/libs/ofxSpatialHash/include,
-					../../../addons/ofxSpatialHash/libs/ofxSpatialHash/include/ofx,
-					../../../addons/ofxSpatialHash/libs/ofxSpatialHash/src,
-					../../../addons/ofxSpatialHash/src,
-					../../../addons/ofxTime/libs,
-					../../../addons/ofxTime/libs/ofxTime,
-					../../../addons/ofxTime/libs/ofxTime/include,
-					../../../addons/ofxTime/libs/ofxTime/include/ofx,
-					../../../addons/ofxTime/libs/ofxTime/include/ofx/Time,
-					../../../addons/ofxTime/libs/ofxTime/src,
-					../../../addons/ofxTime/src,
-				);
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
-				OTHER_CPLUSPLUSFLAGS = (
-					"-D__MACOSX_CORE__",
-					"-lpthread",
-					"-mtune=native",
-				);
-				SDKROOT = macosx;
-			};
-			name = Debug;
-		};
-		E4B69B4F0A3A1720003C02F2 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E4EB6923138AFD0F00A09F29 /* Project.xcconfig */;
-			buildSettings = {
-				ARCHS = "$(NATIVE_ARCH)";
-				CONFIGURATION_BUILD_DIR = "$(SRCROOT)/bin/";
-				COPY_PHASE_STRIP = YES;
-				DEAD_CODE_STRIPPING = YES;
-				GCC_AUTO_VECTORIZATION = YES;
-				GCC_ENABLE_SSE3_EXTENSIONS = YES;
-				GCC_ENABLE_SUPPLEMENTAL_SSE3_INSTRUCTIONS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 3;
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_UNROLL_LOOPS = YES;
-				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
-				GCC_WARN_ABOUT_INVALID_OFFSETOF_MACRO = NO;
-				GCC_WARN_ALLOW_INCOMPLETE_PROTOCOL = NO;
-				GCC_WARN_UNINITIALIZED_AUTOS = NO;
-				GCC_WARN_UNUSED_VALUE = NO;
-				GCC_WARN_UNUSED_VARIABLE = NO;
-				HEADER_SEARCH_PATHS = (
-					"$(OF_CORE_HEADERS)",
-					src,
-					../../../addons/ofxGeo/libs,
-					../../../addons/ofxGeo/libs/UTM,
-					../../../addons/ofxGeo/libs/UTM/includes,
-					../../../addons/ofxGeo/libs/UTM/includes/UTM,
-					../../../addons/ofxGeo/libs/ofxGeo,
-					../../../addons/ofxGeo/libs/ofxGeo/includes,
-					../../../addons/ofxGeo/libs/ofxGeo/includes/ofx,
-					../../../addons/ofxGeo/libs/ofxGeo/includes/ofx/Geo,
-					../../../addons/ofxGeo/libs/ofxGeo/src,
-					../../../addons/ofxGeo/src,
-					../../../addons/ofxSatellite/libs,
-					../../../addons/ofxSatellite/libs/libsgp4,
-					../../../addons/ofxSatellite/libs/ofxSatellite,
-					../../../addons/ofxSatellite/libs/ofxSatellite/includes,
-					../../../addons/ofxSatellite/libs/ofxSatellite/includes/ofx,
-					../../../addons/ofxSatellite/libs/ofxSatellite/includes/ofx/Satellite,
-					../../../addons/ofxSatellite/libs/ofxSatellite/src,
-					../../../addons/ofxSatellite/src,
-					../../../addons/ofxSpatialHash/libs,
-					../../../addons/ofxSpatialHash/libs/nanoflann,
-					../../../addons/ofxSpatialHash/libs/nanoflann/include,
-					../../../addons/ofxSpatialHash/libs/ofxSpatialHash,
-					../../../addons/ofxSpatialHash/libs/ofxSpatialHash/include,
-					../../../addons/ofxSpatialHash/libs/ofxSpatialHash/include/ofx,
-					../../../addons/ofxSpatialHash/libs/ofxSpatialHash/src,
-					../../../addons/ofxSpatialHash/src,
-					../../../addons/ofxTime/libs,
-					../../../addons/ofxTime/libs/ofxTime,
-					../../../addons/ofxTime/libs/ofxTime/include,
-					../../../addons/ofxTime/libs/ofxTime/include/ofx,
-					../../../addons/ofxTime/libs/ofxTime/include/ofx/Time,
-					../../../addons/ofxTime/libs/ofxTime/src,
-					../../../addons/ofxTime/src,
-				);
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
-				OTHER_CPLUSPLUSFLAGS = (
-					"-D__MACOSX_CORE__",
-					"-lpthread",
-					"-mtune=native",
-				);
-				SDKROOT = macosx;
-			};
-			name = Release;
-		};
-		E4B69B600A3A1757003C02F2 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				COPY_PHASE_STRIP = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
-				);
-				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/../../../libs/glut/lib/osx\"";
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_MODEL_TUNING = NONE;
-				ICON = "$(ICON_NAME_DEBUG)";
-				ICON_FILE = "$(ICON_FILE_PATH)$(ICON)";
-				INFOPLIST_FILE = "openFrameworks-Info.plist";
-				INSTALL_PATH = "$(HOME)/Applications";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_2)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_3)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_4)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_5)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_6)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_7)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_8)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_9)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_10)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_11)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_12)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_13)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_14)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_15)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_2)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_3)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_7)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_8)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_9)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_10)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_11)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_12)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_13)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_16)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_17)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_18)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_19)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_20)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_21)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_22)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_23)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_24)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_25)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_26)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_27)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_28)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_29)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_30)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_31)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_32)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_33)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_34)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_35)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_36)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_37)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_38)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_39)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_40)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_41)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_42)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_43)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_44)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_45)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_46)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_47)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_48)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_49)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_50)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_51)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_52)",
-				);
-				PRODUCT_NAME = "$(TARGET_NAME)Debug";
-				WRAPPER_EXTENSION = app;
-			};
-			name = Debug;
-		};
-		E4B69B610A3A1757003C02F2 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				COPY_PHASE_STRIP = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
-				);
-				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/../../../libs/glut/lib/osx\"";
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_MODEL_TUNING = NONE;
-				ICON = "$(ICON_NAME_RELEASE)";
-				ICON_FILE = "$(ICON_FILE_PATH)$(ICON)";
-				INFOPLIST_FILE = "openFrameworks-Info.plist";
-				INSTALL_PATH = "$(HOME)/Applications";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_2)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_3)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_4)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_5)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_6)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_7)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_8)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_9)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_10)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_11)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_12)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_13)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_14)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_15)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_2)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_1)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_3)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_7)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_8)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_9)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_10)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_11)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_12)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_13)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_16)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_17)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_18)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_19)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_20)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_21)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_22)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_23)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_24)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_25)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_26)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_27)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_28)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_29)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_30)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_31)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_32)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_33)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_34)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_35)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_36)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_37)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_38)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_39)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_40)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_41)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_42)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_43)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_44)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_45)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_46)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_47)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_48)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_49)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_50)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_51)",
-				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = app;
-			};
-			name = Release;
-		};
-/* End XCBuildConfiguration section */
-
-/* Begin XCConfigurationList section */
-		E4B69B4D0A3A1720003C02F2 /* Build configuration list for PBXProject "example_passpredict" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				E4B69B4E0A3A1720003C02F2 /* Debug */,
-				E4B69B4F0A3A1720003C02F2 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		E4B69B5F0A3A1757003C02F2 /* Build configuration list for PBXNativeTarget "example_passpredict" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				E4B69B600A3A1757003C02F2 /* Debug */,
-				E4B69B610A3A1757003C02F2 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-/* End XCConfigurationList section */
-	};
-	rootObject = E4B69B4C0A3A1720003C02F2 /* Project object */;
-}
+<?xml version="1.0"?>
+<plist version="1.0">
+	<dict>
+		<key>archiveVersion</key>
+		<string>1</string>
+		<key>classes</key>
+		<dict />
+		<key>objectVersion</key>
+		<string>46</string>
+		<key>objects</key>
+		<dict>
+			<key>99A5F972CDDB4230FB6C852A</key>
+			<dict>
+				<key>children</key>
+				<array>
+					<string>D43B3FC985D6ED5C9FECE758</string>
+				</array>
+				<key>isa</key>
+				<string>PBXGroup</string>
+				<key>name</key>
+				<string>UTM</string>
+				<key>sourceTree</key>
+				<string>&lt;group&gt;</string>
+			</dict>
+			<key>02CEE9FC11DEE98954409AE4</key>
+			<dict>
+				<key>children</key>
+				<array>
+					<string>99A5F972CDDB4230FB6C852A</string>
+				</array>
+				<key>isa</key>
+				<string>PBXGroup</string>
+				<key>name</key>
+				<string>include</string>
+				<key>sourceTree</key>
+				<string>&lt;group&gt;</string>
+			</dict>
+			<key>732FF1F0F380095F0C84035F</key>
+			<dict>
+				<key>children</key>
+				<array>
+					<string>02CEE9FC11DEE98954409AE4</string>
+				</array>
+				<key>isa</key>
+				<string>PBXGroup</string>
+				<key>name</key>
+				<string>UTM</string>
+				<key>sourceTree</key>
+				<string>&lt;group&gt;</string>
+			</dict>
+			<key>D43B3FC985D6ED5C9FECE758</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>UTM.h</string>
+				<key>path</key>
+				<string>../../../addons/ofxGeo/libs/UTM/include/UTM/UTM.h</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>49FBBB743B8337E09F42EAFF</key>
+			<dict>
+				<key>fileRef</key>
+				<string>57AC19537D7E9DC0B7F69F97</string>
+				<key>isa</key>
+				<string>PBXBuildFile</string>
+			</dict>
+			<key>57AC19537D7E9DC0B7F69F97</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.cpp.cpp</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>UTMLocationBounds.cpp</string>
+				<key>path</key>
+				<string>../../../addons/ofxGeo/libs/ofxGeo/src/UTMLocationBounds.cpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>F43C0EFC1C2C6FA257B0BE37</key>
+			<dict>
+				<key>fileRef</key>
+				<string>604BB71B812E172AD8FA62C9</string>
+				<key>isa</key>
+				<string>PBXBuildFile</string>
+			</dict>
+			<key>604BB71B812E172AD8FA62C9</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.cpp.cpp</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>UTMLocation.cpp</string>
+				<key>path</key>
+				<string>../../../addons/ofxGeo/libs/ofxGeo/src/UTMLocation.cpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>408BD0AB0C1B8086F4F88323</key>
+			<dict>
+				<key>fileRef</key>
+				<string>D8404E8449692E26259F0655</string>
+				<key>isa</key>
+				<string>PBXBuildFile</string>
+			</dict>
+			<key>D8404E8449692E26259F0655</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.cpp.cpp</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>GeoUtils.cpp</string>
+				<key>path</key>
+				<string>../../../addons/ofxGeo/libs/ofxGeo/src/GeoUtils.cpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>08CD2256307B048A8152D1C6</key>
+			<dict>
+				<key>fileRef</key>
+				<string>699D60A62BCFD7B740FF0B62</string>
+				<key>isa</key>
+				<string>PBXBuildFile</string>
+			</dict>
+			<key>699D60A62BCFD7B740FF0B62</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.cpp.cpp</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>CoordinateBounds.cpp</string>
+				<key>path</key>
+				<string>../../../addons/ofxGeo/libs/ofxGeo/src/CoordinateBounds.cpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>BD20485D4BF06B8DDC9594D2</key>
+			<dict>
+				<key>children</key>
+				<array>
+					<string>46170C7AD3127D015F025A03</string>
+					<string>699D60A62BCFD7B740FF0B62</string>
+					<string>D8404E8449692E26259F0655</string>
+					<string>604BB71B812E172AD8FA62C9</string>
+					<string>57AC19537D7E9DC0B7F69F97</string>
+				</array>
+				<key>isa</key>
+				<string>PBXGroup</string>
+				<key>name</key>
+				<string>src</string>
+				<key>sourceTree</key>
+				<string>&lt;group&gt;</string>
+			</dict>
+			<key>75680DD78047C04373769C5B</key>
+			<dict>
+				<key>fileRef</key>
+				<string>46170C7AD3127D015F025A03</string>
+				<key>isa</key>
+				<string>PBXBuildFile</string>
+			</dict>
+			<key>46170C7AD3127D015F025A03</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.cpp.cpp</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>Coordinate.cpp</string>
+				<key>path</key>
+				<string>../../../addons/ofxGeo/libs/ofxGeo/src/Coordinate.cpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>18FC75E8EB57EC9BCCAB61F5</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>UTMLocationBounds.h</string>
+				<key>path</key>
+				<string>../../../addons/ofxGeo/libs/ofxGeo/include/ofx/Geo/UTMLocationBounds.h</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>46B8F6B7B58C13CAFFBC35BF</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>UTMLocation.h</string>
+				<key>path</key>
+				<string>../../../addons/ofxGeo/libs/ofxGeo/include/ofx/Geo/UTMLocation.h</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>B0B640B9E96E39B4C109AB1C</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>GeoUtils.h</string>
+				<key>path</key>
+				<string>../../../addons/ofxGeo/libs/ofxGeo/include/ofx/Geo/GeoUtils.h</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>8771A84CECF2275A66FE8446</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>CoordinateBounds.h</string>
+				<key>path</key>
+				<string>../../../addons/ofxGeo/libs/ofxGeo/include/ofx/Geo/CoordinateBounds.h</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>FFD353592DB3602D437548A9</key>
+			<dict>
+				<key>children</key>
+				<array>
+					<string>CBEF280D5F87CFDD4123CF2F</string>
+					<string>8771A84CECF2275A66FE8446</string>
+					<string>B0B640B9E96E39B4C109AB1C</string>
+					<string>46B8F6B7B58C13CAFFBC35BF</string>
+					<string>18FC75E8EB57EC9BCCAB61F5</string>
+				</array>
+				<key>isa</key>
+				<string>PBXGroup</string>
+				<key>name</key>
+				<string>Geo</string>
+				<key>sourceTree</key>
+				<string>&lt;group&gt;</string>
+			</dict>
+			<key>60CD0F2C33FFDC66583E775E</key>
+			<dict>
+				<key>children</key>
+				<array>
+					<string>FFD353592DB3602D437548A9</string>
+				</array>
+				<key>isa</key>
+				<string>PBXGroup</string>
+				<key>name</key>
+				<string>ofx</string>
+				<key>sourceTree</key>
+				<string>&lt;group&gt;</string>
+			</dict>
+			<key>53C34BCD002BC70260084CA6</key>
+			<dict>
+				<key>children</key>
+				<array>
+					<string>60CD0F2C33FFDC66583E775E</string>
+				</array>
+				<key>isa</key>
+				<string>PBXGroup</string>
+				<key>name</key>
+				<string>include</string>
+				<key>sourceTree</key>
+				<string>&lt;group&gt;</string>
+			</dict>
+			<key>916D885E62E86A4CF0A50712</key>
+			<dict>
+				<key>children</key>
+				<array>
+					<string>53C34BCD002BC70260084CA6</string>
+					<string>BD20485D4BF06B8DDC9594D2</string>
+				</array>
+				<key>isa</key>
+				<string>PBXGroup</string>
+				<key>name</key>
+				<string>ofxGeo</string>
+				<key>sourceTree</key>
+				<string>&lt;group&gt;</string>
+			</dict>
+			<key>CBEF280D5F87CFDD4123CF2F</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>Coordinate.h</string>
+				<key>path</key>
+				<string>../../../addons/ofxGeo/libs/ofxGeo/include/ofx/Geo/Coordinate.h</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>90394B76928F4E40167A3536</key>
+			<dict>
+				<key>fileRef</key>
+				<string>47732C7034CF3929428BA6B1</string>
+				<key>isa</key>
+				<string>PBXBuildFile</string>
+			</dict>
+			<key>47732C7034CF3929428BA6B1</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.cpp.cpp</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>UTMUPS.cpp</string>
+				<key>path</key>
+				<string>../../../addons/ofxGeo/libs/GeographicLib/src/UTMUPS.cpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>C17F077E9A84ADD14323C2C2</key>
+			<dict>
+				<key>fileRef</key>
+				<string>38ACE6644E5C3F92E27F8E97</string>
+				<key>isa</key>
+				<string>PBXBuildFile</string>
+			</dict>
+			<key>38ACE6644E5C3F92E27F8E97</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.cpp.cpp</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>Utility.cpp</string>
+				<key>path</key>
+				<string>../../../addons/ofxGeo/libs/GeographicLib/src/Utility.cpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>83E82590F226EDFA644D06F6</key>
+			<dict>
+				<key>fileRef</key>
+				<string>C4981473BDB02687BCA3626E</string>
+				<key>isa</key>
+				<string>PBXBuildFile</string>
+			</dict>
+			<key>C4981473BDB02687BCA3626E</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.cpp.cpp</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>TransverseMercatorExact.cpp</string>
+				<key>path</key>
+				<string>../../../addons/ofxGeo/libs/GeographicLib/src/TransverseMercatorExact.cpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>F234826FB6C32C331BE8808B</key>
+			<dict>
+				<key>fileRef</key>
+				<string>E49FC6E9161FE91AF19486A7</string>
+				<key>isa</key>
+				<string>PBXBuildFile</string>
+			</dict>
+			<key>E49FC6E9161FE91AF19486A7</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.cpp.cpp</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>TransverseMercator.cpp</string>
+				<key>path</key>
+				<string>../../../addons/ofxGeo/libs/GeographicLib/src/TransverseMercator.cpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>CC5BA434CD7AA510CA4AC40A</key>
+			<dict>
+				<key>fileRef</key>
+				<string>4D4048CFB999A7E054968D4E</string>
+				<key>isa</key>
+				<string>PBXBuildFile</string>
+			</dict>
+			<key>4D4048CFB999A7E054968D4E</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.cpp.cpp</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>SphericalEngine.cpp</string>
+				<key>path</key>
+				<string>../../../addons/ofxGeo/libs/GeographicLib/src/SphericalEngine.cpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>5623BA6346DC550F88F4D072</key>
+			<dict>
+				<key>fileRef</key>
+				<string>281CADCEFDDC06C4CEA54C16</string>
+				<key>isa</key>
+				<string>PBXBuildFile</string>
+			</dict>
+			<key>281CADCEFDDC06C4CEA54C16</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.cpp.cpp</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>Rhumb.cpp</string>
+				<key>path</key>
+				<string>../../../addons/ofxGeo/libs/GeographicLib/src/Rhumb.cpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>F2BA755FE1DF5B347F8F10C9</key>
+			<dict>
+				<key>fileRef</key>
+				<string>BD2A65A6272B194C62A32520</string>
+				<key>isa</key>
+				<string>PBXBuildFile</string>
+			</dict>
+			<key>BD2A65A6272B194C62A32520</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.cpp.cpp</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>PolygonArea.cpp</string>
+				<key>path</key>
+				<string>../../../addons/ofxGeo/libs/GeographicLib/src/PolygonArea.cpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>344582AA1751BB3B36F35817</key>
+			<dict>
+				<key>fileRef</key>
+				<string>25368D99F0A2FE184C99FFD0</string>
+				<key>isa</key>
+				<string>PBXBuildFile</string>
+			</dict>
+			<key>25368D99F0A2FE184C99FFD0</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.cpp.cpp</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>PolarStereographic.cpp</string>
+				<key>path</key>
+				<string>../../../addons/ofxGeo/libs/GeographicLib/src/PolarStereographic.cpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>35CE5EC340E1D8EF637ABD6F</key>
+			<dict>
+				<key>fileRef</key>
+				<string>2944EAFD6998C568DCA244AB</string>
+				<key>isa</key>
+				<string>PBXBuildFile</string>
+			</dict>
+			<key>2944EAFD6998C568DCA244AB</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.cpp.cpp</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>OSGB.cpp</string>
+				<key>path</key>
+				<string>../../../addons/ofxGeo/libs/GeographicLib/src/OSGB.cpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>F5DC9F938EED1EC86104C743</key>
+			<dict>
+				<key>fileRef</key>
+				<string>C947F9143622E33A1A4BA53F</string>
+				<key>isa</key>
+				<string>PBXBuildFile</string>
+			</dict>
+			<key>C947F9143622E33A1A4BA53F</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.cpp.cpp</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>NormalGravity.cpp</string>
+				<key>path</key>
+				<string>../../../addons/ofxGeo/libs/GeographicLib/src/NormalGravity.cpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>F1652A478FA675612F9A71B5</key>
+			<dict>
+				<key>fileRef</key>
+				<string>D081ABA6AC0D2BAF5CF9D4EA</string>
+				<key>isa</key>
+				<string>PBXBuildFile</string>
+			</dict>
+			<key>D081ABA6AC0D2BAF5CF9D4EA</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.cpp.cpp</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>MGRS.cpp</string>
+				<key>path</key>
+				<string>../../../addons/ofxGeo/libs/GeographicLib/src/MGRS.cpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>8596496D98D9AC5120B203F9</key>
+			<dict>
+				<key>fileRef</key>
+				<string>E1314190AA9B1E3FF2A73F5B</string>
+				<key>isa</key>
+				<string>PBXBuildFile</string>
+			</dict>
+			<key>E1314190AA9B1E3FF2A73F5B</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.cpp.cpp</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>MagneticModel.cpp</string>
+				<key>path</key>
+				<string>../../../addons/ofxGeo/libs/GeographicLib/src/MagneticModel.cpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>9EC4A63B79CED3FB1FE94705</key>
+			<dict>
+				<key>fileRef</key>
+				<string>32952154FBB4CA4E83AA14F8</string>
+				<key>isa</key>
+				<string>PBXBuildFile</string>
+			</dict>
+			<key>32952154FBB4CA4E83AA14F8</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.cpp.cpp</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>MagneticCircle.cpp</string>
+				<key>path</key>
+				<string>../../../addons/ofxGeo/libs/GeographicLib/src/MagneticCircle.cpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>01A107FA562137338B1CE26A</key>
+			<dict>
+				<key>fileRef</key>
+				<string>45A6F865978C720C3490839B</string>
+				<key>isa</key>
+				<string>PBXBuildFile</string>
+			</dict>
+			<key>45A6F865978C720C3490839B</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.cpp.cpp</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>LocalCartesian.cpp</string>
+				<key>path</key>
+				<string>../../../addons/ofxGeo/libs/GeographicLib/src/LocalCartesian.cpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>80C28802A626A203E95C26B6</key>
+			<dict>
+				<key>fileRef</key>
+				<string>FD7BE1DD4FC6E7DFF77F5339</string>
+				<key>isa</key>
+				<string>PBXBuildFile</string>
+			</dict>
+			<key>FD7BE1DD4FC6E7DFF77F5339</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.cpp.cpp</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>LambertConformalConic.cpp</string>
+				<key>path</key>
+				<string>../../../addons/ofxGeo/libs/GeographicLib/src/LambertConformalConic.cpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>81E3BF0840C90EFE80077797</key>
+			<dict>
+				<key>fileRef</key>
+				<string>7DFFCC36085B584C87F4A449</string>
+				<key>isa</key>
+				<string>PBXBuildFile</string>
+			</dict>
+			<key>7DFFCC36085B584C87F4A449</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.cpp.cpp</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>GravityModel.cpp</string>
+				<key>path</key>
+				<string>../../../addons/ofxGeo/libs/GeographicLib/src/GravityModel.cpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>D6191DB7E72E59F688E4A6BF</key>
+			<dict>
+				<key>fileRef</key>
+				<string>D0539C60633B35F7B26CA0C7</string>
+				<key>isa</key>
+				<string>PBXBuildFile</string>
+			</dict>
+			<key>D0539C60633B35F7B26CA0C7</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.cpp.cpp</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>GravityCircle.cpp</string>
+				<key>path</key>
+				<string>../../../addons/ofxGeo/libs/GeographicLib/src/GravityCircle.cpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>7F6649E5831D917CFD033162</key>
+			<dict>
+				<key>fileRef</key>
+				<string>B3F7E016602D9F16A5463023</string>
+				<key>isa</key>
+				<string>PBXBuildFile</string>
+			</dict>
+			<key>B3F7E016602D9F16A5463023</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.cpp.cpp</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>Gnomonic.cpp</string>
+				<key>path</key>
+				<string>../../../addons/ofxGeo/libs/GeographicLib/src/Gnomonic.cpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>50DE26627BFC67DBB2B0D4B4</key>
+			<dict>
+				<key>fileRef</key>
+				<string>8F0C12A742310031AFEA1AEE</string>
+				<key>isa</key>
+				<string>PBXBuildFile</string>
+			</dict>
+			<key>8F0C12A742310031AFEA1AEE</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.cpp.cpp</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>Geoid.cpp</string>
+				<key>path</key>
+				<string>../../../addons/ofxGeo/libs/GeographicLib/src/Geoid.cpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>AAB695C022336C68547C70B7</key>
+			<dict>
+				<key>fileRef</key>
+				<string>BF64DBDEF47E7A8DA6F9D9E7</string>
+				<key>isa</key>
+				<string>PBXBuildFile</string>
+			</dict>
+			<key>BF64DBDEF47E7A8DA6F9D9E7</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.cpp.cpp</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>Geohash.cpp</string>
+				<key>path</key>
+				<string>../../../addons/ofxGeo/libs/GeographicLib/src/Geohash.cpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>81848B5C6156E3C41DAB5A1E</key>
+			<dict>
+				<key>fileRef</key>
+				<string>3AC54F1DDC7E9E7103ECB17F</string>
+				<key>isa</key>
+				<string>PBXBuildFile</string>
+			</dict>
+			<key>3AC54F1DDC7E9E7103ECB17F</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.cpp.cpp</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>GeodesicLineExact.cpp</string>
+				<key>path</key>
+				<string>../../../addons/ofxGeo/libs/GeographicLib/src/GeodesicLineExact.cpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>0D6BEA7B8AF78513DC822F28</key>
+			<dict>
+				<key>fileRef</key>
+				<string>FD56547531EE2C982A13FCB5</string>
+				<key>isa</key>
+				<string>PBXBuildFile</string>
+			</dict>
+			<key>FD56547531EE2C982A13FCB5</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.cpp.cpp</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>GeodesicLine.cpp</string>
+				<key>path</key>
+				<string>../../../addons/ofxGeo/libs/GeographicLib/src/GeodesicLine.cpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>07CFE012390553B3F5A65C8D</key>
+			<dict>
+				<key>fileRef</key>
+				<string>20FB8575A0E389E653DC3ED7</string>
+				<key>isa</key>
+				<string>PBXBuildFile</string>
+			</dict>
+			<key>20FB8575A0E389E653DC3ED7</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.cpp.cpp</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>GeodesicExactC4.cpp</string>
+				<key>path</key>
+				<string>../../../addons/ofxGeo/libs/GeographicLib/src/GeodesicExactC4.cpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>D5277340E78D29EE272FABEB</key>
+			<dict>
+				<key>fileRef</key>
+				<string>60BCE7B58003129DEDF48445</string>
+				<key>isa</key>
+				<string>PBXBuildFile</string>
+			</dict>
+			<key>60BCE7B58003129DEDF48445</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.cpp.cpp</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>GeodesicExact.cpp</string>
+				<key>path</key>
+				<string>../../../addons/ofxGeo/libs/GeographicLib/src/GeodesicExact.cpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>B7C3B391BB7D1ABE564A2678</key>
+			<dict>
+				<key>fileRef</key>
+				<string>73C30D181818A072BC6AB3D2</string>
+				<key>isa</key>
+				<string>PBXBuildFile</string>
+			</dict>
+			<key>73C30D181818A072BC6AB3D2</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.cpp.cpp</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>Geodesic.cpp</string>
+				<key>path</key>
+				<string>../../../addons/ofxGeo/libs/GeographicLib/src/Geodesic.cpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>AA44DBD67D39B3B6E3A3F5E3</key>
+			<dict>
+				<key>fileRef</key>
+				<string>F7D41CEA2BBF0144323BF9E9</string>
+				<key>isa</key>
+				<string>PBXBuildFile</string>
+			</dict>
+			<key>F7D41CEA2BBF0144323BF9E9</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.cpp.cpp</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>GeoCoords.cpp</string>
+				<key>path</key>
+				<string>../../../addons/ofxGeo/libs/GeographicLib/src/GeoCoords.cpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>324B65EF5615231242A1C255</key>
+			<dict>
+				<key>fileRef</key>
+				<string>30CCE22F6B640E27D09D5B8C</string>
+				<key>isa</key>
+				<string>PBXBuildFile</string>
+			</dict>
+			<key>30CCE22F6B640E27D09D5B8C</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.cpp.cpp</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>Geocentric.cpp</string>
+				<key>path</key>
+				<string>../../../addons/ofxGeo/libs/GeographicLib/src/Geocentric.cpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>DD1921BB4716E9BB22A3B863</key>
+			<dict>
+				<key>fileRef</key>
+				<string>0A6B4681DE1C0ADB98E96B6C</string>
+				<key>isa</key>
+				<string>PBXBuildFile</string>
+			</dict>
+			<key>0A6B4681DE1C0ADB98E96B6C</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.cpp.cpp</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>EllipticFunction.cpp</string>
+				<key>path</key>
+				<string>../../../addons/ofxGeo/libs/GeographicLib/src/EllipticFunction.cpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>7108E3254AF88DAEC0624230</key>
+			<dict>
+				<key>fileRef</key>
+				<string>283CB2BBC4779E71825E7947</string>
+				<key>isa</key>
+				<string>PBXBuildFile</string>
+			</dict>
+			<key>283CB2BBC4779E71825E7947</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.cpp.cpp</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>Ellipsoid.cpp</string>
+				<key>path</key>
+				<string>../../../addons/ofxGeo/libs/GeographicLib/src/Ellipsoid.cpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>45F5C9CDECDED9636943AE05</key>
+			<dict>
+				<key>fileRef</key>
+				<string>7FE4B7D76A2A28100B4775E3</string>
+				<key>isa</key>
+				<string>PBXBuildFile</string>
+			</dict>
+			<key>7FE4B7D76A2A28100B4775E3</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.cpp.cpp</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>DMS.cpp</string>
+				<key>path</key>
+				<string>../../../addons/ofxGeo/libs/GeographicLib/src/DMS.cpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>492D4077BF33486AA1AA6121</key>
+			<dict>
+				<key>fileRef</key>
+				<string>692423CC3CC7F8EEA7DE698E</string>
+				<key>isa</key>
+				<string>PBXBuildFile</string>
+			</dict>
+			<key>692423CC3CC7F8EEA7DE698E</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.cpp.cpp</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>CircularEngine.cpp</string>
+				<key>path</key>
+				<string>../../../addons/ofxGeo/libs/GeographicLib/src/CircularEngine.cpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>5B281281743ABE4E9F387E84</key>
+			<dict>
+				<key>fileRef</key>
+				<string>92F650A7527BDBA3737CD778</string>
+				<key>isa</key>
+				<string>PBXBuildFile</string>
+			</dict>
+			<key>92F650A7527BDBA3737CD778</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.cpp.cpp</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>CassiniSoldner.cpp</string>
+				<key>path</key>
+				<string>../../../addons/ofxGeo/libs/GeographicLib/src/CassiniSoldner.cpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>F67BCED075E4D28B8DCDA8AF</key>
+			<dict>
+				<key>fileRef</key>
+				<string>5F6931D9BB7854E7A83B96B6</string>
+				<key>isa</key>
+				<string>PBXBuildFile</string>
+			</dict>
+			<key>5F6931D9BB7854E7A83B96B6</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.cpp.cpp</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>AzimuthalEquidistant.cpp</string>
+				<key>path</key>
+				<string>../../../addons/ofxGeo/libs/GeographicLib/src/AzimuthalEquidistant.cpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>C74EB54F9C2C709BFF0A9456</key>
+			<dict>
+				<key>fileRef</key>
+				<string>4FB141FFB43D43EC961B869B</string>
+				<key>isa</key>
+				<string>PBXBuildFile</string>
+			</dict>
+			<key>4FB141FFB43D43EC961B869B</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.cpp.cpp</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>AlbersEqualArea.cpp</string>
+				<key>path</key>
+				<string>../../../addons/ofxGeo/libs/GeographicLib/src/AlbersEqualArea.cpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>E2D98227CE399EF372AB637D</key>
+			<dict>
+				<key>children</key>
+				<array>
+					<string>D77B928517B3103255756717</string>
+					<string>4FB141FFB43D43EC961B869B</string>
+					<string>5F6931D9BB7854E7A83B96B6</string>
+					<string>92F650A7527BDBA3737CD778</string>
+					<string>692423CC3CC7F8EEA7DE698E</string>
+					<string>7FE4B7D76A2A28100B4775E3</string>
+					<string>283CB2BBC4779E71825E7947</string>
+					<string>0A6B4681DE1C0ADB98E96B6C</string>
+					<string>30CCE22F6B640E27D09D5B8C</string>
+					<string>F7D41CEA2BBF0144323BF9E9</string>
+					<string>73C30D181818A072BC6AB3D2</string>
+					<string>60BCE7B58003129DEDF48445</string>
+					<string>20FB8575A0E389E653DC3ED7</string>
+					<string>FD56547531EE2C982A13FCB5</string>
+					<string>3AC54F1DDC7E9E7103ECB17F</string>
+					<string>BF64DBDEF47E7A8DA6F9D9E7</string>
+					<string>8F0C12A742310031AFEA1AEE</string>
+					<string>B3F7E016602D9F16A5463023</string>
+					<string>D0539C60633B35F7B26CA0C7</string>
+					<string>7DFFCC36085B584C87F4A449</string>
+					<string>FD7BE1DD4FC6E7DFF77F5339</string>
+					<string>45A6F865978C720C3490839B</string>
+					<string>32952154FBB4CA4E83AA14F8</string>
+					<string>E1314190AA9B1E3FF2A73F5B</string>
+					<string>D081ABA6AC0D2BAF5CF9D4EA</string>
+					<string>C947F9143622E33A1A4BA53F</string>
+					<string>2944EAFD6998C568DCA244AB</string>
+					<string>25368D99F0A2FE184C99FFD0</string>
+					<string>BD2A65A6272B194C62A32520</string>
+					<string>281CADCEFDDC06C4CEA54C16</string>
+					<string>4D4048CFB999A7E054968D4E</string>
+					<string>E49FC6E9161FE91AF19486A7</string>
+					<string>C4981473BDB02687BCA3626E</string>
+					<string>38ACE6644E5C3F92E27F8E97</string>
+					<string>47732C7034CF3929428BA6B1</string>
+				</array>
+				<key>isa</key>
+				<string>PBXGroup</string>
+				<key>name</key>
+				<string>src</string>
+				<key>sourceTree</key>
+				<string>&lt;group&gt;</string>
+			</dict>
+			<key>CA90CF93603575A10509B381</key>
+			<dict>
+				<key>fileRef</key>
+				<string>D77B928517B3103255756717</string>
+				<key>isa</key>
+				<string>PBXBuildFile</string>
+			</dict>
+			<key>D77B928517B3103255756717</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.cpp.cpp</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>Accumulator.cpp</string>
+				<key>path</key>
+				<string>../../../addons/ofxGeo/libs/GeographicLib/src/Accumulator.cpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>A02F6AE9937FBEA7EE78DD4C</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>UTMUPS.hpp</string>
+				<key>path</key>
+				<string>../../../addons/ofxGeo/libs/GeographicLib/include/GeographicLib/UTMUPS.hpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>7FA0C853FB5A933773E60F03</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>Utility.hpp</string>
+				<key>path</key>
+				<string>../../../addons/ofxGeo/libs/GeographicLib/include/GeographicLib/Utility.hpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>C686EEAF1E4666DA7947961A</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>TransverseMercatorExact.hpp</string>
+				<key>path</key>
+				<string>../../../addons/ofxGeo/libs/GeographicLib/include/GeographicLib/TransverseMercatorExact.hpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>3FACD8A74CAEB6B45BF30190</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>TransverseMercator.hpp</string>
+				<key>path</key>
+				<string>../../../addons/ofxGeo/libs/GeographicLib/include/GeographicLib/TransverseMercator.hpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>861CC50917D85C9AFF0ADB3B</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>SphericalHarmonic2.hpp</string>
+				<key>path</key>
+				<string>../../../addons/ofxGeo/libs/GeographicLib/include/GeographicLib/SphericalHarmonic2.hpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>CC466AB293B682C93C6BF5E7</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>SphericalHarmonic1.hpp</string>
+				<key>path</key>
+				<string>../../../addons/ofxGeo/libs/GeographicLib/include/GeographicLib/SphericalHarmonic1.hpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>952722E4A543D026C6F325F0</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>SphericalHarmonic.hpp</string>
+				<key>path</key>
+				<string>../../../addons/ofxGeo/libs/GeographicLib/include/GeographicLib/SphericalHarmonic.hpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>4143F0FE6A3F2A01DF8D7F24</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>SphericalEngine.hpp</string>
+				<key>path</key>
+				<string>../../../addons/ofxGeo/libs/GeographicLib/include/GeographicLib/SphericalEngine.hpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>7B433066150159F6135A5E98</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>Rhumb.hpp</string>
+				<key>path</key>
+				<string>../../../addons/ofxGeo/libs/GeographicLib/include/GeographicLib/Rhumb.hpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>54E44E7CC49FC9B9AA0DFD6A</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>PolygonArea.hpp</string>
+				<key>path</key>
+				<string>../../../addons/ofxGeo/libs/GeographicLib/include/GeographicLib/PolygonArea.hpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>C1A984FFBBC871EB7F90E1A9</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>PolarStereographic.hpp</string>
+				<key>path</key>
+				<string>../../../addons/ofxGeo/libs/GeographicLib/include/GeographicLib/PolarStereographic.hpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>088A520BDA2C116DEB07FF90</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>OSGB.hpp</string>
+				<key>path</key>
+				<string>../../../addons/ofxGeo/libs/GeographicLib/include/GeographicLib/OSGB.hpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>B2A06A5475EB34D9C3913894</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>NormalGravity.hpp</string>
+				<key>path</key>
+				<string>../../../addons/ofxGeo/libs/GeographicLib/include/GeographicLib/NormalGravity.hpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>8CCE8CDCDBEA17C02AEB2821</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>MGRS.hpp</string>
+				<key>path</key>
+				<string>../../../addons/ofxGeo/libs/GeographicLib/include/GeographicLib/MGRS.hpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>A907241C60BAF3A70633D1A2</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>Math.hpp</string>
+				<key>path</key>
+				<string>../../../addons/ofxGeo/libs/GeographicLib/include/GeographicLib/Math.hpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>29EE449ED1A40334E6D37AC4</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>MagneticModel.hpp</string>
+				<key>path</key>
+				<string>../../../addons/ofxGeo/libs/GeographicLib/include/GeographicLib/MagneticModel.hpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>D2FCBA4B803EE14701B1E74A</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>MagneticCircle.hpp</string>
+				<key>path</key>
+				<string>../../../addons/ofxGeo/libs/GeographicLib/include/GeographicLib/MagneticCircle.hpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>0D1E14F8FA34E08DDF3377CA</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>LocalCartesian.hpp</string>
+				<key>path</key>
+				<string>../../../addons/ofxGeo/libs/GeographicLib/include/GeographicLib/LocalCartesian.hpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>65F5EF8E5B40DEB64A522F10</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>LambertConformalConic.hpp</string>
+				<key>path</key>
+				<string>../../../addons/ofxGeo/libs/GeographicLib/include/GeographicLib/LambertConformalConic.hpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>F481015F8DF34314A3134B24</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>GravityModel.hpp</string>
+				<key>path</key>
+				<string>../../../addons/ofxGeo/libs/GeographicLib/include/GeographicLib/GravityModel.hpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>D33AE386EA999E384ACEFD77</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>GravityCircle.hpp</string>
+				<key>path</key>
+				<string>../../../addons/ofxGeo/libs/GeographicLib/include/GeographicLib/GravityCircle.hpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>3EDD0DD9118B3C397101A986</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>Gnomonic.hpp</string>
+				<key>path</key>
+				<string>../../../addons/ofxGeo/libs/GeographicLib/include/GeographicLib/Gnomonic.hpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>63A894F7F0C375B1F5EE7269</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>Geoid.hpp</string>
+				<key>path</key>
+				<string>../../../addons/ofxGeo/libs/GeographicLib/include/GeographicLib/Geoid.hpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>248BA08A9DDB0D95A61EA32F</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>Geohash.hpp</string>
+				<key>path</key>
+				<string>../../../addons/ofxGeo/libs/GeographicLib/include/GeographicLib/Geohash.hpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>04B9F3F2BF4A46C7ECA00532</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>GeodesicLineExact.hpp</string>
+				<key>path</key>
+				<string>../../../addons/ofxGeo/libs/GeographicLib/include/GeographicLib/GeodesicLineExact.hpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>EB55469E4CBAE5C88B513AF9</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>GeodesicLine.hpp</string>
+				<key>path</key>
+				<string>../../../addons/ofxGeo/libs/GeographicLib/include/GeographicLib/GeodesicLine.hpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>350E271C505B757CEDFDCE79</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>GeodesicExact.hpp</string>
+				<key>path</key>
+				<string>../../../addons/ofxGeo/libs/GeographicLib/include/GeographicLib/GeodesicExact.hpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>76302142A58CDB4BB680287B</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>Geodesic.hpp</string>
+				<key>path</key>
+				<string>../../../addons/ofxGeo/libs/GeographicLib/include/GeographicLib/Geodesic.hpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>563D4C03051EA34B23647BF0</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>GeoCoords.hpp</string>
+				<key>path</key>
+				<string>../../../addons/ofxGeo/libs/GeographicLib/include/GeographicLib/GeoCoords.hpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>00844683848CEC50AFF05062</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>Geocentric.hpp</string>
+				<key>path</key>
+				<string>../../../addons/ofxGeo/libs/GeographicLib/include/GeographicLib/Geocentric.hpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>C5D692A2046C4737278A948C</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>EllipticFunction.hpp</string>
+				<key>path</key>
+				<string>../../../addons/ofxGeo/libs/GeographicLib/include/GeographicLib/EllipticFunction.hpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>829878583ADC44987CC05859</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>Ellipsoid.hpp</string>
+				<key>path</key>
+				<string>../../../addons/ofxGeo/libs/GeographicLib/include/GeographicLib/Ellipsoid.hpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>989D23575775E2C5ADC362EA</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>DMS.hpp</string>
+				<key>path</key>
+				<string>../../../addons/ofxGeo/libs/GeographicLib/include/GeographicLib/DMS.hpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>DB89C1523E22A4AE489E165E</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>Constants.hpp</string>
+				<key>path</key>
+				<string>../../../addons/ofxGeo/libs/GeographicLib/include/GeographicLib/Constants.hpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>7A2F72E0053AF92CA89646B0</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>Config.h</string>
+				<key>path</key>
+				<string>../../../addons/ofxGeo/libs/GeographicLib/include/GeographicLib/Config.h</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>310B1991C6B0F698CA319347</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>CircularEngine.hpp</string>
+				<key>path</key>
+				<string>../../../addons/ofxGeo/libs/GeographicLib/include/GeographicLib/CircularEngine.hpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>A1473352A9F69ADEBA7D7DF5</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>CassiniSoldner.hpp</string>
+				<key>path</key>
+				<string>../../../addons/ofxGeo/libs/GeographicLib/include/GeographicLib/CassiniSoldner.hpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>78E73AD142B53D41DDE73718</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>AzimuthalEquidistant.hpp</string>
+				<key>path</key>
+				<string>../../../addons/ofxGeo/libs/GeographicLib/include/GeographicLib/AzimuthalEquidistant.hpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>D6229C1F356AA8E05A91872D</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>AlbersEqualArea.hpp</string>
+				<key>path</key>
+				<string>../../../addons/ofxGeo/libs/GeographicLib/include/GeographicLib/AlbersEqualArea.hpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>D9AB52B1D84912BC70985870</key>
+			<dict>
+				<key>children</key>
+				<array>
+					<string>E3DF39769A5FE71F34382500</string>
+					<string>D6229C1F356AA8E05A91872D</string>
+					<string>78E73AD142B53D41DDE73718</string>
+					<string>A1473352A9F69ADEBA7D7DF5</string>
+					<string>310B1991C6B0F698CA319347</string>
+					<string>7A2F72E0053AF92CA89646B0</string>
+					<string>DB89C1523E22A4AE489E165E</string>
+					<string>989D23575775E2C5ADC362EA</string>
+					<string>829878583ADC44987CC05859</string>
+					<string>C5D692A2046C4737278A948C</string>
+					<string>00844683848CEC50AFF05062</string>
+					<string>563D4C03051EA34B23647BF0</string>
+					<string>76302142A58CDB4BB680287B</string>
+					<string>350E271C505B757CEDFDCE79</string>
+					<string>EB55469E4CBAE5C88B513AF9</string>
+					<string>04B9F3F2BF4A46C7ECA00532</string>
+					<string>248BA08A9DDB0D95A61EA32F</string>
+					<string>63A894F7F0C375B1F5EE7269</string>
+					<string>3EDD0DD9118B3C397101A986</string>
+					<string>D33AE386EA999E384ACEFD77</string>
+					<string>F481015F8DF34314A3134B24</string>
+					<string>65F5EF8E5B40DEB64A522F10</string>
+					<string>0D1E14F8FA34E08DDF3377CA</string>
+					<string>D2FCBA4B803EE14701B1E74A</string>
+					<string>29EE449ED1A40334E6D37AC4</string>
+					<string>A907241C60BAF3A70633D1A2</string>
+					<string>8CCE8CDCDBEA17C02AEB2821</string>
+					<string>B2A06A5475EB34D9C3913894</string>
+					<string>088A520BDA2C116DEB07FF90</string>
+					<string>C1A984FFBBC871EB7F90E1A9</string>
+					<string>54E44E7CC49FC9B9AA0DFD6A</string>
+					<string>7B433066150159F6135A5E98</string>
+					<string>4143F0FE6A3F2A01DF8D7F24</string>
+					<string>952722E4A543D026C6F325F0</string>
+					<string>CC466AB293B682C93C6BF5E7</string>
+					<string>861CC50917D85C9AFF0ADB3B</string>
+					<string>3FACD8A74CAEB6B45BF30190</string>
+					<string>C686EEAF1E4666DA7947961A</string>
+					<string>7FA0C853FB5A933773E60F03</string>
+					<string>A02F6AE9937FBEA7EE78DD4C</string>
+				</array>
+				<key>isa</key>
+				<string>PBXGroup</string>
+				<key>name</key>
+				<string>GeographicLib</string>
+				<key>sourceTree</key>
+				<string>&lt;group&gt;</string>
+			</dict>
+			<key>F60B4DAE2D5521498C2E1B27</key>
+			<dict>
+				<key>children</key>
+				<array>
+					<string>D9AB52B1D84912BC70985870</string>
+				</array>
+				<key>isa</key>
+				<string>PBXGroup</string>
+				<key>name</key>
+				<string>include</string>
+				<key>sourceTree</key>
+				<string>&lt;group&gt;</string>
+			</dict>
+			<key>C5453C767E33885FCAD000B9</key>
+			<dict>
+				<key>children</key>
+				<array>
+					<string>F60B4DAE2D5521498C2E1B27</string>
+					<string>E2D98227CE399EF372AB637D</string>
+				</array>
+				<key>isa</key>
+				<string>PBXGroup</string>
+				<key>name</key>
+				<string>GeographicLib</string>
+				<key>sourceTree</key>
+				<string>&lt;group&gt;</string>
+			</dict>
+			<key>0840FE8EEC520BE46ED856C2</key>
+			<dict>
+				<key>children</key>
+				<array>
+					<string>C5453C767E33885FCAD000B9</string>
+					<string>916D885E62E86A4CF0A50712</string>
+					<string>732FF1F0F380095F0C84035F</string>
+				</array>
+				<key>isa</key>
+				<string>PBXGroup</string>
+				<key>name</key>
+				<string>libs</string>
+				<key>sourceTree</key>
+				<string>&lt;group&gt;</string>
+			</dict>
+			<key>E3DF39769A5FE71F34382500</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>Accumulator.hpp</string>
+				<key>path</key>
+				<string>../../../addons/ofxGeo/libs/GeographicLib/include/GeographicLib/Accumulator.hpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>D26663999E7D6113C46B3110</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>ofxGeo.h</string>
+				<key>path</key>
+				<string>../../../addons/ofxGeo/src/ofxGeo.h</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>0ACF5C25F4063432218FAAAC</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>ofVec4d.h</string>
+				<key>path</key>
+				<string>../../../addons/ofxGeo/src/ofVec4d.h</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>9D2002DCCA863F80989626BD</key>
+			<dict>
+				<key>fileRef</key>
+				<string>AD30986094675C81ABB2D2BB</string>
+				<key>isa</key>
+				<string>PBXBuildFile</string>
+			</dict>
+			<key>AD30986094675C81ABB2D2BB</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.cpp.cpp</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>ofVec4d.cpp</string>
+				<key>path</key>
+				<string>../../../addons/ofxGeo/src/ofVec4d.cpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>3EB97C972CC87B8D4A58F3C2</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>ofVec3d.h</string>
+				<key>path</key>
+				<string>../../../addons/ofxGeo/src/ofVec3d.h</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>D0A942C03E58219FB195A518</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>ofVec2d.h</string>
+				<key>path</key>
+				<string>../../../addons/ofxGeo/src/ofVec2d.h</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>508D5ECDA7FAFF379F58128A</key>
+			<dict>
+				<key>fileRef</key>
+				<string>FF63913175ED4525AE4D309E</string>
+				<key>isa</key>
+				<string>PBXBuildFile</string>
+			</dict>
+			<key>FF63913175ED4525AE4D309E</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.cpp.cpp</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>ofVec2d.cpp</string>
+				<key>path</key>
+				<string>../../../addons/ofxGeo/src/ofVec2d.cpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>081FA8A6E82902E0559672E3</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>ofRectangled.h</string>
+				<key>path</key>
+				<string>../../../addons/ofxGeo/src/ofRectangled.h</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>0F391434A4BE149E83611AE6</key>
+			<dict>
+				<key>children</key>
+				<array>
+					<string>F43C8904807C0F81956584EF</string>
+					<string>081FA8A6E82902E0559672E3</string>
+					<string>FF63913175ED4525AE4D309E</string>
+					<string>D0A942C03E58219FB195A518</string>
+					<string>3EB97C972CC87B8D4A58F3C2</string>
+					<string>AD30986094675C81ABB2D2BB</string>
+					<string>0ACF5C25F4063432218FAAAC</string>
+					<string>D26663999E7D6113C46B3110</string>
+				</array>
+				<key>isa</key>
+				<string>PBXGroup</string>
+				<key>name</key>
+				<string>src</string>
+				<key>sourceTree</key>
+				<string>&lt;group&gt;</string>
+			</dict>
+			<key>07675191E5CBBF4211173C08</key>
+			<dict>
+				<key>children</key>
+				<array>
+					<string>0F391434A4BE149E83611AE6</string>
+					<string>0840FE8EEC520BE46ED856C2</string>
+				</array>
+				<key>isa</key>
+				<string>PBXGroup</string>
+				<key>name</key>
+				<string>ofxGeo</string>
+				<key>sourceTree</key>
+				<string>&lt;group&gt;</string>
+			</dict>
+			<key>3E7D272BB14CF0CD21AB9BF5</key>
+			<dict>
+				<key>fileRef</key>
+				<string>F43C8904807C0F81956584EF</string>
+				<key>isa</key>
+				<string>PBXBuildFile</string>
+			</dict>
+			<key>F43C8904807C0F81956584EF</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.cpp.cpp</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>ofRectangled.cpp</string>
+				<key>path</key>
+				<string>../../../addons/ofxGeo/src/ofRectangled.cpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>532AF6D7E3CB5AE24D160140</key>
+			<dict>
+				<key>fileRef</key>
+				<string>44FF7F4131BDB1710CF68AA4</string>
+				<key>isa</key>
+				<string>PBXBuildFile</string>
+			</dict>
+			<key>44FF7F4131BDB1710CF68AA4</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.cpp.cpp</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>Utils.cpp</string>
+				<key>path</key>
+				<string>../../../addons/ofxTime/libs/ofxTime/src/Utils.cpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>5847AA7C8B6171D9FE1CC8D5</key>
+			<dict>
+				<key>fileRef</key>
+				<string>AE9C89F270782B85763A3554</string>
+				<key>isa</key>
+				<string>PBXBuildFile</string>
+			</dict>
+			<key>AE9C89F270782B85763A3554</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.cpp.cpp</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>Period.cpp</string>
+				<key>path</key>
+				<string>../../../addons/ofxTime/libs/ofxTime/src/Period.cpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>F0C6E3B6EE7399B21C2DC328</key>
+			<dict>
+				<key>children</key>
+				<array>
+					<string>8F3DF41CC44878753F29BDE5</string>
+					<string>AE9C89F270782B85763A3554</string>
+					<string>44FF7F4131BDB1710CF68AA4</string>
+				</array>
+				<key>isa</key>
+				<string>PBXGroup</string>
+				<key>name</key>
+				<string>src</string>
+				<key>sourceTree</key>
+				<string>&lt;group&gt;</string>
+			</dict>
+			<key>FD60BE5CE7BBD47BD60D6F5B</key>
+			<dict>
+				<key>fileRef</key>
+				<string>8F3DF41CC44878753F29BDE5</string>
+				<key>isa</key>
+				<string>PBXBuildFile</string>
+			</dict>
+			<key>8F3DF41CC44878753F29BDE5</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.cpp.cpp</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>Interval.cpp</string>
+				<key>path</key>
+				<string>../../../addons/ofxTime/libs/ofxTime/src/Interval.cpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>491E46E314AE2929A0FA5FE2</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>Utils.h</string>
+				<key>path</key>
+				<string>../../../addons/ofxTime/libs/ofxTime/include/ofx/Time/Utils.h</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>27C6A66DCD92DA674907E4AE</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>Period.h</string>
+				<key>path</key>
+				<string>../../../addons/ofxTime/libs/ofxTime/include/ofx/Time/Period.h</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>CEF17E9E6C28478748B8D76C</key>
+			<dict>
+				<key>children</key>
+				<array>
+					<string>B5C1290549DDB8C05D826393</string>
+					<string>27C6A66DCD92DA674907E4AE</string>
+					<string>491E46E314AE2929A0FA5FE2</string>
+				</array>
+				<key>isa</key>
+				<string>PBXGroup</string>
+				<key>name</key>
+				<string>Time</string>
+				<key>sourceTree</key>
+				<string>&lt;group&gt;</string>
+			</dict>
+			<key>28D3C5052C346D0BF45BBF6C</key>
+			<dict>
+				<key>children</key>
+				<array>
+					<string>CEF17E9E6C28478748B8D76C</string>
+				</array>
+				<key>isa</key>
+				<string>PBXGroup</string>
+				<key>name</key>
+				<string>ofx</string>
+				<key>sourceTree</key>
+				<string>&lt;group&gt;</string>
+			</dict>
+			<key>05AD41A21F8A492C4A0AD67A</key>
+			<dict>
+				<key>children</key>
+				<array>
+					<string>28D3C5052C346D0BF45BBF6C</string>
+				</array>
+				<key>isa</key>
+				<string>PBXGroup</string>
+				<key>name</key>
+				<string>include</string>
+				<key>sourceTree</key>
+				<string>&lt;group&gt;</string>
+			</dict>
+			<key>5898D0A0989B0E33AE378C0D</key>
+			<dict>
+				<key>children</key>
+				<array>
+					<string>05AD41A21F8A492C4A0AD67A</string>
+					<string>F0C6E3B6EE7399B21C2DC328</string>
+				</array>
+				<key>isa</key>
+				<string>PBXGroup</string>
+				<key>name</key>
+				<string>ofxTime</string>
+				<key>sourceTree</key>
+				<string>&lt;group&gt;</string>
+			</dict>
+			<key>E013B1666A0CB6749DC18982</key>
+			<dict>
+				<key>children</key>
+				<array>
+					<string>5898D0A0989B0E33AE378C0D</string>
+				</array>
+				<key>isa</key>
+				<string>PBXGroup</string>
+				<key>name</key>
+				<string>libs</string>
+				<key>sourceTree</key>
+				<string>&lt;group&gt;</string>
+			</dict>
+			<key>B5C1290549DDB8C05D826393</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>Interval.h</string>
+				<key>path</key>
+				<string>../../../addons/ofxTime/libs/ofxTime/include/ofx/Time/Interval.h</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>F54275BC9EDEF24A0D844D15</key>
+			<dict>
+				<key>children</key>
+				<array>
+					<string>FEEEEECE3C65CA4F0B66606E</string>
+				</array>
+				<key>isa</key>
+				<string>PBXGroup</string>
+				<key>name</key>
+				<string>src</string>
+				<key>sourceTree</key>
+				<string>&lt;group&gt;</string>
+			</dict>
+			<key>E580DA17DAC1E2210AA6BB6A</key>
+			<dict>
+				<key>children</key>
+				<array>
+					<string>F54275BC9EDEF24A0D844D15</string>
+					<string>E013B1666A0CB6749DC18982</string>
+				</array>
+				<key>isa</key>
+				<string>PBXGroup</string>
+				<key>name</key>
+				<string>ofxTime</string>
+				<key>sourceTree</key>
+				<string>&lt;group&gt;</string>
+			</dict>
+			<key>FEEEEECE3C65CA4F0B66606E</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>ofxTime.h</string>
+				<key>path</key>
+				<string>../../../addons/ofxTime/src/ofxTime.h</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>0593F71A6C41BCBCD91D9C0C</key>
+			<dict>
+				<key>children</key>
+				<array>
+					<string>3FCC3CC63F1FB03FA5A6C417</string>
+				</array>
+				<key>isa</key>
+				<string>PBXGroup</string>
+				<key>name</key>
+				<string>ofx</string>
+				<key>sourceTree</key>
+				<string>&lt;group&gt;</string>
+			</dict>
+			<key>E953F1F92651A00C0DC78C82</key>
+			<dict>
+				<key>children</key>
+				<array>
+					<string>0593F71A6C41BCBCD91D9C0C</string>
+				</array>
+				<key>isa</key>
+				<string>PBXGroup</string>
+				<key>name</key>
+				<string>include</string>
+				<key>sourceTree</key>
+				<string>&lt;group&gt;</string>
+			</dict>
+			<key>B40F26471D7470B269E6F4D6</key>
+			<dict>
+				<key>children</key>
+				<array>
+					<string>E953F1F92651A00C0DC78C82</string>
+				</array>
+				<key>isa</key>
+				<string>PBXGroup</string>
+				<key>name</key>
+				<string>ofxSpatialHash</string>
+				<key>sourceTree</key>
+				<string>&lt;group&gt;</string>
+			</dict>
+			<key>3FCC3CC63F1FB03FA5A6C417</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>KDTree.h</string>
+				<key>path</key>
+				<string>../../../addons/ofxSpatialHash/libs/ofxSpatialHash/include/ofx/KDTree.h</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>7C1FBBCA7CAE2DFAD0F11123</key>
+			<dict>
+				<key>children</key>
+				<array>
+					<string>B93E3253E66E6B282C408B7C</string>
+				</array>
+				<key>isa</key>
+				<string>PBXGroup</string>
+				<key>name</key>
+				<string>include</string>
+				<key>sourceTree</key>
+				<string>&lt;group&gt;</string>
+			</dict>
+			<key>CF1D40B026E188CB81FA4F13</key>
+			<dict>
+				<key>children</key>
+				<array>
+					<string>7C1FBBCA7CAE2DFAD0F11123</string>
+				</array>
+				<key>isa</key>
+				<string>PBXGroup</string>
+				<key>name</key>
+				<string>nanoflann</string>
+				<key>sourceTree</key>
+				<string>&lt;group&gt;</string>
+			</dict>
+			<key>6C9AF35F1A9916752055A0F3</key>
+			<dict>
+				<key>children</key>
+				<array>
+					<string>CF1D40B026E188CB81FA4F13</string>
+					<string>B40F26471D7470B269E6F4D6</string>
+				</array>
+				<key>isa</key>
+				<string>PBXGroup</string>
+				<key>name</key>
+				<string>libs</string>
+				<key>sourceTree</key>
+				<string>&lt;group&gt;</string>
+			</dict>
+			<key>B93E3253E66E6B282C408B7C</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>nanoflann.hpp</string>
+				<key>path</key>
+				<string>../../../addons/ofxSpatialHash/libs/nanoflann/include/nanoflann.hpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>385A835B12A0021297521F5A</key>
+			<dict>
+				<key>children</key>
+				<array>
+					<string>C7741F5222EA5255DD6710ED</string>
+				</array>
+				<key>isa</key>
+				<string>PBXGroup</string>
+				<key>name</key>
+				<string>src</string>
+				<key>sourceTree</key>
+				<string>&lt;group&gt;</string>
+			</dict>
+			<key>6F8AB0A4B467ADD4AFCB478C</key>
+			<dict>
+				<key>children</key>
+				<array>
+					<string>385A835B12A0021297521F5A</string>
+					<string>6C9AF35F1A9916752055A0F3</string>
+				</array>
+				<key>isa</key>
+				<string>PBXGroup</string>
+				<key>name</key>
+				<string>ofxSpatialHash</string>
+				<key>sourceTree</key>
+				<string>&lt;group&gt;</string>
+			</dict>
+			<key>C7741F5222EA5255DD6710ED</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>ofxSpatialHash.h</string>
+				<key>path</key>
+				<string>../../../addons/ofxSpatialHash/src/ofxSpatialHash.h</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>7701602118C70C10291E49C8</key>
+			<dict>
+				<key>fileRef</key>
+				<string>2F615CEE50F03C98EE5F0999</string>
+				<key>isa</key>
+				<string>PBXBuildFile</string>
+			</dict>
+			<key>2F615CEE50F03C98EE5F0999</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.cpp.cpp</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>Utils.cpp</string>
+				<key>path</key>
+				<string>../../../addons/ofxSatellite/libs/ofxSatellite/src/Utils.cpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>12F92D22188E8072B15300B9</key>
+			<dict>
+				<key>children</key>
+				<array>
+					<string>3BECB5A155F6BAA3BEA761DF</string>
+					<string>2F615CEE50F03C98EE5F0999</string>
+				</array>
+				<key>isa</key>
+				<string>PBXGroup</string>
+				<key>name</key>
+				<string>src</string>
+				<key>sourceTree</key>
+				<string>&lt;group&gt;</string>
+			</dict>
+			<key>651DE076CC112B6101E5C2BC</key>
+			<dict>
+				<key>fileRef</key>
+				<string>3BECB5A155F6BAA3BEA761DF</string>
+				<key>isa</key>
+				<string>PBXBuildFile</string>
+			</dict>
+			<key>3BECB5A155F6BAA3BEA761DF</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.cpp.cpp</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>Satellite.cpp</string>
+				<key>path</key>
+				<string>../../../addons/ofxSatellite/libs/ofxSatellite/src/Satellite.cpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>4CB37F6B6BA03E50196A5E19</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>Utils.h</string>
+				<key>path</key>
+				<string>../../../addons/ofxSatellite/libs/ofxSatellite/includes/ofx/Satellite/Utils.h</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>DCC6CA999B435847E784E8E8</key>
+			<dict>
+				<key>children</key>
+				<array>
+					<string>3F0D35AAB1021E0EDD881C19</string>
+					<string>4CB37F6B6BA03E50196A5E19</string>
+				</array>
+				<key>isa</key>
+				<string>PBXGroup</string>
+				<key>name</key>
+				<string>Satellite</string>
+				<key>sourceTree</key>
+				<string>&lt;group&gt;</string>
+			</dict>
+			<key>D76C491D7059588992E88A42</key>
+			<dict>
+				<key>children</key>
+				<array>
+					<string>DCC6CA999B435847E784E8E8</string>
+				</array>
+				<key>isa</key>
+				<string>PBXGroup</string>
+				<key>name</key>
+				<string>ofx</string>
+				<key>sourceTree</key>
+				<string>&lt;group&gt;</string>
+			</dict>
+			<key>5909EB10E8B446FCC7F7B1E6</key>
+			<dict>
+				<key>children</key>
+				<array>
+					<string>D76C491D7059588992E88A42</string>
+				</array>
+				<key>isa</key>
+				<string>PBXGroup</string>
+				<key>name</key>
+				<string>includes</string>
+				<key>sourceTree</key>
+				<string>&lt;group&gt;</string>
+			</dict>
+			<key>C167E376F5F61D4647DFED1A</key>
+			<dict>
+				<key>children</key>
+				<array>
+					<string>5909EB10E8B446FCC7F7B1E6</string>
+					<string>12F92D22188E8072B15300B9</string>
+				</array>
+				<key>isa</key>
+				<string>PBXGroup</string>
+				<key>name</key>
+				<string>ofxSatellite</string>
+				<key>sourceTree</key>
+				<string>&lt;group&gt;</string>
+			</dict>
+			<key>3F0D35AAB1021E0EDD881C19</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>Satellite.h</string>
+				<key>path</key>
+				<string>../../../addons/ofxSatellite/libs/ofxSatellite/includes/ofx/Satellite/Satellite.h</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>C55A6A11A379E0F27C032381</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>Vector.h</string>
+				<key>path</key>
+				<string>../../../addons/ofxSatellite/libs/libsgp4/Vector.h</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>A45AE417DC366D2319D3A192</key>
+			<dict>
+				<key>fileRef</key>
+				<string>60E0F24878474A4AEE71D50A</string>
+				<key>isa</key>
+				<string>PBXBuildFile</string>
+			</dict>
+			<key>60E0F24878474A4AEE71D50A</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.cpp.cpp</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>Vector.cpp</string>
+				<key>path</key>
+				<string>../../../addons/ofxSatellite/libs/libsgp4/Vector.cpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>9CD816E4BB7C54734CB15092</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>Util.h</string>
+				<key>path</key>
+				<string>../../../addons/ofxSatellite/libs/libsgp4/Util.h</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>A5C693A7ACC97A9E70F94200</key>
+			<dict>
+				<key>fileRef</key>
+				<string>3841F040369B6F65ABA7CE80</string>
+				<key>isa</key>
+				<string>PBXBuildFile</string>
+			</dict>
+			<key>3841F040369B6F65ABA7CE80</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.cpp.cpp</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>Util.cpp</string>
+				<key>path</key>
+				<string>../../../addons/ofxSatellite/libs/libsgp4/Util.cpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>910A940620FCFDF8E5204E2D</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>TleException.h</string>
+				<key>path</key>
+				<string>../../../addons/ofxSatellite/libs/libsgp4/TleException.h</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>5EBA84663EF1276A176A39D6</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>Tle.h</string>
+				<key>path</key>
+				<string>../../../addons/ofxSatellite/libs/libsgp4/Tle.h</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>CAE4FC54449DE204F0AAF087</key>
+			<dict>
+				<key>fileRef</key>
+				<string>4A2AEC0A46E5294DF372C40C</string>
+				<key>isa</key>
+				<string>PBXBuildFile</string>
+			</dict>
+			<key>4A2AEC0A46E5294DF372C40C</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.cpp.cpp</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>Tle.cpp</string>
+				<key>path</key>
+				<string>../../../addons/ofxSatellite/libs/libsgp4/Tle.cpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>D36B7BA863C7D8ADE8C59D56</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>TimeSpan.h</string>
+				<key>path</key>
+				<string>../../../addons/ofxSatellite/libs/libsgp4/TimeSpan.h</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>929AECB71883296976F4BC83</key>
+			<dict>
+				<key>fileRef</key>
+				<string>F2B6A6AA7C61FCBD6A41FFF2</string>
+				<key>isa</key>
+				<string>PBXBuildFile</string>
+			</dict>
+			<key>F2B6A6AA7C61FCBD6A41FFF2</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.cpp.cpp</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>TimeSpan.cpp</string>
+				<key>path</key>
+				<string>../../../addons/ofxSatellite/libs/libsgp4/TimeSpan.cpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>D2F7F7850E61CAC4B221E799</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>SolarPosition.h</string>
+				<key>path</key>
+				<string>../../../addons/ofxSatellite/libs/libsgp4/SolarPosition.h</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>1F122C94015B73A1AA4AA430</key>
+			<dict>
+				<key>fileRef</key>
+				<string>11ADC71C2EECEB617585F80F</string>
+				<key>isa</key>
+				<string>PBXBuildFile</string>
+			</dict>
+			<key>11ADC71C2EECEB617585F80F</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.cpp.cpp</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>SolarPosition.cpp</string>
+				<key>path</key>
+				<string>../../../addons/ofxSatellite/libs/libsgp4/SolarPosition.cpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>2D778A3949A95D4A0559395B</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>SGP4.h</string>
+				<key>path</key>
+				<string>../../../addons/ofxSatellite/libs/libsgp4/SGP4.h</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>02F878E84CD6299ED22361F4</key>
+			<dict>
+				<key>fileRef</key>
+				<string>3225C5826B6E61472C508C84</string>
+				<key>isa</key>
+				<string>PBXBuildFile</string>
+			</dict>
+			<key>3225C5826B6E61472C508C84</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.cpp.cpp</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>SGP4.cpp</string>
+				<key>path</key>
+				<string>../../../addons/ofxSatellite/libs/libsgp4/SGP4.cpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>CF59AA85735DC849B121B260</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>SatelliteException.h</string>
+				<key>path</key>
+				<string>../../../addons/ofxSatellite/libs/libsgp4/SatelliteException.h</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>A551A63C96F598937AC720F1</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>OrbitalElements.h</string>
+				<key>path</key>
+				<string>../../../addons/ofxSatellite/libs/libsgp4/OrbitalElements.h</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>8285A7F277AC7D2038387981</key>
+			<dict>
+				<key>fileRef</key>
+				<string>66B0E95189D928BB08B77E74</string>
+				<key>isa</key>
+				<string>PBXBuildFile</string>
+			</dict>
+			<key>66B0E95189D928BB08B77E74</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.cpp.cpp</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>OrbitalElements.cpp</string>
+				<key>path</key>
+				<string>../../../addons/ofxSatellite/libs/libsgp4/OrbitalElements.cpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>FAA8D784A55E0A56E0B7F3F4</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>Observer.h</string>
+				<key>path</key>
+				<string>../../../addons/ofxSatellite/libs/libsgp4/Observer.h</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>265BAB017954B6CC1D2A3D78</key>
+			<dict>
+				<key>fileRef</key>
+				<string>89474D2EA08F16FBC6AE438B</string>
+				<key>isa</key>
+				<string>PBXBuildFile</string>
+			</dict>
+			<key>89474D2EA08F16FBC6AE438B</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.cpp.cpp</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>Observer.cpp</string>
+				<key>path</key>
+				<string>../../../addons/ofxSatellite/libs/libsgp4/Observer.cpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>ECAA44979060BA681627A01E</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>Globals.h</string>
+				<key>path</key>
+				<string>../../../addons/ofxSatellite/libs/libsgp4/Globals.h</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>4D81191B49715B34C8FA6549</key>
+			<dict>
+				<key>fileRef</key>
+				<string>B029979AAB04E790310C1A74</string>
+				<key>isa</key>
+				<string>PBXBuildFile</string>
+			</dict>
+			<key>B029979AAB04E790310C1A74</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.cpp.cpp</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>Globals.cpp</string>
+				<key>path</key>
+				<string>../../../addons/ofxSatellite/libs/libsgp4/Globals.cpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>3DD17DA6B502BA0EF242735D</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>Eci.h</string>
+				<key>path</key>
+				<string>../../../addons/ofxSatellite/libs/libsgp4/Eci.h</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>8D5F19EBD8346746AE55E39B</key>
+			<dict>
+				<key>fileRef</key>
+				<string>DFF9E78844130870C9759E8A</string>
+				<key>isa</key>
+				<string>PBXBuildFile</string>
+			</dict>
+			<key>DFF9E78844130870C9759E8A</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.cpp.cpp</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>Eci.cpp</string>
+				<key>path</key>
+				<string>../../../addons/ofxSatellite/libs/libsgp4/Eci.cpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>7D6BD8BE655DA4A729DD8EF5</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>DecayedException.h</string>
+				<key>path</key>
+				<string>../../../addons/ofxSatellite/libs/libsgp4/DecayedException.h</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>75EC6BFAB43D69C49CA2FA7E</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>DateTime.h</string>
+				<key>path</key>
+				<string>../../../addons/ofxSatellite/libs/libsgp4/DateTime.h</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>8919DBC6E0DCFC437DCFFB90</key>
+			<dict>
+				<key>fileRef</key>
+				<string>E0EBAD6CF2AF6AD79BE06442</string>
+				<key>isa</key>
+				<string>PBXBuildFile</string>
+			</dict>
+			<key>E0EBAD6CF2AF6AD79BE06442</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.cpp.cpp</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>DateTime.cpp</string>
+				<key>path</key>
+				<string>../../../addons/ofxSatellite/libs/libsgp4/DateTime.cpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>BE180C99C925A246BB85A032</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>CoordTopocentric.h</string>
+				<key>path</key>
+				<string>../../../addons/ofxSatellite/libs/libsgp4/CoordTopocentric.h</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>045A2B483916E01209927C76</key>
+			<dict>
+				<key>fileRef</key>
+				<string>06EC8D051FDADFCDF3891AFB</string>
+				<key>isa</key>
+				<string>PBXBuildFile</string>
+			</dict>
+			<key>06EC8D051FDADFCDF3891AFB</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.cpp.cpp</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>CoordTopocentric.cpp</string>
+				<key>path</key>
+				<string>../../../addons/ofxSatellite/libs/libsgp4/CoordTopocentric.cpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>2CDC015DFC2CEA94D61870DF</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>CoordGeodetic.h</string>
+				<key>path</key>
+				<string>../../../addons/ofxSatellite/libs/libsgp4/CoordGeodetic.h</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>262E56C22936A7DC64237E39</key>
+			<dict>
+				<key>children</key>
+				<array>
+					<string>AA203E8E5A958F9BA46F6478</string>
+					<string>2CDC015DFC2CEA94D61870DF</string>
+					<string>06EC8D051FDADFCDF3891AFB</string>
+					<string>BE180C99C925A246BB85A032</string>
+					<string>E0EBAD6CF2AF6AD79BE06442</string>
+					<string>75EC6BFAB43D69C49CA2FA7E</string>
+					<string>7D6BD8BE655DA4A729DD8EF5</string>
+					<string>DFF9E78844130870C9759E8A</string>
+					<string>3DD17DA6B502BA0EF242735D</string>
+					<string>B029979AAB04E790310C1A74</string>
+					<string>ECAA44979060BA681627A01E</string>
+					<string>89474D2EA08F16FBC6AE438B</string>
+					<string>FAA8D784A55E0A56E0B7F3F4</string>
+					<string>66B0E95189D928BB08B77E74</string>
+					<string>A551A63C96F598937AC720F1</string>
+					<string>CF59AA85735DC849B121B260</string>
+					<string>3225C5826B6E61472C508C84</string>
+					<string>2D778A3949A95D4A0559395B</string>
+					<string>11ADC71C2EECEB617585F80F</string>
+					<string>D2F7F7850E61CAC4B221E799</string>
+					<string>F2B6A6AA7C61FCBD6A41FFF2</string>
+					<string>D36B7BA863C7D8ADE8C59D56</string>
+					<string>4A2AEC0A46E5294DF372C40C</string>
+					<string>5EBA84663EF1276A176A39D6</string>
+					<string>910A940620FCFDF8E5204E2D</string>
+					<string>3841F040369B6F65ABA7CE80</string>
+					<string>9CD816E4BB7C54734CB15092</string>
+					<string>60E0F24878474A4AEE71D50A</string>
+					<string>C55A6A11A379E0F27C032381</string>
+				</array>
+				<key>isa</key>
+				<string>PBXGroup</string>
+				<key>name</key>
+				<string>libsgp4</string>
+				<key>sourceTree</key>
+				<string>&lt;group&gt;</string>
+			</dict>
+			<key>5DED4E43304C2A8C5DAE6026</key>
+			<dict>
+				<key>children</key>
+				<array>
+					<string>262E56C22936A7DC64237E39</string>
+					<string>C167E376F5F61D4647DFED1A</string>
+				</array>
+				<key>isa</key>
+				<string>PBXGroup</string>
+				<key>name</key>
+				<string>libs</string>
+				<key>sourceTree</key>
+				<string>&lt;group&gt;</string>
+			</dict>
+			<key>21D5B299E31341B5D655EA6E</key>
+			<dict>
+				<key>fileRef</key>
+				<string>AA203E8E5A958F9BA46F6478</string>
+				<key>isa</key>
+				<string>PBXBuildFile</string>
+			</dict>
+			<key>AA203E8E5A958F9BA46F6478</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.cpp.cpp</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>CoordGeodetic.cpp</string>
+				<key>path</key>
+				<string>../../../addons/ofxSatellite/libs/libsgp4/CoordGeodetic.cpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>90F390D37066E2DCA34E5CE7</key>
+			<dict>
+				<key>children</key>
+				<array>
+					<string>0F304B76D020460D46C85EA8</string>
+				</array>
+				<key>isa</key>
+				<string>PBXGroup</string>
+				<key>name</key>
+				<string>src</string>
+				<key>sourceTree</key>
+				<string>&lt;group&gt;</string>
+			</dict>
+			<key>673C542C90F960253390265E</key>
+			<dict>
+				<key>children</key>
+				<array>
+					<string>90F390D37066E2DCA34E5CE7</string>
+					<string>5DED4E43304C2A8C5DAE6026</string>
+				</array>
+				<key>isa</key>
+				<string>PBXGroup</string>
+				<key>name</key>
+				<string>ofxSatellite</string>
+				<key>sourceTree</key>
+				<string>&lt;group&gt;</string>
+			</dict>
+			<key>0F304B76D020460D46C85EA8</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>ofxSatellite.h</string>
+				<key>path</key>
+				<string>../../../addons/ofxSatellite/src/ofxSatellite.h</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>BB4B014C10F69532006C3DED</key>
+			<dict>
+				<key>children</key>
+				<array>
+					<string>673C542C90F960253390265E</string>
+					<string>6F8AB0A4B467ADD4AFCB478C</string>
+					<string>E580DA17DAC1E2210AA6BB6A</string>
+					<string>07675191E5CBBF4211173C08</string>
+				</array>
+				<key>isa</key>
+				<string>PBXGroup</string>
+				<key>name</key>
+				<string>addons</string>
+				<key>sourceTree</key>
+				<string>&lt;group&gt;</string>
+			</dict>
+			<key>E4328143138ABC890047C5CB</key>
+			<dict>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>lastKnownFileType</key>
+				<string>wrapper.pb-project</string>
+				<key>name</key>
+				<string>openFrameworksLib.xcodeproj</string>
+				<key>path</key>
+				<string>../../../libs/openFrameworksCompiled/project/osx/openFrameworksLib.xcodeproj</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>E4328144138ABC890047C5CB</key>
+			<dict>
+				<key>children</key>
+				<array>
+					<string>E4328148138ABC890047C5CB</string>
+				</array>
+				<key>isa</key>
+				<string>PBXGroup</string>
+				<key>name</key>
+				<string>Products</string>
+				<key>sourceTree</key>
+				<string>&lt;group&gt;</string>
+			</dict>
+			<key>E4328147138ABC890047C5CB</key>
+			<dict>
+				<key>containerPortal</key>
+				<string>E4328143138ABC890047C5CB</string>
+				<key>isa</key>
+				<string>PBXContainerItemProxy</string>
+				<key>proxyType</key>
+				<string>2</string>
+				<key>remoteGlobalIDString</key>
+				<string>E4B27C1510CBEB8E00536013</string>
+				<key>remoteInfo</key>
+				<string>openFrameworks</string>
+			</dict>
+			<key>E4328148138ABC890047C5CB</key>
+			<dict>
+				<key>fileType</key>
+				<string>archive.ar</string>
+				<key>isa</key>
+				<string>PBXReferenceProxy</string>
+				<key>path</key>
+				<string>openFrameworksDebug.a</string>
+				<key>remoteRef</key>
+				<string>E4328147138ABC890047C5CB</string>
+				<key>sourceTree</key>
+				<string>BUILT_PRODUCTS_DIR</string>
+			</dict>
+			<key>E4328149138ABC9F0047C5CB</key>
+			<dict>
+				<key>fileRef</key>
+				<string>E4328148138ABC890047C5CB</string>
+				<key>isa</key>
+				<string>PBXBuildFile</string>
+			</dict>
+			<key>E4B69B4A0A3A1720003C02F2</key>
+			<dict>
+				<key>children</key>
+				<array>
+					<string>E4B6FCAD0C3E899E008CF71C</string>
+					<string>E4EB6923138AFD0F00A09F29</string>
+					<string>E4B69E1C0A3A1BDC003C02F2</string>
+					<string>E4EEC9E9138DF44700A80321</string>
+					<string>BB4B014C10F69532006C3DED</string>
+					<string>E4B69B5B0A3A1756003C02F2</string>
+				</array>
+				<key>isa</key>
+				<string>PBXGroup</string>
+				<key>sourceTree</key>
+				<string>&lt;group&gt;</string>
+			</dict>
+			<key>E4B69B4C0A3A1720003C02F2</key>
+			<dict>
+				<key>attributes</key>
+				<dict>
+					<key>LastUpgradeCheck</key>
+					<string>0600</string>
+				</dict>
+				<key>buildConfigurationList</key>
+				<string>E4B69B4D0A3A1720003C02F2</string>
+				<key>compatibilityVersion</key>
+				<string>Xcode 3.2</string>
+				<key>developmentRegion</key>
+				<string>English</string>
+				<key>hasScannedForEncodings</key>
+				<string>0</string>
+				<key>isa</key>
+				<string>PBXProject</string>
+				<key>knownRegions</key>
+				<array>
+					<string>English</string>
+					<string>Japanese</string>
+					<string>French</string>
+					<string>German</string>
+				</array>
+				<key>mainGroup</key>
+				<string>E4B69B4A0A3A1720003C02F2</string>
+				<key>productRefGroup</key>
+				<string>E4B69B4A0A3A1720003C02F2</string>
+				<key>projectDirPath</key>
+				<string />
+				<key>projectReferences</key>
+				<array>
+					<dict>
+						<key>ProductGroup</key>
+						<string>E4328144138ABC890047C5CB</string>
+						<key>ProjectRef</key>
+						<string>E4328143138ABC890047C5CB</string>
+					</dict>
+				</array>
+				<key>projectRoot</key>
+				<string />
+				<key>targets</key>
+				<array>
+					<string>E4B69B5A0A3A1756003C02F2</string>
+				</array>
+			</dict>
+			<key>E4B69B4D0A3A1720003C02F2</key>
+			<dict>
+				<key>buildConfigurations</key>
+				<array>
+					<string>E4B69B4E0A3A1720003C02F2</string>
+					<string>E4B69B4F0A3A1720003C02F2</string>
+				</array>
+				<key>defaultConfigurationIsVisible</key>
+				<string>0</string>
+				<key>defaultConfigurationName</key>
+				<string>Release</string>
+				<key>isa</key>
+				<string>XCConfigurationList</string>
+			</dict>
+			<key>E4B69B4E0A3A1720003C02F2</key>
+			<dict>
+				<key>baseConfigurationReference</key>
+				<string>E4EB6923138AFD0F00A09F29</string>
+				<key>buildSettings</key>
+				<dict>
+					<key>HEADER_SEARCH_PATHS</key>
+					<array>
+						<string>$(OF_CORE_HEADERS)</string>
+						<string>../../../addons/ofxSatellite/libs</string>
+						<string>../../../addons/ofxSatellite/libs/libsgp4</string>
+						<string>../../../addons/ofxSatellite/libs/ofxSatellite</string>
+						<string>../../../addons/ofxSatellite/libs/ofxSatellite/includes</string>
+						<string>../../../addons/ofxSatellite/libs/ofxSatellite/includes/ofx</string>
+						<string>../../../addons/ofxSatellite/libs/ofxSatellite/includes/ofx/Satellite</string>
+						<string>../../../addons/ofxSatellite/libs/ofxSatellite/src</string>
+						<string>../../../addons/ofxSatellite/src</string>
+						<string>../../../addons/ofxSpatialHash/libs</string>
+						<string>../../../addons/ofxSpatialHash/libs/nanoflann</string>
+						<string>../../../addons/ofxSpatialHash/libs/nanoflann/include</string>
+						<string>../../../addons/ofxSpatialHash/libs/ofxSpatialHash</string>
+						<string>../../../addons/ofxSpatialHash/libs/ofxSpatialHash/include</string>
+						<string>../../../addons/ofxSpatialHash/libs/ofxSpatialHash/include/ofx</string>
+						<string>../../../addons/ofxSpatialHash/libs/ofxSpatialHash/src</string>
+						<string>../../../addons/ofxSpatialHash/src</string>
+						<string>../../../addons/ofxTime/libs</string>
+						<string>../../../addons/ofxTime/libs/ofxTime</string>
+						<string>../../../addons/ofxTime/libs/ofxTime/include</string>
+						<string>../../../addons/ofxTime/libs/ofxTime/include/ofx</string>
+						<string>../../../addons/ofxTime/libs/ofxTime/include/ofx/Time</string>
+						<string>../../../addons/ofxTime/libs/ofxTime/src</string>
+						<string>../../../addons/ofxTime/src</string>
+						<string>../../../addons/libs</string>
+						<string>../../../addons/src</string>
+						<string>src</string>
+						<string>../../../addons/ofxGeo/libs</string>
+						<string>../../../addons/ofxGeo/libs/GeographicLib</string>
+						<string>../../../addons/ofxGeo/libs/GeographicLib/include</string>
+						<string>../../../addons/ofxGeo/libs/GeographicLib/include/GeographicLib</string>
+						<string>../../../addons/ofxGeo/libs/GeographicLib/src</string>
+						<string>../../../addons/ofxGeo/libs/UTM</string>
+						<string>../../../addons/ofxGeo/libs/UTM/include</string>
+						<string>../../../addons/ofxGeo/libs/UTM/include/UTM</string>
+						<string>../../../addons/ofxGeo/libs/ofxGeo</string>
+						<string>../../../addons/ofxGeo/libs/ofxGeo/include</string>
+						<string>../../../addons/ofxGeo/libs/ofxGeo/include/ofx</string>
+						<string>../../../addons/ofxGeo/libs/ofxGeo/include/ofx/Geo</string>
+						<string>../../../addons/ofxGeo/libs/ofxGeo/src</string>
+						<string>../../../addons/ofxGeo/src</string>
+					</array>
+					<key>ARCHS</key>
+					<string>$(ARCHS_STANDARD_32_BIT)</string>
+					<key>CONFIGURATION_BUILD_DIR</key>
+					<string>$(SRCROOT)/bin/</string>
+					<key>COPY_PHASE_STRIP</key>
+					<string>NO</string>
+					<key>DEAD_CODE_STRIPPING</key>
+					<string>YES</string>
+					<key>GCC_AUTO_VECTORIZATION</key>
+					<string>YES</string>
+					<key>GCC_ENABLE_SSE3_EXTENSIONS</key>
+					<string>YES</string>
+					<key>GCC_ENABLE_SUPPLEMENTAL_SSE3_INSTRUCTIONS</key>
+					<string>YES</string>
+					<key>GCC_INLINES_ARE_PRIVATE_EXTERN</key>
+					<string>NO</string>
+					<key>GCC_OPTIMIZATION_LEVEL</key>
+					<string>0</string>
+					<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
+					<string>NO</string>
+					<key>GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS</key>
+					<string>YES</string>
+					<key>GCC_WARN_ABOUT_INVALID_OFFSETOF_MACRO</key>
+					<string>NO</string>
+					<key>GCC_WARN_ALLOW_INCOMPLETE_PROTOCOL</key>
+					<string>NO</string>
+					<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+					<string>NO</string>
+					<key>GCC_WARN_UNUSED_VALUE</key>
+					<string>NO</string>
+					<key>GCC_WARN_UNUSED_VARIABLE</key>
+					<string>NO</string>
+					<key>MACOSX_DEPLOYMENT_TARGET</key>
+					<string>10.6</string>
+					<key>ONLY_ACTIVE_ARCH</key>
+					<string>YES</string>
+					<key>OTHER_CPLUSPLUSFLAGS</key>
+					<array>
+						<string>-D__MACOSX_CORE__</string>
+						<string>-lpthread</string>
+						<string>-mtune=native</string>
+					</array>
+					<key>SDKROOT</key>
+					<string>macosx</string>
+				</dict>
+				<key>isa</key>
+				<string>XCBuildConfiguration</string>
+				<key>name</key>
+				<string>Debug</string>
+			</dict>
+			<key>E4B69B4F0A3A1720003C02F2</key>
+			<dict>
+				<key>baseConfigurationReference</key>
+				<string>E4EB6923138AFD0F00A09F29</string>
+				<key>buildSettings</key>
+				<dict>
+					<key>HEADER_SEARCH_PATHS</key>
+					<array>
+						<string>$(OF_CORE_HEADERS)</string>
+						<string>../../../addons/ofxSatellite/libs</string>
+						<string>../../../addons/ofxSatellite/libs/libsgp4</string>
+						<string>../../../addons/ofxSatellite/libs/ofxSatellite</string>
+						<string>../../../addons/ofxSatellite/libs/ofxSatellite/includes</string>
+						<string>../../../addons/ofxSatellite/libs/ofxSatellite/includes/ofx</string>
+						<string>../../../addons/ofxSatellite/libs/ofxSatellite/includes/ofx/Satellite</string>
+						<string>../../../addons/ofxSatellite/libs/ofxSatellite/src</string>
+						<string>../../../addons/ofxSatellite/src</string>
+						<string>../../../addons/ofxSpatialHash/libs</string>
+						<string>../../../addons/ofxSpatialHash/libs/nanoflann</string>
+						<string>../../../addons/ofxSpatialHash/libs/nanoflann/include</string>
+						<string>../../../addons/ofxSpatialHash/libs/ofxSpatialHash</string>
+						<string>../../../addons/ofxSpatialHash/libs/ofxSpatialHash/include</string>
+						<string>../../../addons/ofxSpatialHash/libs/ofxSpatialHash/include/ofx</string>
+						<string>../../../addons/ofxSpatialHash/libs/ofxSpatialHash/src</string>
+						<string>../../../addons/ofxSpatialHash/src</string>
+						<string>../../../addons/ofxTime/libs</string>
+						<string>../../../addons/ofxTime/libs/ofxTime</string>
+						<string>../../../addons/ofxTime/libs/ofxTime/include</string>
+						<string>../../../addons/ofxTime/libs/ofxTime/include/ofx</string>
+						<string>../../../addons/ofxTime/libs/ofxTime/include/ofx/Time</string>
+						<string>../../../addons/ofxTime/libs/ofxTime/src</string>
+						<string>../../../addons/ofxTime/src</string>
+						<string>../../../addons/libs</string>
+						<string>../../../addons/src</string>
+						<string>src</string>
+						<string>../../../addons/ofxGeo/libs</string>
+						<string>../../../addons/ofxGeo/libs/GeographicLib</string>
+						<string>../../../addons/ofxGeo/libs/GeographicLib/include</string>
+						<string>../../../addons/ofxGeo/libs/GeographicLib/include/GeographicLib</string>
+						<string>../../../addons/ofxGeo/libs/GeographicLib/src</string>
+						<string>../../../addons/ofxGeo/libs/UTM</string>
+						<string>../../../addons/ofxGeo/libs/UTM/include</string>
+						<string>../../../addons/ofxGeo/libs/UTM/include/UTM</string>
+						<string>../../../addons/ofxGeo/libs/ofxGeo</string>
+						<string>../../../addons/ofxGeo/libs/ofxGeo/include</string>
+						<string>../../../addons/ofxGeo/libs/ofxGeo/include/ofx</string>
+						<string>../../../addons/ofxGeo/libs/ofxGeo/include/ofx/Geo</string>
+						<string>../../../addons/ofxGeo/libs/ofxGeo/src</string>
+						<string>../../../addons/ofxGeo/src</string>
+					</array>
+					<key>ARCHS</key>
+					<string>$(ARCHS_STANDARD_32_BIT)</string>
+					<key>CONFIGURATION_BUILD_DIR</key>
+					<string>$(SRCROOT)/bin/</string>
+					<key>COPY_PHASE_STRIP</key>
+					<string>YES</string>
+					<key>DEAD_CODE_STRIPPING</key>
+					<string>YES</string>
+					<key>GCC_AUTO_VECTORIZATION</key>
+					<string>YES</string>
+					<key>GCC_ENABLE_SSE3_EXTENSIONS</key>
+					<string>YES</string>
+					<key>GCC_ENABLE_SUPPLEMENTAL_SSE3_INSTRUCTIONS</key>
+					<string>YES</string>
+					<key>GCC_INLINES_ARE_PRIVATE_EXTERN</key>
+					<string>NO</string>
+					<key>GCC_OPTIMIZATION_LEVEL</key>
+					<string>3</string>
+					<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
+					<string>NO</string>
+					<key>GCC_UNROLL_LOOPS</key>
+					<string>YES</string>
+					<key>GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS</key>
+					<string>YES</string>
+					<key>GCC_WARN_ABOUT_INVALID_OFFSETOF_MACRO</key>
+					<string>NO</string>
+					<key>GCC_WARN_ALLOW_INCOMPLETE_PROTOCOL</key>
+					<string>NO</string>
+					<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+					<string>NO</string>
+					<key>GCC_WARN_UNUSED_VALUE</key>
+					<string>NO</string>
+					<key>GCC_WARN_UNUSED_VARIABLE</key>
+					<string>NO</string>
+					<key>MACOSX_DEPLOYMENT_TARGET</key>
+					<string>10.6</string>
+					<key>OTHER_CPLUSPLUSFLAGS</key>
+					<array>
+						<string>-D__MACOSX_CORE__</string>
+						<string>-lpthread</string>
+						<string>-mtune=native</string>
+					</array>
+					<key>SDKROOT</key>
+					<string>macosx</string>
+				</dict>
+				<key>isa</key>
+				<string>XCBuildConfiguration</string>
+				<key>name</key>
+				<string>Release</string>
+			</dict>
+			<key>E4B69B580A3A1756003C02F2</key>
+			<dict>
+				<key>buildActionMask</key>
+				<string>2147483647</string>
+				<key>files</key>
+				<array>
+					<string>E4B69E200A3A1BDC003C02F2</string>
+					<string>E4B69E210A3A1BDC003C02F2</string>
+					<string>21D5B299E31341B5D655EA6E</string>
+					<string>045A2B483916E01209927C76</string>
+					<string>8919DBC6E0DCFC437DCFFB90</string>
+					<string>8D5F19EBD8346746AE55E39B</string>
+					<string>4D81191B49715B34C8FA6549</string>
+					<string>265BAB017954B6CC1D2A3D78</string>
+					<string>8285A7F277AC7D2038387981</string>
+					<string>02F878E84CD6299ED22361F4</string>
+					<string>1F122C94015B73A1AA4AA430</string>
+					<string>929AECB71883296976F4BC83</string>
+					<string>CAE4FC54449DE204F0AAF087</string>
+					<string>A5C693A7ACC97A9E70F94200</string>
+					<string>A45AE417DC366D2319D3A192</string>
+					<string>651DE076CC112B6101E5C2BC</string>
+					<string>7701602118C70C10291E49C8</string>
+					<string>FD60BE5CE7BBD47BD60D6F5B</string>
+					<string>5847AA7C8B6171D9FE1CC8D5</string>
+					<string>532AF6D7E3CB5AE24D160140</string>
+					<string>3E7D272BB14CF0CD21AB9BF5</string>
+					<string>508D5ECDA7FAFF379F58128A</string>
+					<string>9D2002DCCA863F80989626BD</string>
+					<string>CA90CF93603575A10509B381</string>
+					<string>C74EB54F9C2C709BFF0A9456</string>
+					<string>F67BCED075E4D28B8DCDA8AF</string>
+					<string>5B281281743ABE4E9F387E84</string>
+					<string>492D4077BF33486AA1AA6121</string>
+					<string>45F5C9CDECDED9636943AE05</string>
+					<string>7108E3254AF88DAEC0624230</string>
+					<string>DD1921BB4716E9BB22A3B863</string>
+					<string>324B65EF5615231242A1C255</string>
+					<string>AA44DBD67D39B3B6E3A3F5E3</string>
+					<string>B7C3B391BB7D1ABE564A2678</string>
+					<string>D5277340E78D29EE272FABEB</string>
+					<string>07CFE012390553B3F5A65C8D</string>
+					<string>0D6BEA7B8AF78513DC822F28</string>
+					<string>81848B5C6156E3C41DAB5A1E</string>
+					<string>AAB695C022336C68547C70B7</string>
+					<string>50DE26627BFC67DBB2B0D4B4</string>
+					<string>7F6649E5831D917CFD033162</string>
+					<string>D6191DB7E72E59F688E4A6BF</string>
+					<string>81E3BF0840C90EFE80077797</string>
+					<string>80C28802A626A203E95C26B6</string>
+					<string>01A107FA562137338B1CE26A</string>
+					<string>9EC4A63B79CED3FB1FE94705</string>
+					<string>8596496D98D9AC5120B203F9</string>
+					<string>F1652A478FA675612F9A71B5</string>
+					<string>F5DC9F938EED1EC86104C743</string>
+					<string>35CE5EC340E1D8EF637ABD6F</string>
+					<string>344582AA1751BB3B36F35817</string>
+					<string>F2BA755FE1DF5B347F8F10C9</string>
+					<string>5623BA6346DC550F88F4D072</string>
+					<string>CC5BA434CD7AA510CA4AC40A</string>
+					<string>F234826FB6C32C331BE8808B</string>
+					<string>83E82590F226EDFA644D06F6</string>
+					<string>C17F077E9A84ADD14323C2C2</string>
+					<string>90394B76928F4E40167A3536</string>
+					<string>75680DD78047C04373769C5B</string>
+					<string>08CD2256307B048A8152D1C6</string>
+					<string>408BD0AB0C1B8086F4F88323</string>
+					<string>F43C0EFC1C2C6FA257B0BE37</string>
+					<string>49FBBB743B8337E09F42EAFF</string>
+				</array>
+				<key>isa</key>
+				<string>PBXSourcesBuildPhase</string>
+				<key>runOnlyForDeploymentPostprocessing</key>
+				<string>0</string>
+			</dict>
+			<key>E4B69B590A3A1756003C02F2</key>
+			<dict>
+				<key>buildActionMask</key>
+				<string>2147483647</string>
+				<key>files</key>
+				<array>
+					<string>E4328149138ABC9F0047C5CB</string>
+				</array>
+				<key>isa</key>
+				<string>PBXFrameworksBuildPhase</string>
+				<key>runOnlyForDeploymentPostprocessing</key>
+				<string>0</string>
+			</dict>
+			<key>E4B69B5A0A3A1756003C02F2</key>
+			<dict>
+				<key>buildConfigurationList</key>
+				<string>E4B69B5F0A3A1757003C02F2</string>
+				<key>buildPhases</key>
+				<array>
+					<string>E4B69B580A3A1756003C02F2</string>
+					<string>E4B69B590A3A1756003C02F2</string>
+					<string>E4B6FFFD0C3F9AB9008CF71C</string>
+					<string>E4C2427710CC5ABF004149E2</string>
+				</array>
+				<key>buildRules</key>
+				<array />
+				<key>dependencies</key>
+				<array>
+					<string>E4EEB9AC138B136A00A80321</string>
+				</array>
+				<key>isa</key>
+				<string>PBXNativeTarget</string>
+				<key>name</key>
+				<string>example_passpredict</string>
+				<key>productName</key>
+				<string>myOFApp</string>
+				<key>productReference</key>
+				<string>E4B69B5B0A3A1756003C02F2</string>
+				<key>productType</key>
+				<string>com.apple.product-type.application</string>
+			</dict>
+			<key>E4B69B5B0A3A1756003C02F2</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>wrapper.application</string>
+				<key>includeInIndex</key>
+				<string>0</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>path</key>
+				<string>example_passpredictDebug.app</string>
+				<key>sourceTree</key>
+				<string>BUILT_PRODUCTS_DIR</string>
+			</dict>
+			<key>E4B69B5F0A3A1757003C02F2</key>
+			<dict>
+				<key>buildConfigurations</key>
+				<array>
+					<string>E4B69B600A3A1757003C02F2</string>
+					<string>E4B69B610A3A1757003C02F2</string>
+				</array>
+				<key>defaultConfigurationIsVisible</key>
+				<string>0</string>
+				<key>defaultConfigurationName</key>
+				<string>Release</string>
+				<key>isa</key>
+				<string>XCConfigurationList</string>
+			</dict>
+			<key>E4B69B600A3A1757003C02F2</key>
+			<dict>
+				<key>buildSettings</key>
+				<dict>
+					<key>COMBINE_HIDPI_IMAGES</key>
+					<string>YES</string>
+					<key>COPY_PHASE_STRIP</key>
+					<string>NO</string>
+					<key>FRAMEWORK_SEARCH_PATHS</key>
+					<array>
+						<string>$(inherited)</string>
+						<string>$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)</string>
+					</array>
+					<key>FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1</key>
+					<string>"$(SRCROOT)/../../../libs/glut/lib/osx"</string>
+					<key>GCC_DYNAMIC_NO_PIC</key>
+					<string>NO</string>
+					<key>GCC_GENERATE_DEBUGGING_SYMBOLS</key>
+					<string>YES</string>
+					<key>GCC_MODEL_TUNING</key>
+					<string>NONE</string>
+					<key>ICON</key>
+					<string>$(ICON_NAME_DEBUG)</string>
+					<key>ICON_FILE</key>
+					<string>$(ICON_FILE_PATH)$(ICON)</string>
+					<key>INFOPLIST_FILE</key>
+					<string>openFrameworks-Info.plist</string>
+					<key>INSTALL_PATH</key>
+					<string>$(HOME)/Applications</string>
+					<key>LIBRARY_SEARCH_PATHS</key>
+					<string>$(inherited)</string>
+					<key>PRODUCT_NAME</key>
+					<string>$(TARGET_NAME)Debug</string>
+					<key>WRAPPER_EXTENSION</key>
+					<string>app</string>
+				</dict>
+				<key>isa</key>
+				<string>XCBuildConfiguration</string>
+				<key>name</key>
+				<string>Debug</string>
+			</dict>
+			<key>E4B69B610A3A1757003C02F2</key>
+			<dict>
+				<key>buildSettings</key>
+				<dict>
+					<key>COMBINE_HIDPI_IMAGES</key>
+					<string>YES</string>
+					<key>COPY_PHASE_STRIP</key>
+					<string>YES</string>
+					<key>FRAMEWORK_SEARCH_PATHS</key>
+					<array>
+						<string>$(inherited)</string>
+						<string>$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)</string>
+					</array>
+					<key>FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1</key>
+					<string>"$(SRCROOT)/../../../libs/glut/lib/osx"</string>
+					<key>GCC_GENERATE_DEBUGGING_SYMBOLS</key>
+					<string>YES</string>
+					<key>GCC_MODEL_TUNING</key>
+					<string>NONE</string>
+					<key>ICON</key>
+					<string>$(ICON_NAME_RELEASE)</string>
+					<key>ICON_FILE</key>
+					<string>$(ICON_FILE_PATH)$(ICON)</string>
+					<key>INFOPLIST_FILE</key>
+					<string>openFrameworks-Info.plist</string>
+					<key>INSTALL_PATH</key>
+					<string>$(HOME)/Applications</string>
+					<key>LIBRARY_SEARCH_PATHS</key>
+					<string>$(inherited)</string>
+					<key>PRODUCT_NAME</key>
+					<string>$(TARGET_NAME)</string>
+					<key>WRAPPER_EXTENSION</key>
+					<string>app</string>
+				</dict>
+				<key>isa</key>
+				<string>XCBuildConfiguration</string>
+				<key>name</key>
+				<string>Release</string>
+			</dict>
+			<key>E4B69E1C0A3A1BDC003C02F2</key>
+			<dict>
+				<key>children</key>
+				<array>
+					<string>E4B69E1D0A3A1BDC003C02F2</string>
+					<string>E4B69E1E0A3A1BDC003C02F2</string>
+					<string>E4B69E1F0A3A1BDC003C02F2</string>
+				</array>
+				<key>isa</key>
+				<string>PBXGroup</string>
+				<key>path</key>
+				<string>src</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>E4B69E1D0A3A1BDC003C02F2</key>
+			<dict>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>lastKnownFileType</key>
+				<string>sourcecode.cpp.cpp</string>
+				<key>name</key>
+				<string>main.cpp</string>
+				<key>path</key>
+				<string>src/main.cpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>E4B69E1E0A3A1BDC003C02F2</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.cpp.cpp</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>ofApp.cpp</string>
+				<key>path</key>
+				<string>src/ofApp.cpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>E4B69E1F0A3A1BDC003C02F2</key>
+			<dict>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>lastKnownFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>name</key>
+				<string>ofApp.h</string>
+				<key>path</key>
+				<string>src/ofApp.h</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>E4B69E200A3A1BDC003C02F2</key>
+			<dict>
+				<key>fileRef</key>
+				<string>E4B69E1D0A3A1BDC003C02F2</string>
+				<key>isa</key>
+				<string>PBXBuildFile</string>
+			</dict>
+			<key>E4B69E210A3A1BDC003C02F2</key>
+			<dict>
+				<key>fileRef</key>
+				<string>E4B69E1E0A3A1BDC003C02F2</string>
+				<key>isa</key>
+				<string>PBXBuildFile</string>
+			</dict>
+			<key>E4B6FCAD0C3E899E008CF71C</key>
+			<dict>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>lastKnownFileType</key>
+				<string>text.plist.xml</string>
+				<key>path</key>
+				<string>openFrameworks-Info.plist</string>
+				<key>sourceTree</key>
+				<string>&lt;group&gt;</string>
+			</dict>
+			<key>E4B6FFFD0C3F9AB9008CF71C</key>
+			<dict>
+				<key>buildActionMask</key>
+				<string>2147483647</string>
+				<key>files</key>
+				<array />
+				<key>inputPaths</key>
+				<array />
+				<key>isa</key>
+				<string>PBXShellScriptBuildPhase</string>
+				<key>outputPaths</key>
+				<array />
+				<key>runOnlyForDeploymentPostprocessing</key>
+				<string>0</string>
+				<key>shellPath</key>
+				<string>/bin/sh</string>
+				<key>shellScript</key>
+				<string>cp -f ../../../libs/fmodex/lib/osx/libfmodex.dylib "$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/MacOS/libfmodex.dylib"; install_name_tool -change ./libfmodex.dylib @executable_path/libfmodex.dylib "$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/MacOS/$PRODUCT_NAME";
+mkdir -p "$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/Resources/"
+cp -f "$ICON_FILE" "$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/Resources/"
+</string>
+			</dict>
+			<key>E4C2427710CC5ABF004149E2</key>
+			<dict>
+				<key>buildActionMask</key>
+				<string>2147483647</string>
+				<key>dstPath</key>
+				<string />
+				<key>dstSubfolderSpec</key>
+				<string>10</string>
+				<key>files</key>
+				<array />
+				<key>isa</key>
+				<string>PBXCopyFilesBuildPhase</string>
+				<key>runOnlyForDeploymentPostprocessing</key>
+				<string>0</string>
+			</dict>
+			<key>E4EB691F138AFCF100A09F29</key>
+			<dict>
+				<key>fileEncoding</key>
+				<string>4</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>lastKnownFileType</key>
+				<string>text.xcconfig</string>
+				<key>name</key>
+				<string>CoreOF.xcconfig</string>
+				<key>path</key>
+				<string>../../../libs/openFrameworksCompiled/project/osx/CoreOF.xcconfig</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>E4EB6923138AFD0F00A09F29</key>
+			<dict>
+				<key>fileEncoding</key>
+				<string>4</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>lastKnownFileType</key>
+				<string>text.xcconfig</string>
+				<key>path</key>
+				<string>Project.xcconfig</string>
+				<key>sourceTree</key>
+				<string>&lt;group&gt;</string>
+			</dict>
+			<key>E4EEB9AB138B136A00A80321</key>
+			<dict>
+				<key>containerPortal</key>
+				<string>E4328143138ABC890047C5CB</string>
+				<key>isa</key>
+				<string>PBXContainerItemProxy</string>
+				<key>proxyType</key>
+				<string>1</string>
+				<key>remoteGlobalIDString</key>
+				<string>E4B27C1410CBEB8E00536013</string>
+				<key>remoteInfo</key>
+				<string>openFrameworks</string>
+			</dict>
+			<key>E4EEB9AC138B136A00A80321</key>
+			<dict>
+				<key>isa</key>
+				<string>PBXTargetDependency</string>
+				<key>name</key>
+				<string>openFrameworks</string>
+				<key>targetProxy</key>
+				<string>E4EEB9AB138B136A00A80321</string>
+			</dict>
+			<key>E4EEC9E9138DF44700A80321</key>
+			<dict>
+				<key>children</key>
+				<array>
+					<string>E4EB691F138AFCF100A09F29</string>
+					<string>E4328143138ABC890047C5CB</string>
+				</array>
+				<key>isa</key>
+				<string>PBXGroup</string>
+				<key>name</key>
+				<string>openFrameworks</string>
+				<key>sourceTree</key>
+				<string>&lt;group&gt;</string>
+			</dict>
+		</dict>
+		<key>rootObject</key>
+		<string>E4B69B4C0A3A1720003C02F2</string>
+	</dict>
+</plist>

@@ -1,6 +1,6 @@
 // =============================================================================
 //
-// Copyright (c) 2010-2014 Christopher Baker <http://christopherbaker.net>
+// Copyright (c) 2013 Christopher Baker <http://christopherbaker.net>
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -42,7 +42,7 @@ void ofApp::setup()
     DateTime start_date = DateTime::Now(true);
     DateTime end_date(start_date.AddDays(7.0));
 
-    std::vector<Satellite::Utils::PassDetails> pass_list;
+    std::vector<ofx::Satellite::Utils::PassDetails> pass_list;
 
     std::cout << "Start time: " << start_date << std::endl;
     std::cout << "End time  : " << end_date << std::endl << std::endl;
@@ -50,7 +50,7 @@ void ofApp::setup()
     /*
      * generate passes
      */
-    pass_list = Satellite::Utils::GeneratePassList(geo, sgp4, start_date, end_date, 180);
+    pass_list = ofx::Satellite::Utils::GeneratePassList(geo, sgp4, start_date, end_date, 180);
 
     if (pass_list.begin() == pass_list.end())
     {
@@ -62,7 +62,7 @@ void ofApp::setup()
 
         ss << std::right << std::setprecision(1) << std::fixed;
 
-        std::vector<Satellite::Utils::PassDetails>::const_iterator itr = pass_list.begin();
+        std::vector<ofx::Satellite::Utils::PassDetails>::const_iterator itr = pass_list.begin();
         do
         {
             ss  << "AOS: " << itr->aos
@@ -78,16 +78,9 @@ void ofApp::setup()
 }
 
 
-void ofApp::update()
-{
-}
-
-
 void ofApp::draw()
 {
+    ofBackground(255);
+    ofDrawBitmapStringHighlight("See the Console", 10, 42);
 }
 
-
-void ofApp::keyPressed(int key)
-{
-}

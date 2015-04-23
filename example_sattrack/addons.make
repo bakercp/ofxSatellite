@@ -1,4 +1,1 @@
-ofxGeo
 ofxSatellite
-ofxSpatialHash
-ofxTime
