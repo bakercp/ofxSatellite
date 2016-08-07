@@ -33,8 +33,7 @@
 #include "Observer.h"
 #include "Tle.h"
 #include "Util.h"
-#include "ofxTime.h"
-#include "ofxGeo.h"
+#include "Poco/DateTime.h"
 
 
 namespace ofx {

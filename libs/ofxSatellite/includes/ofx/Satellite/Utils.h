@@ -32,7 +32,8 @@
 #include "CoordGeodetic.h"
 #include "Observer.h"
 #include "Util.h"
-#include "ofxTime.h"
+#include "Poco/DateTime.h"
+#include "ofFileUtils.h"
 #include "ofxGeo.h"
 
 

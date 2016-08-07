@@ -35,20 +35,20 @@ void ofApp::setup()
 
     scaler = 300 / ofx::Geo::GeoUtils::EARTH_RADIUS_KM;
 
-    colorMap.loadImage("color_map_1024.jpg");
+    colorMap.load("color_map_1024.jpg");
 
     earthSphere.set(ofx::Geo::GeoUtils::EARTH_RADIUS_KM, 24);
     ofQuaternion quat;
     quat.makeRotate(180, 0, 1, 0);
     earthSphere.rotate(quat);
     earthSphere.mapTexCoords(0,
-                             colorMap.getTextureReference().getTextureData().tex_u,
-                             colorMap.getTextureReference().getTextureData().tex_t,
+                             colorMap.getTexture().getTextureData().tex_u,
+                             colorMap.getTexture().getTextureData().tex_t,
                              0);
 
-    myLocation = ofx::Geo::ElevatedCoordinate(51.507406923983446,
-                                              -0.12773752212524414,
-                                              0.05);
+    myLocation = ofxGeo::ElevatedCoordinate(51.507406923983446,
+                                            -0.12773752212524414,
+                                            0.05);
 
     ofHttpResponse response = ofLoadURL("http://www.celestrak.com/NORAD/elements/resource.txt");
 
@@ -86,7 +86,7 @@ void ofApp::draw()
     ofQuaternion latRot;
     ofQuaternion longRot;
 
-    std::vector<ofx::Satellite::Satellite>::const_iterator iter = satellites.begin();
+    auto iter = satellites.begin();
 
     ofx::Geo::ElevatedCoordinate pos;
 
@@ -94,16 +94,16 @@ void ofApp::draw()
 
     while (iter != satellites.end())
     {
-        // Only show two satellites to keep things simple.
-        if (iter->Name().compare("AQUA") != 0 && iter->Name().compare("TERRA") != 0)
-        {
-            ++iter;
-            continue;
-        }
+//        // Only show two satellites to keep things simple.
+//        if (iter->Name().compare("AQUA") != 0 && iter->Name().compare("TERRA") != 0)
+//        {
+//            ++iter;
+//            continue;
+//        }
 
         try
         {
-            pos = ofx::Satellite::Utils::toElevatedCoordinate((*iter).find(now).ToGeodetic());
+            pos = ofxSatellite::Utils::toElevatedCoordinate((*iter).find(now).ToGeodetic());
         }
         catch (...)
         {
@@ -139,7 +139,7 @@ void ofApp::draw()
         ss << "Longitude (deg): " << pos.getLongitude() << std::endl;
         ss << " Elevation (km): " << pos.getElevation() / 1000 << std::endl;
 
-        ofDrawBitmapString(ss.str(), worldPoint);
+//        ofDrawBitmapString(ss.str(), worldPoint);
 
         ++iter;
     }

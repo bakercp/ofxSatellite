@@ -26,6 +26,7 @@
 #include "ofx/Satellite/Utils.h"
 #include "ofx/Satellite/Satellite.h"
 #include "Poco/String.h"
+#include "ofLog.h"
 
 
 namespace ofx {

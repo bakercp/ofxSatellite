@@ -6,4 +6,4 @@ meta:
 	ADDON_URL = http://github.com/bakercp/ofxSatellite
 
 common:
-	ADDON_DEPENDENCIES = ofxGeo ofxSpatialHash ofxTime
+	ADDON_DEPENDENCIES = ofxGeo
