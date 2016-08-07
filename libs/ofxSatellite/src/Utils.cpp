@@ -1,6 +1,6 @@
 // =============================================================================
 //
-// Copyright (c) 2014 Christopher Baker <http://christopherbaker.net>
+// Copyright (c) 2014-2016 Christopher Baker <http://christopherbaker.net>
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -276,7 +276,7 @@ DateTime Utils::FindCrossingPoint(const CoordGeodetic& user_geo,
                 time2 = middle_time;
             }
         }
-        
+
         if ((time2 - time1).TotalSeconds() < 1.0)
         {
             /*
@@ -294,7 +294,7 @@ DateTime Utils::FindCrossingPoint(const CoordGeodetic& user_geo,
             middle_time = middle_time.AddSeconds(finding_aos ? 1 : -1);
         }
     }
-    
+
     /*
      * go back/forward 1second until below the horizon
      */
@@ -313,7 +313,7 @@ DateTime Utils::FindCrossingPoint(const CoordGeodetic& user_geo,
             running = false;
         }
     }
-    
+
     return middle_time;
 }
 
@@ -420,7 +420,7 @@ std::vector<Utils::PassDetails> Utils::GeneratePassList(const CoordGeodetic& use
              */
             current_time = current_time + TimeSpan(0, 0, time_step);
         }
-        
+
         if (current_time > end_time)
         {
             /*
@@ -429,7 +429,7 @@ std::vector<Utils::PassDetails> Utils::GeneratePassList(const CoordGeodetic& use
             current_time = end_time;
         }
     };
-    
+
     if (found_aos)
     {
         /*
@@ -440,12 +440,12 @@ std::vector<Utils::PassDetails> Utils::GeneratePassList(const CoordGeodetic& use
         pd.aos = aos_time;
         pd.los = end_time;
         pd.max_elevation = FindMaxElevation(user_geo, sgp4, aos_time, end_time);
-        
+
         pass_list.push_back(pd);
     }
-    
+
     return pass_list;
 }
 
-    
+
 } } // namespace ofx::Satellite

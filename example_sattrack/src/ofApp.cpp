@@ -1,6 +1,6 @@
 // =============================================================================
 //
-// Copyright (c) 2010-2014 Christopher Baker <http://christopherbaker.net>
+// Copyright (c) 2010-2016 Christopher Baker <http://christopherbaker.net>
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -29,7 +29,7 @@
 void ofApp::setup()
 {
     ofEnableDepthTest();
-	ofEnableAlphaBlending();
+    ofEnableAlphaBlending();
 
     rot = 0;
 
@@ -69,11 +69,11 @@ void ofApp::setup()
 
 void ofApp::draw()
 {
-	ofBackground(0);
+    ofBackground(0);
 
     cam.begin();
 
-	ofPushMatrix();
+    ofPushMatrix();
     //rot += 1;
     //ofRotate(rot, 0, 1, 0);
     ofScale(scaler, scaler, scaler);
@@ -112,18 +112,18 @@ void ofApp::draw()
             continue;
         }
 
-		ofQuaternion latRot;
+        ofQuaternion latRot;
         ofQuaternion longRot;
 
-		latRot.makeRotate(pos.getLatitude(), 1, 0, 0);
-		longRot.makeRotate(pos.getLongitude(), 0, 1, 0);
+        latRot.makeRotate(pos.getLatitude(), 1, 0, 0);
+        longRot.makeRotate(pos.getLongitude(), 0, 1, 0);
 
-		//our starting point is 0,0, on the surface of our sphere, this is where the meridian and equator meet
-		ofVec3f center = ofVec3f(0,0, pos.getElevation() / 1000 + ofx::Geo::GeoUtils::EARTH_RADIUS_KM);
-		//multiplying a quat with another quat combines their rotations into one quat
-		//multiplying a quat to a vector applies the quat's rotation to that vector
-		//so to to generate our point on the sphere, multiply all of our quaternions together then multiple the centery by the combined rotation
-		ofVec3f worldPoint = latRot * longRot * center;
+        //our starting point is 0,0, on the surface of our sphere, this is where the meridian and equator meet
+        ofVec3f center = ofVec3f(0,0, pos.getElevation() / 1000 + ofx::Geo::GeoUtils::EARTH_RADIUS_KM);
+        //multiplying a quat with another quat combines their rotations into one quat
+        //multiplying a quat to a vector applies the quat's rotation to that vector
+        //so to to generate our point on the sphere, multiply all of our quaternions together then multiple the centery by the combined rotation
+        ofVec3f worldPoint = latRot * longRot * center;
 
         ofNoFill();
         ofSetColor(255, 0, 0, 255);
@@ -131,20 +131,20 @@ void ofApp::draw()
 
         ofSetColor(255);
 
-		//set the bitmap text mode billboard so the points show up correctly in 3d
-        std::stringstream ss;
-
-        ss << iter->Name() << std::endl;
-        ss << " Latitude (deg): " << pos.getLatitude() << std::endl;
-        ss << "Longitude (deg): " << pos.getLongitude() << std::endl;
-        ss << " Elevation (km): " << pos.getElevation() / 1000 << std::endl;
-
+//        // Set the bitmap text mode billboard so the points show up correctly in 3d.
+//        std::stringstream ss;
+//
+//        ss << iter->Name() << std::endl;
+//        ss << " Latitude (deg): " << pos.getLatitude() << std::endl;
+//        ss << "Longitude (deg): " << pos.getLongitude() << std::endl;
+//        ss << " Elevation (km): " << pos.getElevation() / 1000 << std::endl;
+//
 //        ofDrawBitmapString(ss.str(), worldPoint);
 
         ++iter;
     }
 
-	ofPopMatrix();
+    ofPopMatrix();
 
     cam.end();
 
