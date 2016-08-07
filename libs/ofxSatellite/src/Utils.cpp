@@ -51,13 +51,14 @@ std::vector<Satellite> Utils::loadTLEFromBuffer(const ofBuffer& buffer)
     std::string tleLineOne = "";
     std::string tleLineTwo = "";
 
-    buf.resetLineReader();
+    auto lines = buf.getLines();
+    auto linesIter = lines.begin();
 
     bool first = true;
 
-    while (!buf.isLastLine())
+    for (const auto& line: buf.getLines())
     {
-        currentLine = buf.getNextLine();
+        currentLine = line;
 
         Poco::trimInPlace(currentLine);
 
