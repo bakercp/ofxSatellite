@@ -15,33 +15,28 @@
  */
 
 
-#ifndef SATELLITEEXCEPTION_H_
-#define SATELLITEEXCEPTION_H_
+#ifndef TLEEXCEPTION_H_
+#define TLEEXCEPTION_H_
 
-#include <exception>
+#include <stdexcept>
+#include <string>
 
 /**
- * @brief The exception that the SGP4 class throws upon an error.
+ * @brief The exception that the Tle class throws on an error.
+ *
+ * The exception that the Tle decoder will throw on an error.
  */
-class SatelliteException : public std::exception
+class TleException : public std::runtime_error
 {
 public:
-    SatelliteException(const char* message)
-        : message_(message)
+    /**
+     * Constructor
+     * @param message Exception message
+     */
+    TleException(const char* message)
+        : runtime_error(message)
     {
     }
-
-    virtual ~SatelliteException(void) throw ()
-    {
-    }
-
-    virtual const char* what() const throw ()
-    {
-        return message_.c_str();
-    }
-
-private:
-    std::string message_;
 };
 
 #endif

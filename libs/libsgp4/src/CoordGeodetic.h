@@ -80,13 +80,6 @@ public:
     }
 
     /**
-     * Destructor
-     */
-    virtual ~CoordGeodetic()
-    {
-    }
-
-    /**
      * Assignment operator
      * @param[in] geo object to copy from
      */
@@ -102,26 +95,6 @@ public:
     }
 
     /**
-     * Equality operator
-     * @param[in] geo the object to compare with
-     * @returns whether the object is equal
-     */
-    bool operator==(const CoordGeodetic& geo) const
-    {
-        return IsEqual(geo);
-    }
-
-    /**
-     * Inequality operator
-     * @param[in] geo the object to compare with
-     * @returns whether the object is not equal
-     */
-    bool operator!=(const CoordGeodetic& geo) const
-    {
-        return !IsEqual(geo);
-    }
-
-    /**
      * Dump this object to a string
      * @returns string
      */
@@ -129,9 +102,9 @@ public:
     {
         std::stringstream ss;
         ss << std::right << std::fixed << std::setprecision(3);
-        ss << "Lat: " << std::setw(7) << Util::RadiansToDegrees(latitude);
-        ss << ", Lon: " << std::setw(7) << Util::RadiansToDegrees(longitude);
-        ss << ", Alt: " << std::setw(9) << altitude;
+        ss << "Lat: " << std::setw(8) << Util::RadiansToDegrees(latitude);
+        ss << ", Lon: " << std::setw(8) << Util::RadiansToDegrees(longitude);
+        ss << ", Alt: " << std::setw(10) << altitude;
         return ss.str();
     }
 
@@ -141,25 +114,12 @@ public:
     double longitude;
     /** altitude in kilometers */
     double altitude;
-
-private:
-    bool IsEqual(const CoordGeodetic& geo) const
-    {
-        bool equal = false;
-        if (latitude == geo.latitude &&
-                longitude == geo.longitude &&
-                altitude == geo.altitude)
-        {
-            equal = false;
-        }
-        return equal;
-    }
 };
 
 /**
  * Dump a Coordgeodetic to a stream
- * @params[in,out] strm stream to output to
- * @params[in] g the CoordGeodetic to print
+ * @param[in,out] strm stream to output to
+ * @param[in] g the CoordGeodetic to print
  */
 inline std::ostream& operator<<(std::ostream& strm, const CoordGeodetic& g)
 {

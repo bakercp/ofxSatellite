@@ -21,12 +21,13 @@
 #include "DateTime.h"
 #include "Vector.h"
 
-#include <exception>
+#include <stdexcept>
+#include <string>
 
 /**
  * @brief The exception that the SGP4 class throws when a satellite decays.
  */
-class DecayedException : public std::exception
+class DecayedException : public std::runtime_error
 {
 public:
     /**
@@ -36,23 +37,11 @@ public:
      * @param[in] vel velocity of the satellite at dt
      */
     DecayedException(const DateTime& dt, const Vector& pos, const Vector& vel)
-        : _dt(dt), _pos(pos), _vel(vel)
+        : runtime_error("Satellite decayed")
+        , _dt(dt)
+        , _pos(pos)
+        , _vel(vel)
     {
-    }
-
-    /**
-     * Destructor
-     */
-    virtual ~DecayedException(void) throw ()
-    {
-    }
-
-    /**
-     * @returns the error string
-     */
-    virtual const char* what() const throw ()
-    {
-        return "Error: Satellite decayed";
     }
 
     /**

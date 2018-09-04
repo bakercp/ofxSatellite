@@ -15,30 +15,22 @@
  */
 
 
-#ifndef SOLARPOSITION_H_
-#define SOLARPOSITION_H_
+#ifndef SATELLITEEXCEPTION_H_
+#define SATELLITEEXCEPTION_H_
 
-#include "DateTime.h"
-#include "Eci.h"
+#include <stdexcept>
+#include <string>
 
 /**
- * @brief Find the position of the sun
+ * @brief The exception that the SGP4 class throws upon an error.
  */
-class SolarPosition
+class SatelliteException : public std::runtime_error
 {
 public:
-    SolarPosition()
+    SatelliteException(const char* message)
+        : runtime_error(message)
     {
     }
-
-    virtual ~SolarPosition()
-    {
-    }
-
-    Eci FindPosition(const DateTime& dt);
-
-private:
-    double Delta_ET(double year) const;
 };
 
 #endif

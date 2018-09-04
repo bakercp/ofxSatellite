@@ -38,10 +38,10 @@ public:
      * Default constructor
      */
     CoordTopocentric()
-        : azimuth(0.0), 
-        elevation(0.0),
-        range(0.0),
-        range_rate(0.0)
+        : azimuth(0.0)
+        , elevation(0.0)
+        , range(0.0)
+        , range_rate(0.0)
     {
     }
 
@@ -57,10 +57,10 @@ public:
             double el,
             double rnge,
             double rnge_rate)
-        : azimuth(az),
-        elevation(el),
-        range(rnge),
-        range_rate(rnge_rate)
+        : azimuth(az)
+        , elevation(el)
+        , range(rnge)
+        , range_rate(rnge_rate)
     {
     }
 
@@ -77,13 +77,6 @@ public:
     }
 
     /**
-     * Destructor
-     */
-    virtual ~CoordTopocentric()
-    {
-    }
-
-    /**
      * Assignment operator
      * @param[in] topo object to copy from
      */
@@ -97,26 +90,6 @@ public:
             range_rate = topo.range_rate;
         }
         return *this;
-    }
-
-    /**
-     * Equality operator
-     * @param[in] topo value to check
-     * @returns whether the object is equal
-     */
-    bool operator==(const CoordTopocentric& topo) const
-    {
-        return IsEqual(topo);
-    }
-
-    /**
-     * Inequality operator
-     * @param[in] topo the object to compare with
-     * @returns whether the object is not equal
-     */    
-    bool operator !=(const CoordTopocentric& topo) const
-    {
-        return !IsEqual(topo);
     }
 
     /**
@@ -142,20 +115,6 @@ public:
     double range;
     /** range rate in kilometers per second */
     double range_rate;
-
-private:
-    bool IsEqual(const CoordTopocentric& topo) const
-    {
-        bool equal = false;
-        if (azimuth == topo.azimuth &&
-                elevation == topo.elevation &&
-                range == topo.range &&
-                range_rate == topo.range_rate)
-        {
-            equal = true;
-        }
-        return equal;
-    }
 };
 
 
